@@ -11,7 +11,7 @@
         "Provides a buying-committee map for Tier 1 accounts covering economic buyer, champion, technical evaluator, end users, and blockers (procurement/security/legal), with each role's care-about, success metric, objection, and content",
         "Designs plays that each tie to a specific committee role and a funnel stage (identify, engage, advance, close, expand)",
         "Recommends account-level metrics (committee coverage/engagement, pipeline created and influenced, velocity, win rate, expansion) rather than lead volume, and defines what good looks like for the first quarter",
-        "States that the program is saved to .vital/abm.md"
+        "Lists the account/cluster-specific assets to produce (custom one-pagers, ROI models, tailored landing pages) personalized on each account's actual context — industry, stack, trigger — rather than a merged company name, and routes production to design-brief"
       ]
     },
     {
@@ -24,7 +24,7 @@
         "Defines a marketing-sales orchestration model with a shared account plan and agreed signals that trigger sales action, and explicitly designs for founder-led/assisted selling given no dedicated sales team",
         "Lists account/cluster-specific content personalized on each account's actual context (industry, stack, trigger) rather than a merged company name, and routes production to design-brief",
         "Recommends account-level metrics with a first-quarter definition of good, and offers to deliver the target list/account plans as a spreadsheet (xlsx skill) or shareable tracker",
-        "States that the program is saved to .vital/abm.md"
+        "Designs a play library where each play ties to a specific committee role and a funnel stage (identify, engage, advance, close, expand) rather than a generic outreach sequence"
       ]
     },
     {
@@ -37,7 +37,7 @@
         "Requires buying-committee maps for Tier 1 accounts that surface blockers (procurement, security, legal) early because one unaddressed stakeholder stalls the deal",
         "Defines marketing-sales orchestration including agreed signals that trigger sales action and a single view of account status",
         "Recommends account-level metrics (committee coverage, pipeline created/influenced, velocity, win rate, expansion) instead of lead or email volume",
-        "States that the program is saved to .vital/abm.md"
+        "Designs plays that each tie to a specific committee role and a funnel stage (identify, engage, advance, close, expand) rather than a single undifferentiated email sequence"
       ]
     }
   ]

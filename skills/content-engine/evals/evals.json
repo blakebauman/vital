@@ -9,7 +9,7 @@
         "Output states the objective and maps it to funnel stages (awareness, consideration, activation, retention) with effort balanced rather than all-awareness",
         "Three to five content pillars are defined and tied to the message pillars",
         "The calendar is concrete and dated: every slot lists date, channel, format, working title/hook, pillar, and funnel stage (not a themes-by-week abstraction)",
-        "The calendar covers the full requested 6-week pre-launch window",
+        "Frames the plan as repeatable, compounding programs rather than one-off posts, favoring formats that can be repurposed across channels",
         "At least one growth loop where output feeds input (referral, UGC, content-to-audience, or product-generated) is identified",
         "Formats and channels lean to the small-business segment (high-velocity SEO, social, self-serve education) rather than enterprise whitepapers/webinars"
       ]
@@ -20,7 +20,7 @@
       "expected_output": "Pulls ICP and messaging from project, defines the objective and funnel map, delivers lifecycle email flows with trigger/sequence/per-message goal and drafted critical emails in the brand voice, and an SEO strategy with topic clusters, a pillar page and supporting pages per cluster, and priority order by intent and winnability. Every program is tied to a metric. Enterprise-weighted formats (thought leadership, whitepapers, ABM/nurture). ",
       "assertions": [
         "Email flows specify the trigger, the full sequence, the goal of each message, and include drafts of the critical emails in the brand voice",
-        "Email subject lines and body copy are drafted (not just described) for the key emails",
+        "Identifies at least one growth loop where output feeds input (referral, UGC, content-to-audience, or product-generated) that compounds rather than decays",
         "SEO output identifies topic clusters with a pillar page and supporting pages per cluster and a priority order by intent and winnability",
         "Each program is mapped to a funnel stage and names the metric it moves",
         "Content approach is weighted to the enterprise segment (thought leadership, whitepapers, longer nurture, account-based) rather than high-velocity self-serve",

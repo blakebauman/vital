@@ -6,9 +6,9 @@
       "prompt": "Our website copy sounds super generic and could be any SaaS. We're Ledgerly, a small-business bookkeeping app for solo contractors and tradespeople. Can you fix our messaging and give us a brand voice?",
       "expected_output": "A full messaging system tuned to the small-business segment: a single ownable value proposition in the customer's language, three to five benefit-led message pillars each backed by concrete proof, a headline system, and a voice-and-tone guide with named traits and before/after rewrites. Voice reads plain, direct, outcome-first, and warmer per the small-business segment. Saved to .vital/brand.md.",
       "assertions": [
-        "Output states a single value proposition as one line expressing a core promise in the customer's language",
+        "Drafts multiple value-proposition candidates and selects the sharpest single line, expressed in the tradesperson's own language rather than category jargon",
         "Message hierarchy contains three to five pillars, and every pillar has at least one concrete proof point (capability, metric, testimonial, or mechanism) directly under it",
-        "Each pillar is framed as a benefit/outcome rather than a raw feature",
+        "Delivers a headline system of ready-to-use headline/subhead pairs generated from the value prop and pillars (for site, deck, and ads), not just abstract pillars",
         "The voice-and-tone guide names three to five voice traits, states explicitly what the brand never sounds like, and includes at least one before/after rewrite of a real sentence",
         "Voice register matches the small-business segment: plain, direct, outcome-first, low-jargon, warmer tone rather than enterprise proof-heavy formality",
         "No line in the value prop or pillars is generic filler that could sit unchanged on a competitor bookkeeping-app homepage (no bare 'powerful, easy, all-in-one' claims)"
@@ -19,7 +19,7 @@
       "prompt": "We need naming plus a messaging framework for a new enterprise product. It's a data-governance and lineage platform for Fortune 500 compliance and security teams; positioning doc is in .vital/positioning.md. Give us a name shortlist and the full message architecture and voice guide.",
       "expected_output": "Confirms/pulls positioning first, then delivers a value proposition, message pillars with proof weighted toward enterprise concerns (security, compliance, integration, credibility), a headline system, audience-flex notes, and a voice guide that is credible and low-hype. Naming shortlist of five to eight names generated across approaches, screened, each with a one-line rationale and risk flags, plus a trademark-clearance disclaimer.",
       "assertions": [
-        "Skill requires/references positioning before building messaging (pulls .vital/positioning.md or the positioning skill rather than inventing positioning)",
+        "Anchors the messaging in the product's positioning and differentiation (using given positioning or establishing it first) rather than generic claims",
         "Naming shortlist contains between five and eight candidate names, each with a one-line rationale and any risk flagged, and spans multiple naming approaches (descriptive, evocative, invented, metaphor, or real-word)",
         "Output explicitly states it cannot perform legal trademark clearance and recommends the client do so before committing",
         "Message pillars emphasize enterprise-weighted themes (security, compliance, integration) with proof-heavy, low-hype language matching the enterprise segment",

@@ -19,7 +19,7 @@
       "prompt": "We need launch social creative and a landing page for Vaultline, an enterprise data-security platform sold to CISOs at regulated banks. Message and voice are in .vital/brand.md. Give me feed, story, and OG graphics plus the landing page.",
       "expected_output": "Pulls message/voice from brand.md, sets one visual system matching the enterprise register (polished, restrained, trustworthy), and delivers build-ready specs for social assets at correct dimensions plus a single self-contained on-brand HTML landing page. All assets stay within one visual system and pass the anti-slop checklist.",
       "assertions": [
-        "Output pulls the message and voice from .vital/brand.md rather than inventing new copy",
+        "Uses the provided brand voice/messaging if available, and otherwise explicitly flags that it needs the brand's voice rather than inventing a new one",
         "Social specs give exact dimensions for each surface: 1080x1080 feed, 1080x1920 story, 1200x630 OG/link preview",
         "A single self-contained HTML landing page (inline CSS/JS) is produced, on-brand and ready to preview",
         "Visual register matches the enterprise segment (polished, restrained, trustworthy) and the direction is placed on the impeccable dimensions",

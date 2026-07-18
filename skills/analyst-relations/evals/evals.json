@@ -11,7 +11,7 @@
         "Builds an analyst-facing narrative distinct from press/marketing, anchored to a credible market thesis backed by data/customer proof rather than product hype",
         "Provides a sequenced engagement plan (initial briefing, follow-up inquiry, ongoing updates) with a defined cadence and who from the client presents",
         "Includes a Sources section citing the reports and coverage found",
-        "States that the program is saved to .vital/analyst-relations.md"
+        "Outlines a briefing kit (market context, differentiated approach, proof, roadmap, and the questions to leave the analyst) that is evidence-led rather than a product pitch"
       ]
     },
     {
@@ -37,7 +37,7 @@
         "Honestly identifies the readiness gaps (e.g., only two customers, no SOC 2, thin reference base) rather than papering over them",
         "Redirects to an achievable AR objective such as getting on the radar or expert validation for the sales cycle, with a prioritized analyst map",
         "Includes a Sources section for the analyst research it cites",
-        "Coordinates with the press-kit skill and saves the program to .vital/analyst-relations.md"
+        "Coordinates with the press-kit skill so AR and press reinforce one story"
       ]
     }
   ]

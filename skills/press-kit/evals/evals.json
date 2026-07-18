@@ -11,7 +11,7 @@
         "Includes a press release in inverted-pyramid form with a headline stating the news, a lead, a founder quote drafted for client approval, boilerplate, and contact/links",
         "Includes a Sources section citing the media research",
         "Contains no fabricated quotes or endorsements and attributes no persuasive statements to real named public figures",
-        "States that materials are saved to .vital/press-kit/"
+        "Provides a short tailored pitch per priority journalist that references their beat specifically, makes the ask easy, and includes a subject line built to be opened"
       ]
     },
     {
@@ -37,7 +37,7 @@
         "Provides launch-platform copy (e.g., Product Hunt, Hacker News, relevant communities) with the first comment and platform-appropriate etiquette, and never manufactures inauthentic upvotes or comments",
         "If a founder quote is drafted, it is explicitly marked as drafted for the client to approve rather than presented as already said",
         "Assembles a simple press kit (fact sheet, boilerplate, founder bio, logo/screenshot links, contact) sized to the small effort",
-        "States that materials are saved to .vital/press-kit/"
+        "If a press release is drafted, it is factual and inverted-pyramid — a headline stating the news and a lead answering who/what/why-it-matters — with hype adjectives stripped rather than promotional"
       ]
     }
   ]

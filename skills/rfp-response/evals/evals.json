@@ -11,7 +11,7 @@
         "Answers factually and consistently, stating a compensating control or roadmap date for gaps and never leaving blanks or bluffing",
         "Never states a certification, control, or capability the client does not actually have, and flags any unverified claim for the client to confirm",
         "Notes that Vital advises but the client owns the accuracy of security and legal representations",
-        "States that the answer bank is saved to .vital/rfp-answer-bank.md"
+        "Produces a gap list of missing items that block enterprise deals (e.g., no SOC 2 yet, no SSO) with the effort to close each and an interim compensating story, rather than only answering the current questions"
       ]
     },
     {
@@ -24,7 +24,7 @@
         "Produces a buyer-enablement kit including a security one-pager, a trust/security overview, an ROI/business-case one-pager, and an implementation & onboarding overview, routing design to design-brief",
         "Delivers a reusable answer bank with per-question approved answer, evidence, and yes/roadmap/no status, and a gap list with effort-to-close and interim framing",
         "Flags any unverified technical claim for the client to confirm and considers routing technical claims through the engineering agent for a credibility check",
-        "Notes that the client owns the accuracy of security and legal representations and saves the answer bank to .vital/rfp-answer-bank.md"
+        "Notes that the client owns the accuracy of security and legal representations"
       ]
     },
     {
@@ -37,7 +37,7 @@
         "Flags the uncertain encryption-at-rest claim as unverified and requires the client to confirm the actual configuration before it is stated, suggesting the engineering agent check it",
         "Never states a certification or control the client does not actually have",
         "Reminds the client that Vital advises but the client owns the accuracy of security and legal representations",
-        "Captures the corrected answers with yes/roadmap/no status in the answer bank saved to .vital/rfp-answer-bank.md"
+        "Captures the corrected answers with a yes/roadmap/no status in a reusable answer bank"
       ]
     }
   ]

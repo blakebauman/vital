@@ -6,7 +6,7 @@
       "prompt": "We have a few happy customers now and want to start using them for growth. We're Batchpoint, a mid-market inventory-management SaaS. Help us build case studies and get more reviews on G2.",
       "expected_output": "Confirms there are willing successful customers, builds a proof map, drafts case studies in the proven structure (customer/context, problem/stakes, why chosen, what they did, quantified result — result-led, customer as hero) with interview questions and short-form cutdowns, and designs a G2/Capterra review-generation program researched via web search with a Sources section. Mid-market weighting on written case studies and review presence. Saved to .vital/customer-marketing.md.",
       "assertions": [
-        "Output confirms/requires the client has willing, successful customers before building programs",
+        "Maps specific testimonials/proof to the objections they answer and the surfaces where they convert (pricing page, landing pages, checkout, sales decks) rather than producing free-floating quotes",
         "A proof map is produced noting for each candidate the outcome, metric, segment fit, and reference willingness level",
         "Case studies follow the proven structure (context, problem/stakes, why chosen with alternatives, what they did, quantified result), lead with the result, and keep the customer as the hero",
         "Draft interview questions plus short-form cutdowns (one-line quote, social card, or sales one-pager) are included",
@@ -24,7 +24,7 @@
         "A proof map notes reference willingness levels (logo only, quote, full story, live reference call) per candidate customer",
         "Case studies are drafted in the proven result-led structure with the customer as hero",
         "Every claim, quote, metric, and logo is stated as traceable to a real, consenting customer with no fabrication",
-        "Case-study assets include interview questions to extract the story"
+        "Ties advocacy to a growth loop where advocates bring the next customers (champion/ambassador program, co-marketing, or referral) rather than only one-off reference calls"
       ]
     },
     {
