@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+__MACOSX/
+
+# Build artifacts (the packaged plugin is generated, not source)
+*.plugin
+*.zip
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.*
+
+# Editor
+.vscode/
+.idea/
+*.swp
