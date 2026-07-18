@@ -1,0 +1,44 @@
+{
+  "skill_name": "analyst-relations",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We keep hearing our enterprise prospects mention Gartner. Can you help us start getting on the analysts' radar?",
+      "expected_output": "An analyst-relations program that sets a realistic objective, maps the specific analysts and firms who cover the category, builds an analyst-facing narrative, outlines a briefing kit, sequences an engagement plan with cadence, and cites sources.",
+      "assertions": [
+        "States a clear AR objective (e.g., getting on the radar) and sets realistic expectations that AR compounds over quarters and ranked-report inclusion often takes 12+ months",
+        "Delivers a prioritized analyst map naming specific analysts and firms, each with the market/category they cover, relevant recent reports, and their apparent point of view — a short prioritized list rather than a long shallow one",
+        "Builds an analyst-facing narrative distinct from press/marketing, anchored to a credible market thesis backed by data/customer proof rather than product hype",
+        "Provides a sequenced engagement plan (initial briefing, follow-up inquiry, ongoing updates) with a defined cadence and who from the client presents",
+        "Includes a Sources section citing the reports and coverage found",
+        "States that the program is saved to .vital/analyst-relations.md"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're a cloud-security posture management (CSPM) vendor competing in a crowded market and we want to compete for a position in the next Gartner Magic Quadrant for Cloud-Native Application Protection Platforms. Build the AR program including ranked-evaluation prep, and coordinate it with our press effort.",
+      "expected_output": "A ranked-evaluation-focused AR program with objective, prioritized CNAPP analyst map, market-thesis narrative, briefing kit outline, sequenced engagement plan, honest Magic Quadrant readiness assessment against criteria with reference lineup, measurement, source citations, and coordination with press-kit.",
+      "assertions": [
+        "Frames the objective as competing for a Magic Quadrant position and honestly notes the 12+ month relationship timeline required",
+        "Delivers a prioritized map of the specific analysts/firms covering CNAPP with their recent reports and point of view, with sources cited",
+        "Includes ranked-evaluation prep that identifies the Magic Quadrant evaluation criteria, assesses the client candidly against each (flagging where the client is not yet ready), and lines up customer references",
+        "Outlines a briefing kit (market context, differentiated approach, proof, roadmap, questions to leave the analyst) and notes deck production routes to the pptx skill",
+        "Recommends measurement via leading indicators (briefings held, sentiment shift, report mentions/inclusions, prospect inquiries citing an analyst) plus the lagging ranked position",
+        "Includes a Sources section and explicitly coordinates with the press-kit skill so AR and press reinforce one story"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My co-founder wants us to pay for a Gartner Magic Quadrant spot next month so we can put the logo on our homepage before our big launch. We have two customers and no SOC 2. What do you think?",
+      "expected_output": "A candid pushback that a Magic Quadrant is not pay-for-placement and the client is not yet ready, an honest gap assessment, and a redirect toward a realistic radar-building AR program with a proper objective and timeline.",
+      "assertions": [
+        "Candidly states the client is not ready to push for a ranked report and that a premature push wastes the analyst relationship, correcting the assumption that a Magic Quadrant spot can be bought next month",
+        "Sets a realistic objective and timeline, noting ranked-report inclusion typically takes 12+ months of relationship rather than weeks",
+        "Honestly identifies the readiness gaps (e.g., only two customers, no SOC 2, thin reference base) rather than papering over them",
+        "Redirects to an achievable AR objective such as getting on the radar or expert validation for the sales cycle, with a prioritized analyst map",
+        "Includes a Sources section for the analyst research it cites",
+        "Coordinates with the press-kit skill and saves the program to .vital/analyst-relations.md"
+      ]
+    }
+  ]
+}

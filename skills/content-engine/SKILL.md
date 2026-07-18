@@ -44,4 +44,4 @@ Identify at least one loop where output feeds input (referral, user-generated co
 
 ## Output
 
-Deliver the objective and funnel map, content pillars, a dated calendar, and the specific campaign/SEO/email/social plans requested — with real draft copy where it helps and the metric each program moves. Route graphics to the `design-brief` skill. Consider delivering the calendar as a spreadsheet (xlsx skill) or a shareable tracker. Offer to set up recurring scheduled tasks for ongoing content cadence. Save the plan to the project.
+Deliver the objective and funnel map, content pillars, a dated calendar, and the specific campaign/SEO/email/social plans requested — with real draft copy where it helps and the metric each program moves. Route graphics to the `design-brief` skill. Consider delivering the calendar as a spreadsheet (xlsx skill) or a shareable tracker. Offer to set up recurring scheduled tasks for ongoing content cadence. Save the plan to `.vital/marketing.md`.

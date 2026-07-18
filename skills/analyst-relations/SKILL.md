@@ -43,4 +43,4 @@ Track leading indicators: briefings held, analyst sentiment shift, mentions/incl
 
 ## Output
 
-Deliver the AR objective, a prioritized analyst map with sources, the analyst narrative, the briefing kit outline (and deck if requested), a sequenced engagement plan with cadence, ranked-evaluation prep when relevant, and metrics. Coordinate with the `press-kit` skill so AR and press reinforce one story. Include a Sources section. Save the program to the project.
+Deliver the AR objective, a prioritized analyst map with sources, the analyst narrative, the briefing kit outline (and deck if requested), a sequenced engagement plan with cadence, ranked-evaluation prep when relevant, and metrics. Coordinate with the `press-kit` skill so AR and press reinforce one story. Include a Sources section. Save the program to `.vital/analyst-relations.md`.

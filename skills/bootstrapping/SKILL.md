@@ -54,4 +54,4 @@ Bootstrapping and raising are not mutually exclusive forever. Note the option to
 
 ## Output
 
-Deliver: a bootstrapping fit check, a default-alive/runway model, unit-economics and capital-efficiency guidance, a customer-funded growth plan, a recommended non-dilutive funding option or two with trade-offs, and the later-raise optionality — with the not-financial-advice boundary stated. Consider delivering the runway/unit-economics model as a spreadsheet (xlsx skill). Include a Sources section for any funding-program research. Save the plan to the project.
+Deliver: a bootstrapping fit check, a default-alive/runway model, unit-economics and capital-efficiency guidance, a customer-funded growth plan, a recommended non-dilutive funding option or two with trade-offs, and the later-raise optionality — with the not-financial-advice boundary stated. Consider delivering the runway/unit-economics model as a spreadsheet (xlsx skill). Include a Sources section for any funding-program research. Save the plan to `.vital/capital/bootstrapping.md`.

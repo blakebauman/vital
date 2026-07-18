@@ -1,0 +1,44 @@
+{
+  "skill_name": "customer-marketing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We have a few happy customers now and want to start using them for growth. We're Batchpoint, a mid-market inventory-management SaaS. Help us build case studies and get more reviews on G2.",
+      "expected_output": "Confirms there are willing successful customers, builds a proof map, drafts case studies in the proven structure (customer/context, problem/stakes, why chosen, what they did, quantified result — result-led, customer as hero) with interview questions and short-form cutdowns, and designs a G2/Capterra review-generation program researched via web search with a Sources section. Mid-market weighting on written case studies and review presence. Saved to .vital/customer-marketing.md.",
+      "assertions": [
+        "Output confirms/requires the client has willing, successful customers before building programs",
+        "A proof map is produced noting for each candidate the outcome, metric, segment fit, and reference willingness level",
+        "Case studies follow the proven structure (context, problem/stakes, why chosen with alternatives, what they did, quantified result), lead with the result, and keep the customer as the hero",
+        "Draft interview questions plus short-form cutdowns (one-line quote, social card, or sales one-pager) are included",
+        "The review program researches current G2/Capterra presence and category leaders via web search and includes a Sources section citing what was found",
+        "Output states it never fabricates quotes, metrics, or logos and respects review-site rules (no incentivizing a positive review specifically)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're losing late-stage enterprise deals because prospects want reference calls. We're Aegis, an enterprise cybersecurity platform. Stand up a reference program and get us some analyst-grade customer stories.",
+      "expected_output": "Builds a managed enterprise reference program: a pool of willing customers, matching logic by industry/size/use case, incentives/reciprocity, and guardrails against overusing top references. Adds analyst-grade case studies and a proof map, weighted to the enterprise segment where references and logo rights are deal-critical. All claims traceable to consenting customers.",
+      "assertions": [
+        "A reference program is defined with a managed pool, matching logic (reference to prospect by industry/size/use case), incentives/reciprocity, and guardrails so top references are not overused",
+        "The output weights the enterprise segment: reference calls, logo rights, analyst-grade case studies, and executive advocacy treated as deal-critical",
+        "A proof map notes reference willingness levels (logo only, quote, full story, live reference call) per candidate customer",
+        "Case studies are drafted in the proven result-led structure with the customer as hero",
+        "Every claim, quote, metric, and logo is stated as traceable to a real, consenting customer with no fabrication",
+        "Case-study assets include interview questions to extract the story"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We have a big base of small-business customers on our to-do app, Tickbox, but we haven't launched yet and don't really have customer outcomes documented. Can you build our whole advocacy and expansion program anyway?",
+      "expected_output": "Recognizes the boundary condition: customer marketing starts after there are customers with real, quantifiable outcomes and willingness to go public. Flags that undocumented outcomes and pre-launch status block bespoke proof, and redirects to what is feasible now (lightweight testimonial/review-capture system, volume social proof, community/referral loops) for the small-business segment rather than fabricating stories.",
+      "assertions": [
+        "Output identifies that customer marketing requires customers with real, quantifiable outcomes who are willing to go public, and flags that these are not yet documented",
+        "The skill does not fabricate case studies, quotes, metrics, or logos to fill the gap",
+        "It redirects to feasible near-term work: a lightweight testimonial/review-capture system triggered on success moments and a reusable testimonial bank",
+        "Recommendations weight the small-business segment (volume of reviews/testimonials, quick social proof, community/referral loops) over bespoke enterprise references",
+        "Any review-generation guidance respects review-site rules and does not incentivize positive reviews specifically",
+        "It proposes a capture system to collect proof going forward rather than presenting invented proof as if it exists"
+      ]
+    }
+  ]
+}

@@ -51,4 +51,4 @@ Produce the checklist: EIN obtained, bank account opened, founder equity issued 
 
 ## Output
 
-Deliver: an entity recommendation with reasoning, a recommended incorporation path with current pricing and trade-offs (cite sources), founder equity and vesting guidance, the 83(b) deadline flagged, cap-table basics, and the post-incorporation checklist — all with the not-legal/tax-advice boundary stated and a prompt to engage an attorney and CPA. Include a Sources section for any pricing/feature research. Save the plan to the project.
+Deliver: an entity recommendation with reasoning, a recommended incorporation path with current pricing and trade-offs (cite sources), founder equity and vesting guidance, the 83(b) deadline flagged, cap-table basics, and the post-incorporation checklist — all with the not-legal/tax-advice boundary stated and a prompt to engage an attorney and CPA. Include a Sources section for any pricing/feature research. Save the plan to `.vital/capital/incorporation.md`.

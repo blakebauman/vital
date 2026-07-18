@@ -39,4 +39,4 @@ Build top-down; do not move to a lower level until the one above is sharp.
 
 ## Output
 
-Deliver the value proposition, message hierarchy with pillars and proof, headline system, and voice-and-tone guide with examples; plus a named shortlist when naming was requested. Keep every line specific and ownable — strike anything that could sit unchanged on a competitor's homepage. Save the messaging system to the project so design, marketing, and PR execute against one source of truth.
+Deliver the value proposition, message hierarchy with pillars and proof, headline system, and voice-and-tone guide with examples; plus a named shortlist when naming was requested. Keep every line specific and ownable — strike anything that could sit unchanged on a competitor's homepage. Save the messaging system to `.vital/brand.md` so design, marketing, and PR execute against one source of truth.

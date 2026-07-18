@@ -18,3 +18,10 @@ npm-debug.log*
 .vscode/
 .idea/
 *.swp
+
+# Eval run outputs (generated; evals/evals.json in each skill IS source and stays tracked)
+evals-workspace/
+
+# Vital engagement workspace — deliverables Vital writes into a CLIENT project.
+# In this repo it only appears as dogfood output, which is not source.
+.vital/

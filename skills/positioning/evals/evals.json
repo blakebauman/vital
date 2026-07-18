@@ -1,0 +1,44 @@
+{
+  "skill_name": "positioning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "hey can you help me figure out how to position my app? it's a little tool called FocusFern that blocks distracting websites while you work. not really sure who it's even for tbh",
+      "expected_output": "A complete positioning document for a small-business/consumer productivity app that defines a narrow ICP and one job despite the vague brief, names the real alternatives (including doing nothing), states a positioning statement in both forms, and includes a pressure test. Because the segment reads as small business/consumer, it should nail one persona and one job rather than mapping a buying committee.",
+      "assertions": [
+        "Defines an ICP with a specific role or consumer segment plus the trigger that makes them look for a solution, rather than 'anyone who wants to focus'",
+        "Names at least 3 real alternatives customers use today, and one of them is an explicit 'do nothing' / status-quo / willpower option",
+        "Includes a positioning statement in the 'For [ICP] who [need], [product] is a [category] that [benefit]. Unlike [alternative], [differentiator]' template AND restates it as one natural sentence",
+        "Contains a distinct pressure-test section stating the single strongest argument against the positioning and answering it (or admitting the positioning needs work)",
+        "Includes a product-market-fit section with a value hypothesis and the 'very disappointed' test",
+        "The words 'innovative', 'seamless', and 'next-generation' do not appear anywhere in the output"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're launching Ledgerloop, an accounts-payable automation platform for mid-market finance teams (companies roughly 200-2000 employees). It ingests invoices, routes approvals, and syncs to the ERP. We have 6 design-partner customers and strong feedback that approval routing saves controllers ~15 hours a month. Competitors are Bill.com, Tipalti, and mostly manual work in NetSuite plus email. Write our positioning.",
+      "expected_output": "A precise positioning document for a mid-market B2B product that centers a primary buyer who is also a heavy user (e.g. the controller), maps the small blocking committee, uses the provided traction, names the real competitive set with the wedge identified, and picks a deliberate category.",
+      "assertions": [
+        "Centers a primary buyer who is also a heavy user (controller / AP manager) and maps the small 2-3 person committee that could block, consistent with a mid-market segment",
+        "Competitive frame names Bill.com, Tipalti, and the manual NetSuite-plus-email status quo, stating the position each occupies in the buyer's mind",
+        "Explicitly names a 'wedge' — the narrow place Ledgerloop is clearly the best choice",
+        "Makes a deliberate category choice and states that the category framing is a strategic decision",
+        "Uses the provided traction signals (6 design partners, ~15 hours saved) in the PMF or value-hypothesis section rather than ignoring them",
+        "Includes both forms of the positioning statement and a standalone pressure-test section, and avoids the banned adjectives 'innovative', 'seamless', 'next-generation'"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I need positioning for Atlas Shield, our data-loss-prevention product sold to Fortune 500 CISOs. Honestly the market is packed — CrowdStrike, Microsoft Purview, Forcepoint, Symantec all play here. I'm worried we don't actually have a real wedge. Can you position it anyway and be straight with me about whether we do?",
+      "expected_output": "An enterprise positioning document that separates the user, economic buyer, and champion and maps the buying committee, honestly assesses a crowded market, and either names a defensible wedge or states plainly that the positioning needs work rather than manufacturing a fake differentiator.",
+      "assertions": [
+        "Separates the user, the economic buyer (CISO), and the champion, and maps the enterprise buying committee — consistent with the enterprise segment",
+        "Names the real competitive set including CrowdStrike, Microsoft Purview, Forcepoint, and Symantec, with the position each occupies",
+        "Honestly addresses the crowded-market concern: either names a specific defensible wedge or explicitly states the positioning is not yet defensible and needs work, rather than papering over it",
+        "The pressure-test section engages the user's stated worry (no real wedge) as the strongest counterargument and answers it candidly",
+        "Includes a full positioning statement in template form plus one natural sentence and a PMF framing with proof signals",
+        "Does not use the empty adjectives 'innovative', 'seamless', or 'next-generation'"
+      ]
+    }
+  ]
+}

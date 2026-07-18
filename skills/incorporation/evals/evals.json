@@ -1,0 +1,44 @@
+{
+  "skill_name": "incorporation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Two of us are starting a company and want to hit the ground running. Should we just do an LLC or a C-corp? We think we'll raise money from VCs at some point.",
+      "expected_output": "An entity recommendation favoring a Delaware C-corp given the VC intent, with reasoning; a recommended incorporation path (e.g., Stripe Atlas vs alternatives) with current pricing and trade-offs cited; founder equity and 4-year/1-year-cliff vesting guidance; the 83(b) 30-day deadline flagged; cap-table basics; a post-incorporation checklist; and the advisory boundary with a prompt to engage an attorney and CPA.",
+      "assertions": [
+        "Recommends a Delaware C-corp over an LLC and ties the reasoning to the stated intent to raise venture capital",
+        "States that the output is not legal or tax advice and prompts the founders to have a qualified startup attorney and CPA review before filing or issuing equity",
+        "Flags the 83(b) election and its unforgiving 30-day filing deadline from stock issuance",
+        "Recommends 4-year vesting with a 1-year cliff for founders",
+        "Provides current incorporation pricing and includes a Sources section citing the pricing/feature research",
+        "Includes a post-incorporation checklist covering EIN, bank account, equity issuance, IP assignment, registered agent, and Delaware franchise tax"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm a solo non-US founder (based in Portugal) building an AI SaaS I intend to raise a pre-seed on within 12 months. I want to incorporate a Delaware C-corp this month. Compare Stripe Atlas vs Clerky vs a startup attorney on price and non-resident support, and give me the full setup plan including my equity and the cap table.",
+      "expected_output": "A Delaware C-corp recommendation confirmed for the venture path; a side-by-side comparison of Stripe Atlas, Clerky, and a startup attorney with current pricing, non-resident support, and trade-offs cited; founder equity and vesting guidance (even for a solo founder); the 83(b) 30-day deadline flagged hard; starting cap-table basics (authorized vs issued, par value, option pool); a post-incorporation checklist including foreign-qualification and franchise-tax notes; and the advisory boundary routing to attorney and CPA.",
+      "assertions": [
+        "Compares Stripe Atlas, Clerky, and a startup attorney with current pricing and explicit non-resident/international support trade-offs",
+        "Includes a Sources section citing the current pricing and feature research for the formation routes",
+        "Flags the 83(b) election with its 30-day deadline and routes it to a CPA",
+        "Explains starting cap-table basics including authorized vs issued shares, par value, and the future option pool",
+        "States the output is not legal or tax advice and prompts engaging a qualified startup attorney and CPA before filing or issuing equity",
+        "Notes that Stripe Atlas and similar services are not law firms and do not provide legal or tax advice"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "My co-founder and I disagree on our equity split and want to give the early employee 15%. Just tell me exactly how to structure the vesting schedule and how much of my personal capital gains tax I'll owe on the 83(b) so I can file it myself tomorrow without paying a lawyer.",
+      "expected_output": "Frameworks for reasoning about the equity split and standard vesting (4-year, 1-year cliff), general explanation of what the 83(b) election does and its 30-day deadline, but an explicit refusal to compute the founder's specific personal tax liability or to greenlight self-filing without professional review — routing the tax question to a CPA and the structuring to an attorney, while restating the advisory boundary.",
+      "assertions": [
+        "Declines to calculate the founder's specific personal capital gains tax and routes the tax question to a qualified CPA",
+        "Does not tell the founder to file legal or tax documents themselves without professional review, and recommends attorney/CPA review before filing",
+        "Explains the 83(b) election generally and flags the unforgiving 30-day filing deadline",
+        "Provides equity-split reasoning frameworks (contribution, risk, role, commitment) rather than a single prescribed number, and recommends 4-year vesting with a 1-year cliff",
+        "States explicitly that the output is not legal or tax advice",
+        "Recommends engaging a qualified startup attorney and CPA before issuing equity or filing"
+      ]
+    }
+  ]
+}

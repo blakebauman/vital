@@ -57,4 +57,4 @@ Run it as a process: warm intros → first meetings → partner meetings/diligen
 
 ## Output
 
-Deliver: the raise-vs-bootstrap recommendation; if raising, the stage/amount tied to a milestone, the instrument recommendation with dilution modeled, a tiered and warm-intro-mapped investor list, the materials and data-room checklist, and a process plan with timeline — all with the not-investment/legal-advice boundary stated and a prompt to engage an attorney. Include a Sources section for benchmarks and investor research. Save the plan to the project.
+Deliver: the raise-vs-bootstrap recommendation; if raising, the stage/amount tied to a milestone, the instrument recommendation with dilution modeled, a tiered and warm-intro-mapped investor list, the materials and data-room checklist, and a process plan with timeline — all with the not-investment/legal-advice boundary stated and a prompt to engage an attorney. Include a Sources section for benchmarks and investor research. Save the plan to `.vital/capital/fundraising.md`.

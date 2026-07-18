@@ -1,0 +1,44 @@
+{
+  "skill_name": "design-brief",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make my launch deck look good. We're Trailhead, a small-business scheduling app for hair salons and barbershops. It's a 10-slide investor-ish launch deck and I have Adobe Express.",
+      "expected_output": "An art-direction summary naming the impeccable direction dimensions, a distinctive type and color system with exact hex values and specific Adobe Fonts names, and a build-ready 16:9 (1920x1080) deck spec with Adobe Express production directions the client can reproduce. Visual register is bold, fast-to-grasp, conversion-focused per the small-business segment, and passes the anti-slop checklist. Saved to .vital/design/.",
+      "assertions": [
+        "Art direction names specific heading and body fonts available in Adobe Fonts/Express (not default Inter or a generic system font)",
+        "Color palette lists exact hex values with light/dark logic, and avoids the banned cyan/purple gradient and glassmorphism-hero cliches",
+        "Output explicitly names the impeccable direction dimensions (register, expressive axis, tone, density, distinctiveness, audience, constraints)",
+        "Deck spec uses 16:9 at 1920x1080 per slide and includes copy blocks, color/font choices, imagery direction, and export format",
+        "Adobe Express production directions are step-followable (template type, Brand Kit setup, what to change, how to export) so the client can rebuild it themselves",
+        "The anti-slop checklist is run and its result stated before the asset ships, and the visual register matches the small-business segment (bold, fast to grasp)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We need launch social creative and a landing page for Vaultline, an enterprise data-security platform sold to CISOs at regulated banks. Message and voice are in .vital/brand.md. Give me feed, story, and OG graphics plus the landing page.",
+      "expected_output": "Pulls message/voice from brand.md, sets one visual system matching the enterprise register (polished, restrained, trustworthy), and delivers build-ready specs for social assets at correct dimensions plus a single self-contained on-brand HTML landing page. All assets stay within one visual system and pass the anti-slop checklist.",
+      "assertions": [
+        "Output pulls the message and voice from .vital/brand.md rather than inventing new copy",
+        "Social specs give exact dimensions for each surface: 1080x1080 feed, 1080x1920 story, 1200x630 OG/link preview",
+        "A single self-contained HTML landing page (inline CSS/JS) is produced, on-brand and ready to preview",
+        "Visual register matches the enterprise segment (polished, restrained, trustworthy) and the direction is placed on the impeccable dimensions",
+        "The anti-slop checklist is applied to every asset: no default Inter/system display face, no cyan/purple gradient, no glassmorphism hero, neutrals tinted",
+        "All assets share one consistent visual system (type, color, layout, imagery) rather than differing per asset"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Can you help with the visuals for our launch? We're Cohortiq, a mid-market analytics tool, and the hero graphic needs to show a chart of retention by cohort. I have the Adobe suite.",
+      "expected_output": "Recognizes a dataviz element is present and reads the dataviz skill before choosing chart colors and forms, sets a modern/confident mid-market visual system with named fonts and exact hex, and gives a build-ready asset spec routing heavier work to the right Adobe tool (e.g. Illustrator/Photoshop) while keeping the client able to reproduce it. Passes the anti-slop checklist.",
+      "assertions": [
+        "Output indicates the dataviz skill guidance is consulted before choosing chart colors and chart form for the retention-cohort graphic",
+        "Art direction names specific non-default fonts and a palette with exact hex values, with the chart colors coherent with that palette",
+        "Visual register matches the mid-market segment (modern, confident) and the impeccable direction dimensions are named",
+        "Heavier production is routed to the correct Adobe tool (e.g. Illustrator for vector, Photoshop for compositing) while leaving the client able to rebuild and edit the asset",
+        "The anti-slop checklist is run: no cyan/purple gradient, no glassmorphism hero, no default system display font, neutrals tinted",
+        "The asset spec includes exact dimensions and export format"
+      ]
+    }
+  ]
+}

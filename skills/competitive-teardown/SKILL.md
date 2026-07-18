@@ -42,4 +42,4 @@ Note the strongest competitor's likely response, and any moats (distribution, da
 
 ## Output
 
-Deliver: the competitive set by ring, a per-competitor breakdown with sources, a positioning map, a message/pricing comparison, the named wedge, and watch-outs. Feed the wedge back into the `positioning` skill. Save findings to the project. Include a Sources section citing every competitor page referenced.
+Deliver: the competitive set by ring, a per-competitor breakdown with sources, a positioning map, a message/pricing comparison, the named wedge, and watch-outs. Feed the wedge back into the `positioning` skill. Save findings to `.vital/competitive.md`. Include a Sources section citing every competitor page referenced.

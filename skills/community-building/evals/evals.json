@@ -1,0 +1,44 @@
+{
+  "skill_name": "community-building",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build a community for my open-source project. It's Quantforge, a Rust library for backtesting trading strategies. We have ~800 GitHub stars but almost no contributors. Help me get contributors.",
+      "expected_output": "Names the community's primary job, recommends a GitHub-centric home (plus Discord satellite) with rationale, designs the contributor funnel user->maintainer with friction removed at each step, and drafts the concrete OSS assets (CONTRIBUTING.md, good-first-issues, code of conduct, README guidance). Distinguishes healthy signals from vanity (stars are awareness, not health) and gives two to three health metrics with a first-quarter target. Saved to .vital/community.md.",
+      "assertions": [
+        "Output names the community's primary job (e.g. contribution) among the listed purposes rather than leaving it undefined",
+        "Recommends one primary platform (GitHub for OSS) plus at most one or two satellites, with rationale, not a spread across many platforms",
+        "Designs the contributor funnel (user, engaged user, first-time contributor, repeat contributor, maintainer) and addresses friction at each step",
+        "Drafts concrete OSS assets requested/implied: at least a CONTRIBUTING.md and good-first-issues on-ramp, plus code of conduct",
+        "Explicitly distinguishes vanity from health (stars are awareness, not health) and names two to three health metrics with a realistic first-quarter target",
+        "Includes a time-to-first-response target on issues/PRs, reflecting that slow response is the top contributor killer"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We want a private customer community for Northwind, an enterprise supply-chain platform used by large manufacturers. Our CSMs think it'll help retention. What should we build?",
+      "expected_output": "Anchors to the enterprise segment: a curated customer community / user group (private Slack, advisory board, executive roundtables) rather than a large public Discord, notes the overlap with the reference program in customer-marketing, defines purpose, a minimal channel/structure, a seeding plan starting with power users, compounding rituals, and health metrics with targets.",
+      "assertions": [
+        "Recommendation matches the enterprise segment: a curated customer community / user group (private Slack, advisory board, or executive roundtables) rather than a large public server",
+        "Output names the primary community job (e.g. support, retention, or product feedback) driving the design",
+        "Notes the overlap with the reference program in customer-marketing",
+        "Provides a seeding/early-growth plan that starts with existing power users/design partners and ensures early messages get responses, not opening a large empty room",
+        "Channel/structure is kept minimal (start small, add channels on real need) with an onboarding/welcome flow and a code of conduct / moderation path",
+        "Names two to three health metrics that fit this community's job with a realistic first-quarter target"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Should we spin up a Discord, a Slack, a subreddit, and a Discourse forum for our new prosumer video-editing app Cutloop so we're everywhere at launch?",
+      "expected_output": "Pushes back on fragmenting across four platforms at launch; recommends one primary home plus at most one or two satellites chosen from where the prosumer audience already is and the community's job, warns that a quiet/empty room reads as abandoned, and provides a seeding plan, onboarding first-action, rituals, recognition systems, and health metrics for the small-business/prosumer segment. Names the primary purpose.",
+      "assertions": [
+        "Output rejects launching on all four platforms and recommends one primary home plus at most one or two satellites with rationale",
+        "Platform choice is justified by where the prosumer audience already is and the community's job, not novelty or being 'everywhere'",
+        "Warns against opening a large empty community publicly because a quiet room reads as abandoned, and provides a seeding plan starting with power users/design partners",
+        "Defines an onboarding flow with a clear first action for new members and a code of conduct / moderation approach",
+        "Programs fit the small-business/prosumer segment (lighter-weight, social, creator-style; recognition and events drive stickiness)",
+        "Names the primary community purpose and two to three health metrics with a first-quarter target"
+      ]
+    }
+  ]
+}

@@ -50,4 +50,4 @@ Market to existing customers to drive expansion and retention: onboarding/adopti
 
 ## Output
 
-Deliver: the proof map, drafted case studies (with interview questions) and cutdowns, a testimonial-capture system and bank, a review-generation program, an enterprise reference program where relevant, an advocacy/community plan, and expansion/retention campaigns. Keep every claim traceable to a real, consenting customer — no invented quotes, metrics, or logos, and respect review-site rules. Include a Sources section for review research. Save the assets and programs to the project.
+Deliver: the proof map, drafted case studies (with interview questions) and cutdowns, a testimonial-capture system and bank, a review-generation program, an enterprise reference program where relevant, an advocacy/community plan, and expansion/retention campaigns. Keep every claim traceable to a real, consenting customer — no invented quotes, metrics, or logos, and respect review-site rules. Include a Sources section for review research. Save the assets and programs to `.vital/customer-marketing.md`.

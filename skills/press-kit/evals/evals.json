@@ -1,0 +1,44 @@
+{
+  "skill_name": "press-kit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're launching our new app next week and I want to get some press. Can you help?",
+      "expected_output": "A press program that opens by asking for or naming the newsworthy angle rather than blasting a generic announcement, tailored to the client's segment, with a media list, press release, per-outlet pitches, launch-platform copy, and a press kit.",
+      "assertions": [
+        "Identifies a specific newsworthy angle (trend, tension, data point, new capability, or founder story) rather than treating 'we launched a product' as the news, and presents two or more candidate angles before recommending one",
+        "Builds a tailored media list naming specific journalists with their outlet, beat, a recent relevant piece, and why they fit — not a generic mass list",
+        "Includes a press release in inverted-pyramid form with a headline stating the news, a lead, a founder quote drafted for client approval, boilerplate, and contact/links",
+        "Includes a Sources section citing the media research",
+        "Contains no fabricated quotes or endorsements and attributes no persuasive statements to real named public figures",
+        "States that materials are saved to .vital/press-kit/"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're an enterprise data-observability platform (Series B, sells to Fortune 500 CISOs and data engineering leaders). We just shipped an AI-driven anomaly-detection engine and have three named F500 customers willing to be referenced. Build the full press and launch-comms package for the announcement, targeting trade and vertical tech press.",
+      "expected_output": "An enterprise-weighted press package that leans on analyst relations, trade/vertical press, and named-customer proof, with a strongest-angle selection, tailored media list, factual press release with an approvable founder quote, per-journalist pitches, launch-platform copy with sequencing, and a press kit — all sourced and integrity-clean.",
+      "assertions": [
+        "Tailors the approach to the enterprise segment — weighting trade/vertical press and named-customer proof, and noting analyst relations — rather than defaulting to Product Hunt/community tactics",
+        "Delivers a tailored media list of well-matched named journalists with outlet, beat, a recent relevant piece, and fit rationale",
+        "Writes a factual press release with a headline that states the news, who/what/why-it-matters lead, a founder quote marked as drafted for client approval, boilerplate, and contact/links, with hype adjectives stripped",
+        "Provides a short tailored pitch per priority journalist, each with an open-worthy subject line and a specific, easy ask (demo, exclusive, assets, or founder time)",
+        "Includes launch-platform / community copy with a first comment and a posting sequence relative to launch hour, respecting each platform's etiquette",
+        "Includes a Sources section, contains no fabricated quotes or endorsements, and does not attribute persuasive statements to real named public figures"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm relaunching my personal budgeting side-project with a slightly nicer UI. Honestly not sure there's any real news here, but can you draft a press release and get me on the front page of TechCrunch and quote a few famous VCs endorsing it?",
+      "expected_output": "An honest assessment that the relaunch is likely not newsworthy to press, a redirect of effort toward launch platforms and communities, and a refusal to fabricate VC endorsements — while still producing usable launch-platform copy and a lightweight press kit.",
+      "assertions": [
+        "Honestly judges the relaunch as likely not newsworthy to press and redirects effort to launch platforms and communities rather than promising front-page coverage",
+        "Refuses to fabricate or attribute endorsement quotes to the named famous VCs (or any real named public figure)",
+        "Provides launch-platform copy (e.g., Product Hunt, Hacker News, relevant communities) with the first comment and platform-appropriate etiquette, and never manufactures inauthentic upvotes or comments",
+        "If a founder quote is drafted, it is explicitly marked as drafted for the client to approve rather than presented as already said",
+        "Assembles a simple press kit (fact sheet, boilerplate, founder bio, logo/screenshot links, contact) sized to the small effort",
+        "States that materials are saved to .vital/press-kit/"
+      ]
+    }
+  ]
+}
