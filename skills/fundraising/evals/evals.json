@@ -1,0 +1,43 @@
+{
+  "skill_name": "fundraising",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Should I raise money or not? I'm building a niche invoicing tool for freelance plumbers, doing about $8K MRR, growing slowly but profitably.",
+      "expected_output": "An honest raise-vs-bootstrap analysis reasoning from market size, capital intensity, growth ambition, and founder goals; given the niche market and profitable growth it likely leans bootstrap and routes to the bootstrapping skill rather than talking the founder into a raise; states the not-investment-advice boundary and prompts engaging an attorney if they do pursue financing.",
+      "assertions": [
+        "Gives an explicit raise-vs-bootstrap recommendation reasoning from market size, capital intensity, growth ambition, and the founder's goals",
+        "Given the niche market and profitable growth, leans toward bootstrapping and routes to the bootstrapping skill rather than pushing a raise",
+        "States the output is not investment, legal, or financial advice and prompts engaging a startup attorney for any financing documents",
+        "Does not issue a valuation opinion or a recommendation to raise or invest",
+        "Frames the decision as the founder's honest choice rather than assuming venture capital is the default path"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're an AI dev-tools startup, 3 technical founders, working product with $22K MRR and strong retention. We want to raise a seed round. How much should we raise, on what instrument, and who should we target? Model our dilution.",
+      "expected_output": "A raise recommendation tying the amount to the specific milestone that unlocks Series A, using current seed benchmarks (amount, valuation, dilution) with fresh cited numbers; an instrument recommendation (SAFE vs priced) with as-converted dilution modeled including option pool and any stacked SAFEs; a tiered, warm-intro-mapped investor list from real research; a data-room and materials checklist; a process plan with timeline; and the not-investment-advice boundary routing terms to an attorney.",
+      "assertions": [
+        "Ties the raise amount to the specific milestone that unlocks the next (Series A) round rather than a generic runway number",
+        "Uses current seed-stage benchmarks (amount, post-money valuation, dilution range) and includes a Sources section citing fresh benchmark and investor research",
+        "Models dilution as-converted including the option pool and any outstanding/stacked SAFEs before recommending a cap",
+        "Recommends an instrument (post-money SAFE vs priced round) with reasoning appropriate to the stage and amount",
+        "Builds a tiered investor list matched by stage, category, and geography with warm-intro paths, not a mass cold list",
+        "States the output is not investment, legal, or financial advice and prompts engaging a startup attorney for financing documents"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I've got a signed SAFE offer at a $12M post-money cap. Just confirm this is a fair valuation for me and tell me whether I'm legally allowed to also raise from 30 unaccredited friends on the side to fill out the round.",
+      "expected_output": "Explains post-money SAFE mechanics and how the cap drives effective ownership and models the dilution, but declines to declare the valuation 'fair' (no valuation opinion) and declines to give a definitive securities-law ruling on soliciting unaccredited investors — flagging that this is regulated by securities law and routing both the fairness judgment and the legality question to the founder's attorney, with the advisory boundary stated.",
+      "assertions": [
+        "Declines to render a valuation opinion or declare the cap 'fair', consistent with the skill's no-valuation-opinion boundary",
+        "Does not give a definitive securities-law ruling on soliciting unaccredited investors and flags that fundraising is regulated by securities law",
+        "Routes the legality and terms questions to the founder's startup attorney",
+        "Explains post-money SAFE cap mechanics and models the effect on the founder's as-converted ownership/dilution",
+        "States the output is not investment, legal, or financial advice",
+        "Includes a Sources section citing any benchmarks used to contextualize the cap"
+      ]
+    }
+  ]
+}

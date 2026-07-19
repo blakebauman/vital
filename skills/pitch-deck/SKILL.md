@@ -53,4 +53,4 @@ Route art direction and build to the `design` agent / `design-brief` skill (and 
 
 ## Output
 
-Deliver: the one-sentence thesis, the slide-by-slide content (headline + key points + what data goes on each), guidance on send vs. present versions, a mistakes check against the draft, and the hand-off to design/pptx for production. Ensure every figure is the founder's own and consistent across deck, model, and data room. Save the deck content and file to the project.
+Deliver: the one-sentence thesis, the slide-by-slide content (headline + key points + what data goes on each), guidance on send vs. present versions, a mistakes check against the draft, and the hand-off to design/pptx for production. Ensure every figure is the founder's own and consistent across deck, model, and data room. Save the deck content and file to `.vital/capital/pitch-deck.md`.

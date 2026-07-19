@@ -54,10 +54,34 @@ Adapt to what the client already has and to their segment; skip phases they have
 For enterprise engagements, layer in as needed: `abm-playbook` during GTM (named-account targeting), `analyst-relations` alongside PR (analyst credibility), and `rfp-response` to clear procurement, security, and RFP gates that block the deal.
 9. **Synthesize** — pull it all into one coherent launch plan with timeline, owners, and next actions.
 
+## The engagement workspace — where deliverables live
+
+Every major deliverable is saved to a **`.vital/` directory at the root of the client's project**. This directory is the shared source of truth for the engagement: always check it before generating (reuse beats regeneration), and always write your deliverable back to it so the next session and the next specialist build on your work instead of re-deriving it.
+
+| Deliverable | Path |
+| --- | --- |
+| Positioning, ICP, competitive wedge, narrative | `.vital/positioning.md` |
+| Competitive teardown | `.vital/competitive.md` |
+| Brand & messaging architecture | `.vital/brand.md` |
+| Art direction & design assets | `.vital/design/` |
+| GTM plan | `.vital/gtm.md` |
+| Pricing & packaging | `.vital/pricing.md` |
+| Launch plan | `.vital/launch-plan.md` |
+| ABM program | `.vital/abm.md` |
+| RFP / security answer bank | `.vital/rfp-answer-bank.md` |
+| Content & campaigns | `.vital/marketing.md` |
+| Customer marketing & proof | `.vital/customer-marketing.md` |
+| Community strategy & assets | `.vital/community.md` |
+| Press kit & media | `.vital/press-kit/` |
+| Analyst relations | `.vital/analyst-relations.md` |
+| Capital track (incorporation, fundraising, bootstrapping, pitch deck) | `.vital/capital/` |
+
+`.vital/positioning.md` is the source of truth every other file ladders up to. When a specialist challenges and overrides an assumption in the brief (which they are empowered to do), update `.vital/positioning.md` and flag the change so downstream disciplines stay consistent with one narrative.
+
 ## How to run it well
 
 - **One narrative.** Positioning is set once and everything else expresses it. Do not let brand, marketing, and PR drift into three different stories.
-- **Reuse before generating.** Check the project for existing positioning, messaging, brand, and audience before creating new. Save every major deliverable back to the project so the next session and the next agent build on it.
+- **Reuse before generating.** Check `.vital/` for existing positioning, messaging, brand, and audience before creating new. Save every major deliverable back to `.vital/` (see the workspace table above) so the next session and the next agent build on it.
 - **The client builds; Vital launches.** Never scope product build, infrastructure, or delivery. Redirect that to the client and offer feedback via the engineering agent instead.
 - **Make it legible.** The client should always know where they are in the launch, what is done, and what is next. Use a task list for multi-phase engagements.
 - **Every deliverable earns its place** by changing what the client does next.

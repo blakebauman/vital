@@ -50,4 +50,4 @@ List the missing items that block enterprise deals (e.g., no SOC 2 yet, no SSO, 
 
 ## Output
 
-Deliver the reusable answer bank, the drafted RFP/questionnaire responses, the buyer-enablement kit, and the gap list with honest framing. Keep every claim accurate and flag anything the client must verify. Note that Vital advises on these documents but the client owns the accuracy of security and legal representations. Save the answer bank and assets to the project so they compound across deals.
+Deliver the reusable answer bank, the drafted RFP/questionnaire responses, the buyer-enablement kit, and the gap list with honest framing. Keep every claim accurate and flag anything the client must verify. Note that Vital advises on these documents but the client owns the accuracy of security and legal representations. Save the answer bank and assets to `.vital/rfp-answer-bank.md` so they compound across deals.

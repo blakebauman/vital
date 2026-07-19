@@ -51,4 +51,4 @@ Note the two or three most likely things to go wrong (site down, low traction, n
 
 ## Output
 
-Deliver a launch plan with type/goal, message and CTA, channel plan, asset checklist with owners, a dated three-window timeline, readiness checks, and contingencies. Consider delivering it as a shareable HTML tracker the client will revisit. Offer to set up scheduled reminders for key launch milestones. Save the plan to the project.
+Deliver a launch plan with type/goal, message and CTA, channel plan, asset checklist with owners, a dated three-window timeline, readiness checks, and contingencies. Consider delivering it as a shareable HTML tracker the client will revisit. Offer to set up scheduled reminders for key launch milestones. Save the plan to `.vital/launch-plan.md`.

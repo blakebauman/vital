@@ -46,4 +46,4 @@ Translate the plan into a concrete 90-day action list: what to do, in what order
 
 ## Output
 
-Deliver: chosen motion with rationale, ranked channels with first tests, pricing and packaging, the funnel with leak points, the phased launch sequence, and a 90-day action list. Everything should be actionable this quarter. For the launch phase specifically, hand off to the `launch-plan` skill. Save the plan to the project.
+Deliver: chosen motion with rationale, ranked channels with first tests, pricing and packaging, the funnel with leak points, the phased launch sequence, and a 90-day action list. Everything should be actionable this quarter. For the launch phase specifically, hand off to the `launch-plan` skill. Save the plan to `.vital/gtm.md`.

@@ -1,0 +1,44 @@
+{
+  "skill_name": "launch-plan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "we're doing a Product Hunt launch for Snipbo next tuesday - it's a free desktop app that turns screen recordings into GIFs. help me not forget anything. it's just me and one cofounder.",
+      "expected_output": "A fast, single-moment small-business/community-driven launch plan for a Product Hunt launch that defines type and one primary goal, one message and CTA, a channel plan timed to launch hour, an asset checklist with owners, a three-window dated timeline, readiness checks, and contingencies.",
+      "assertions": [
+        "Identifies the launch type (platform launch / Product Hunt) and states one primary goal metric (e.g. upvotes or signups) with any secondary goals subordinate",
+        "States a single launch message and one primary call to action",
+        "Includes a channel plan covering owned, earned (communities / launch platform), and any paid, with timing relative to launch hour",
+        "Provides an asset checklist with an owner and status for each item (launch page, post, email, social graphics, PH copy/media, demo/video)",
+        "Builds a dated timeline across all three windows: pre-launch, launch day (hour by hour), and post-launch",
+        "Includes go/no-go readiness checks and 2-3 named contingencies each with a pre-agreed response"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Plan the launch for Cascade, our new real-time collaboration feature inside our existing mid-market project-management SaaS. Target launch date is March 12. Primary goal is feature adoption among existing accounts, secondary is a handful of expansion conversations. It's a public moment but our sales team should follow up with accounts that engage. Brand messaging is done.",
+      "expected_output": "A mid-market feature-launch plan that blends a public moment with a sales-assist follow-through, sets adoption as the primary goal, sequences owned/earned/paid channels around March 12, lists assets with owners, and includes a dated timeline plus readiness and contingencies.",
+      "assertions": [
+        "Defines the launch type (big feature) and names feature adoption as the single primary goal with the expansion conversations as an explicitly subordinate secondary goal",
+        "Launch shape blends a public moment with sales-assist follow-through, consistent with the mid-market segment",
+        "Channel plan lists each channel (owned, earned, paid) with the asset, message adaptation, and timing relative to launch hour, anchored to the March 12 date",
+        "Asset checklist assigns an owner and status to every asset and routes creative/press/copy to the appropriate sibling skills where relevant",
+        "Timeline is dated across pre-launch, launch day hour-by-hour, and post-launch (including the sales follow-up on engaged accounts)",
+        "Includes go/no-go readiness checks and 2-3 contingencies with pre-agreed responses"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We need a launch plan for Sentinel, our enterprise IoT security platform. I want to hit Product Hunt and go big-bang public on one day. Buyers are enterprise security teams at manufacturers and the sales cycle is long with procurement and security review. Give me the plan.",
+      "expected_output": "The plan should push back on the single-day big-bang framing for an enterprise product and instead scale to a longer phased launch (design partners, pilots, GA) gated by security/procurement and paired with analyst briefings, while still covering message, channels, assets, timeline, readiness, and contingencies.",
+      "assertions": [
+        "Recognizes the mismatch between a one-day Product Hunt big-bang and a long enterprise sales cycle, and recommends a longer phased launch (design partners, pilots, GA) rather than a single consumer-style moment",
+        "Reflects enterprise gating: security/procurement dependencies and analyst/press briefings are part of the plan",
+        "Still states one primary goal metric appropriate to enterprise (e.g. qualified pipeline / pilots) with secondary goals subordinate",
+        "Provides a channel plan and an asset checklist with owners and status for each asset",
+        "Builds a dated three-window timeline (pre-launch, launch day, post-launch) reflecting the phased shape",
+        "Includes go/no-go readiness checks and 2-3 named contingencies with pre-agreed responses"
+      ]
+    }
+  ]
+}

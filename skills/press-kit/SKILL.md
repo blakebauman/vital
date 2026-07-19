@@ -41,4 +41,4 @@ Assemble the simple kit: fact sheet, boilerplate, founder bio, logo/screenshot l
 
 ## Output
 
-Deliver the chosen angle, a tailored media list with rationale and sources, the press release, per-outlet pitches, launch-platform copy, and the press-kit contents. Keep everything verifiable and free of fabricated quotes or endorsements; do not attribute persuasive statements to real named public figures. Include a Sources section for media research. Save materials to the project.
+Deliver the chosen angle, a tailored media list with rationale and sources, the press release, per-outlet pitches, launch-platform copy, and the press-kit contents. Keep everything verifiable and free of fabricated quotes or endorsements; do not attribute persuasive statements to real named public figures. Include a Sources section for media research. Save materials to `.vital/press-kit/`.

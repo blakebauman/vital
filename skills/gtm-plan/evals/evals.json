@@ -1,0 +1,44 @@
+{
+  "skill_name": "gtm-plan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "how do i actually get customers for my thing? it's PixelPatch, a $9/month browser extension that auto-fixes broken images and layout bugs on your own website. positioning is basically: for indie web devs who hate manual QA, it catches visual regressions automatically. mostly solo devs and tiny agencies.",
+      "expected_output": "A go-to-market plan for a low-priced, self-serve small-business/PLG product that picks product-led as the dominant motion, ranks channels with concrete first tests, recommends transparent monthly pricing, maps the funnel with leak points, sequences a launch, and gives a 90-day action list.",
+      "assertions": [
+        "Selects a dominant motion (product-led / self-serve is the fit here) and justifies it from the low price point, simple buyer, and small-business segment",
+        "Lists candidate acquisition channels ranked by ICP fit, recommends testing only one or two first, and for each gives a hypothesis, a first test, and the signal that it is working",
+        "Recommends a pricing model and value metric and anchors to willingness-to-pay rather than cost-plus",
+        "Maps the funnel stage by stage and explicitly identifies the one or two stages most likely to leak",
+        "Includes a phased launch sequence with a go/no-go signal for each phase",
+        "Ends with a concrete 90-day action list where each action names the metric it moves"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build a GTM plan for Rampart, a vendor-risk-management platform we sell to enterprise security and compliance teams at banks and insurers. ACV target is ~$120k/year, sales cycles run 4-6 months with procurement and a SOC 2 / security review, and the buying committee is a CISO, a compliance lead, and procurement. Positioning and ICP are already done. Assume annual contracts.",
+      "expected_output": "A GTM plan for a high-ACV enterprise product that chooses a sales-led/ABM motion with pilots and procurement, ranks enterprise-appropriate channels, recommends negotiated annual pricing anchored to value, maps a long funnel with leak points, and sequences a phased design-partner-to-GA launch.",
+      "assertions": [
+        "Chooses a sales-led (or ABM) motion and justifies it from the ~$120k ACV, complex multi-stakeholder buyer, and enterprise segment — not product-led",
+        "Channels and funnel account for enterprise realities: pilots/design partners, procurement, and a security/SOC 2 review stage",
+        "Pricing recommendation reflects enterprise norms (annual contracts, negotiated/value-based, a list price to anchor from) rather than a self-serve monthly plan",
+        "Funnel maps the multi-month path across the buying committee (CISO, compliance, procurement) and names the leakiest stages",
+        "Launch sequence is phased (e.g. design partners then pilots then GA) with explicit go/no-go signals per phase",
+        "Includes a 90-day action list tied to metrics, actionable this quarter"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Can you put together a go-to-market plan for Bloomwrite, our AI writing assistant for mid-market marketing teams? Quick heads up: we don't really have positioning written down yet, we just have a rough idea of what it does.",
+      "expected_output": "The skill should recognize that positioning and ICP are missing and either run/insist on the positioning skill first or explicitly establish positioning before proceeding, then deliver a hybrid mid-market GTM plan with land-and-expand packaging.",
+      "assertions": [
+        "Recognizes that positioning and ICP are a prerequisite and either directs to the positioning skill first or explicitly establishes positioning/ICP before building the plan, rather than silently skipping it",
+        "Once proceeding, selects a motion appropriate to mid-market (hybrid self-serve plus sales-assist / land-and-expand) and justifies it from segment",
+        "Ranks channels with a hypothesis, first test, and success signal for each recommended channel",
+        "Recommends pricing and packaging with a named value metric and a land-and-expand structure suited to mid-market",
+        "Maps the funnel end to end and identifies the one or two stages most likely to leak",
+        "Delivers a phased launch sequence and a 90-day action list where each action names the metric it moves"
+      ]
+    }
+  ]
+}

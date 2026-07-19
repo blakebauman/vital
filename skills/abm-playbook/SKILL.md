@@ -48,4 +48,4 @@ Recommend account-level metrics, not lead volume: account engagement/coverage (h
 
 ## Output
 
-Deliver the account profile, a tiered target list with scoring logic, buying-committee maps for Tier 1, a play library mapped to roles and stages, the marketing-sales orchestration model, the personalized content list, and account-level metrics. Consider delivering the target list and account plans as a spreadsheet (xlsx skill) or shareable tracker. Save the program to the project.
+Deliver the account profile, a tiered target list with scoring logic, buying-committee maps for Tier 1, a play library mapped to roles and stages, the marketing-sales orchestration model, the personalized content list, and account-level metrics. Consider delivering the target list and account plans as a spreadsheet (xlsx skill) or shareable tracker. Save the program to `.vital/abm.md`.

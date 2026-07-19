@@ -52,7 +52,7 @@ Give step-followable directions: which Express template type to start from, how 
 
 ## Output
 
-Deliver the art-direction summary (with the impeccable direction dimensions named) plus a build-ready brief (or produced asset) for each item, with Adobe Express/Adobe directions, exact dimensions, and export formats. Run the anti-slop checklist before shipping any asset. Keep every asset within one visual system. Deliver files with SendUserFile; for a landing page or reusable tracker, consider persisting it as an artifact. Save the art direction to the project.
+Deliver the art-direction summary (with the impeccable direction dimensions named) plus a build-ready brief (or produced asset) for each item, with Adobe Express/Adobe directions, exact dimensions, and export formats. Run the anti-slop checklist before shipping any asset. Keep every asset within one visual system. Deliver files with SendUserFile; for a landing page or reusable tracker, consider persisting it as an artifact. Save the art direction and assets to `.vital/design/`.
 
 ## Additional resources
 

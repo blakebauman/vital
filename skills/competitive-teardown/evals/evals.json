@@ -1,0 +1,44 @@
+{
+  "skill_name": "competitive-teardown",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "who are my competitors? i'm building Sprig, a scheduling app for solo house cleaners and handymen to book jobs and take deposits",
+      "expected_output": "A competitive teardown for a small-business/solo-operator product that lists competitors across direct, adjacent, and status-quo rings, researches each from real public sources with citations, plots a positioning map, and names a defensible wedge even for a vague brief.",
+      "assertions": [
+        "Organizes competitors into three explicit rings: direct, adjacent, and status quo (e.g. pen-and-paper / texting / free calendar as the do-nothing)",
+        "Names at least 3 real, specific competitor products (not generic categories) and gives a per-competitor breakdown covering positioning, target customer, and pricing",
+        "Includes a positioning map with two named axes chosen to expose an opening, and states where the white space is",
+        "Names a specific, defensible wedge for Sprig rather than a generic 'be better' claim",
+        "Includes a Sources section with cited URLs for the competitor pages referenced, and flags anything that could not be verified",
+        "Includes a watch-outs section noting the strongest competitor's likely response and any moats"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Run a competitive teardown for Cohere Notes, a note-taking and knowledge tool aimed at mid-market product and engineering teams (50-500 people). Direct rivals I know of are Notion, Confluence, and Coda; people also just use Google Docs and Slack threads. I want to know where everyone sounds the same on messaging and where the pricing anchors sit so we can find an angle.",
+      "expected_output": "A detailed competitive teardown that researches Notion, Confluence, Coda and the Google-Docs/Slack status quo from real sources, compares messaging clichés and pricing anchors explicitly, plots a positioning map, and names the wedge with honesty about crowding.",
+      "assertions": [
+        "Researches each named competitor (Notion, Confluence, Coda) with sourced detail on positioning/tagline, category claimed, and pricing/packaging",
+        "Includes the Google-Docs-plus-Slack workflow as the status-quo ring competitor",
+        "Contains a message comparison that explicitly identifies the shared clichés / where rivals sound the same, framing that sameness as an opening",
+        "Summarizes each competitor's pricing model and anchor price points in a comparison",
+        "Names a specific wedge and is honest if the market is crowded and the wedge is narrow",
+        "Includes a Sources section citing every competitor page referenced with URLs"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're Vero, an AI-driven clinical-documentation assistant for large hospital systems. I genuinely think we're first to market for our exact use case, so I'm not sure a competitor teardown even makes sense — do it anyway and tell me what we're really up against.",
+      "expected_output": "An enterprise competitive teardown that resists the 'no competitors' framing by surfacing adjacent players and the status quo (existing scribe services, incumbent EHR modules, manual dictation), researches real named entities with sources, and names the true competitor which is usually inertia.",
+      "assertions": [
+        "Rejects the 'no competitors' premise by populating the adjacent and status-quo rings even when the direct ring is thin (e.g. medical scribe services, incumbent EHR documentation modules, manual dictation)",
+        "Names at least 3 real, specific companies or products/incumbents rather than asserting the market is empty",
+        "Identifies the status quo / inertia as a primary competitor for an enterprise buyer",
+        "Includes a positioning map with named axes showing where Vero can claim white space",
+        "Includes watch-outs about incumbents' likely response and moats (distribution, EHR integrations, data)",
+        "Includes a Sources section with citations and flags any competitor detail that could not be verified rather than inventing it"
+      ]
+    }
+  ]
+}

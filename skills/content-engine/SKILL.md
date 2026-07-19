@@ -28,7 +28,7 @@ Produce a concrete, dated calendar: for each slot, the date, channel, format, wo
 
 ## 4. Campaign build (when a campaign is the ask)
 
-For a launch or feature campaign: the objective and success metric, the single message, and the sequenced assets across channels with timing. Draft the key pieces — email subject lines and body, social posts, ad copy variants — in the brand voice.
+For a launch or feature campaign: the objective and success metric, the single message, and the sequenced assets across channels with timing. Before drafting any copy the client will publish in their own name, check for a saved `my-writing-style` profile and match it when one exists — first-person copy in the wrong voice reads as inauthentic and gets rewritten. State whether you found and used one; if there is none, draft in the brand voice, say so, and offer to capture a writing-style profile. Draft the key pieces — email subject lines and body, social posts, ad copy variants — accordingly.
 
 ## 5. SEO (when relevant)
 
@@ -44,4 +44,4 @@ Identify at least one loop where output feeds input (referral, user-generated co
 
 ## Output
 
-Deliver the objective and funnel map, content pillars, a dated calendar, and the specific campaign/SEO/email/social plans requested — with real draft copy where it helps and the metric each program moves. Route graphics to the `design-brief` skill. Consider delivering the calendar as a spreadsheet (xlsx skill) or a shareable tracker. Offer to set up recurring scheduled tasks for ongoing content cadence. Save the plan to the project.
+Deliver the objective and funnel map, content pillars, a dated calendar, and the specific campaign/SEO/email/social plans requested — with real draft copy where it helps and the metric each program moves. When you draft first-person copy, note whether a `my-writing-style` profile was found and used. Route graphics to the `design-brief` skill. Consider delivering the calendar as a spreadsheet (xlsx skill) or a shareable tracker. Offer to set up recurring scheduled tasks for ongoing content cadence. Save the plan to `.vital/marketing.md`.

@@ -61,4 +61,4 @@ Recommend how to validate: qualitative willingness-to-pay conversations, Van Wes
 
 ## Output
 
-Deliver: the value metric, the recommended model with rationale, a willingness-to-pay estimate with cited comparisons, the tier/packaging structure with feature fences and free/trial decision, specific starting price points, the expansion and discounting stance, and a test plan. Consider delivering the tier comparison as a pricing-page table (design-brief for the visual) or a spreadsheet (xlsx skill). Include a Sources section for competitor pricing. Save the pricing model to the project.
+Deliver: the value metric, the recommended model with rationale, a willingness-to-pay estimate with cited comparisons, the tier/packaging structure with feature fences and free/trial decision, specific starting price points, the expansion and discounting stance, and a test plan. Consider delivering the tier comparison as a pricing-page table (design-brief for the visual) or a spreadsheet (xlsx skill). Include a Sources section for competitor pricing. Save the pricing model to `.vital/pricing.md`.

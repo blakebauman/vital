@@ -21,7 +21,7 @@ Establish, asking only what you cannot infer from context or prior work:
 - What those people use today instead (including "do nothing").
 - Any traction, feedback, or usage signals that already exist.
 
-Tailor depth and framing to the **client's segment** (enterprise / mid-market / small business) — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. For enterprise, separate the user, economic buyer, and champion and map the buying committee; for mid-market, expect one primary buyer who is also a heavy user; for small business, nail one persona and one job.
+Tailor depth and framing to the **client's segment** (enterprise / mid-market / small business) — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. For enterprise, separate the user, economic buyer, and champion and map the buying committee; for mid-market, center a primary buyer who is also a heavy user, mapping the small committee (2–3) around them when they can block; for small business, nail one persona and one job.
 
 ## 2. ICP definition
 
@@ -60,4 +60,4 @@ State the single strongest argument against this positioning and answer it hones
 
 ## Output
 
-Deliver: ICP definition, competitive frame with the wedge named, the positioning statement (both forms), PMF framing, and the narrative paragraph. Be concrete — name real competitors and real segments. Strike empty adjectives ("innovative", "seamless", "next-generation"). For a deeper competitor pass, use the `competitive-teardown` skill. Save the final positioning to the project so brand, GTM, marketing, and PR can build on it.
+Deliver: ICP definition, competitive frame with the wedge named, the positioning statement (both forms), PMF framing, and the narrative paragraph. Be concrete — name real competitors and real segments. Strike empty adjectives ("innovative", "seamless", "next-generation"). For a deeper competitor pass, use the `competitive-teardown` skill. Save the final positioning to `.vital/positioning.md` so brand, GTM, marketing, and PR can build on it.

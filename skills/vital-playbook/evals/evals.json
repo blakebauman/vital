@@ -1,0 +1,44 @@
+{
+  "skill_name": "vital-playbook",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've built a product and I want to take it to market. Where do we start?",
+      "expected_output": "An intake-first engagement that establishes the client's segment, runs intake to learn the product/ICP/timeline/what exists, names the explicit phase sequence it will run, and ends with concrete next actions and owners.",
+      "assertions": [
+        "Runs intake first — asking about the product, the ICP, what 'launch' means here, the timeline, effort appetite, and what already exists",
+        "Explicitly establishes the client's segment (enterprise / mid-market / small business) and notes it changes the motion, stakeholders, timeline, and deliverables",
+        "Names an explicit ordered phase sequence (e.g., strategy, brand, design, GTM, marketing & PR, launch, engineering check, synthesize) so the client sees the plan",
+        "Commits to reusing existing positioning, messaging, brand, and audience before generating new, with positioning as the single source of truth, rather than regenerating from scratch",
+        "Does not scope product build, infrastructure, or delivery, redirecting that to the client with engineering as advisory feedback",
+        "Ends with concrete next actions and owners rather than an open-ended summary"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're an enterprise cybersecurity platform (sells to Fortune 500 CISOs, 9-month sales cycles, procurement and InfoSec gates). We have rough positioning already. Run a full Vital go-to-market engagement to launch our new product line.",
+      "expected_output": "An enterprise-segment engagement that adapts the sequence to buying committees and gate-clearing, reuses existing positioning, layers in ABM, analyst relations, and RFP-response, coordinates specialist agents/skills, and ends with a synthesized plan with owners and next actions.",
+      "assertions": [
+        "Establishes the segment as enterprise and adapts the motion to buying committees, procurement, security/compliance, analyst relations, and a long sales-led launch",
+        "Names an explicit ordered phase sequence and adapts it to reuse the existing positioning rather than regenerating it",
+        "Layers in the enterprise gate-clearing skills — abm-playbook during GTM, analyst-relations alongside PR, and rfp-response for procurement/security/RFP gates",
+        "Coordinates the specialist agents/skills across disciplines (strategy, brand, design, GTM, marketing, PR) as one narrative rather than siloed outputs, with positioning as source of truth",
+        "Runs the pre-launch engineering advisory check for launch-readiness and technical-claim review",
+        "Ends by synthesizing everything into one coherent launch plan with timeline, owners, and concrete next actions"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I run a two-person small-business SaaS for local gyms. My advisor says we need buying-committee maps, an analyst-relations program, and a formal procurement process before we launch. Set that up.",
+      "expected_output": "A segment-appropriate correction that a small business should not run an enterprise process, a leaner product-led self-serve motion, a named phase sequence adapted to small business, and concrete next actions with owners.",
+      "assertions": [
+        "Establishes the segment as small business and explicitly declines to impose an enterprise process (buying committees, analyst relations, formal procurement) that does not fit",
+        "Recommends a leaner, product-led, self-serve, fast motion applying the same rigor at smaller scale rather than enterprise gate-clearing skills",
+        "Names an explicit ordered phase sequence adapted to the small-business segment, skipping phases the client has covered",
+        "Keeps positioning as the single source of truth and commits to reusing existing work before generating new",
+        "Does not scope product build and keeps engineering advisory only",
+        "Ends with concrete next actions and owners for the leaner engagement"
+      ]
+    }
+  ]
+}

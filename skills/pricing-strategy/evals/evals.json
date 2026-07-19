@@ -1,0 +1,44 @@
+{
+  "skill_name": "pricing-strategy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "hey can you help me figure out pricing for my app? it's called Trailmix, a habit-tracker for regular people on their phone. no idea what to charge or if i should have a free plan",
+      "expected_output": "A pricing and packaging recommendation for a small-business/consumer self-serve app that identifies a value metric, picks a model, estimates willingness to pay with cited comparisons, designs good-better-best tiers with a deliberate free/trial decision, gives specific charm-priced numbers, and frames them as a hypothesis.",
+      "assertions": [
+        "Identifies a specific value metric before recommending a model, and explains why it scales with value received",
+        "Recommends a pricing model with rationale tied to the consumer/small-business self-serve segment (transparent, low entry price, monthly option, minimal decision friction)",
+        "Makes a deliberate free / trial / freemium decision and justifies free as a customer-acquisition strategy with real cost rather than defaulting to it",
+        "Estimates willingness to pay from alternatives and competitor prices, with a cited Sources section for competitor pricing",
+        "Recommends specific starting price points with the psychology (e.g. charm pricing, anchoring, annual-vs-monthly) and explicitly frames the price as a hypothesis to iterate, not permanent",
+        "Designs a tier structure (typically good-better-best) with feature fences chosen so buyers self-select up as they grow"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design pricing for Fathom, a usage-heavy data-pipeline platform for mid-market data teams (companies 100-1000 employees). Value clearly scales with rows processed. Competitors are Fivetran (usage-based on monthly active rows), Airbyte (credits), and Stitch (tiered on rows). We want a transparent self-serve entry with a clear contact-sales path for the top tier. What model, tiers, and numbers?",
+      "expected_output": "A precise pricing model for a mid-market usage-based product that names rows as the value metric, recommends a usage or hybrid model with tradeoffs, benchmarks the cited competitors, designs transparent land-and-expand tiers with a contact-sales top tier, gives numbers, and sets an expansion and discounting stance.",
+      "assertions": [
+        "Names the value metric (rows processed / active rows) and confirms it aligns price with value and grows with the account",
+        "Recommends a usage-based or hybrid model and states the trade-off it imposes on predictability, expansion, and sales friction",
+        "Benchmarks the three named competitors' pricing (Fivetran, Airbyte, Stitch) and includes a Sources section citing their pricing pages",
+        "Designs transparent tiers with a clear contact-sales path for the top tier and land-and-expand packaging, matching the mid-market segment",
+        "Gives specific starting price points and defines an expansion path plus a disciplined discounting stance (default list price, where discounts are allowed, a floor)",
+        "Includes a test-and-iterate plan naming the signals that price is too low or too high"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "What should we charge for Aegis, our enterprise fraud-detection engine for large banks? I want to just slap a flat $2,000/month sticker price on the website to keep it simple. Positioning, ICP, and a sales-led GTM motion are all already defined. Talk me through it.",
+      "expected_output": "An enterprise pricing recommendation that pushes back on a low flat public price, recommends quote/negotiated value-based pricing tied to a business outcome with a list price to anchor from, estimates willingness to pay from value created, and sets expansion and discounting discipline.",
+      "assertions": [
+        "Challenges the flat $2,000/month public sticker as likely far too low for enterprise and tied to cost rather than value, and notes most first prices are too low",
+        "Recommends quote/negotiated, value-based pricing tied to a business outcome (e.g. fraud losses prevented) with a list price to anchor procurement, consistent with the enterprise segment",
+        "Identifies the value metric and estimates willingness to pay by quantifying value created (fraud/risk reduced) versus the alternatives",
+        "Researches and cites comparable enterprise fraud/security pricing where available in a Sources section, or flags where pricing is opaque rather than inventing it",
+        "Defines an expansion path and a disciplined discounting stance (default list price, allowed discount levers like annual/multi-year commit, and a floor)",
+        "Frames the recommended numbers as a starting hypothesis to validate and includes a test/iterate plan (e.g. willingness-to-pay conversations, win/loss on price)"
+      ]
+    }
+  ]
+}

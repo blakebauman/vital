@@ -16,7 +16,7 @@ Always establish the client's segment during intake, because it changes the moti
 
 ### Strategy / positioning
 - **Enterprise**: separate the *user*, the *economic buyer*, and the *champion* — map the buying committee and each one's concern (ROI, risk, control, adoption). Position against "build vs. buy" and incumbent suites. Lead with risk reduction, security, integration, and total cost, not just speed.
-- **Mid-market**: usually one primary buyer who is also a heavy user. Position on time-to-value and doing more without more headcount.
+- **Mid-market**: a primary buyer who is also a heavy user, usually with a small committee (2–3, e.g. a budget owner and a security/IT check) to satisfy — center the primary buyer but map the others when they can block. Position on time-to-value and doing more without more headcount.
 - **Small business**: one persona, one job. Position on immediate, tangible outcome and low effort. No committee — remove every reason to hesitate.
 
 ### GTM

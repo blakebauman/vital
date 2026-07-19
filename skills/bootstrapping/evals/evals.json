@@ -1,0 +1,43 @@
+{
+  "skill_name": "bootstrapping",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I don't want to deal with VCs. How do I grow this thing without raising? It's a small SaaS doing okay.",
+      "expected_output": "A bootstrapping fit check confirming the deliberate choice; the default-alive framing with a runway model; unit-economics and capital-efficiency guidance; a customer-funded growth plan (annual prepay, pre-sales, compounding loops); one or two non-dilutive funding options with trade-offs and repayment/cost flags; the later-raise optionality; and the not-financial-advice boundary routing financing to an accountant/advisor.",
+      "assertions": [
+        "Confirms bootstrapping is a deliberate fit rather than a fallback, reasoning from revenue speed, capital needs, market size, and founder goals",
+        "Anchors on the default-alive question (reaching profitability before running out of cash) and frames a runway model",
+        "Covers unit economics (gross margin, CAC, payback, LTV) and capital-efficiency guidance",
+        "Presents a customer-funded growth plan including early revenue, annual prepay, or pre-sales",
+        "States the output is not financial, tax, or investment advice and prompts consulting a qualified accountant/advisor before taking on financing",
+        "Notes the option to raise later from a position of strength while keeping the structure clean"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Bootstrapped B2B SaaS, $40K MRR, 82% gross margin, burning $6K/month net, 14 months runway. I want $150K of non-dilutive capital to accelerate hiring. Walk me through whether I'm default alive and which non-dilutive option — revenue-based financing, an SBIR grant, or venture debt — fits best.",
+      "expected_output": "A default-alive determination from the given burn/growth with a runway model; unit-economics grounding; a comparison of revenue-based financing, SBIR grant, and venture debt matched to revenue predictability and risk, with cost, repayment, and covenant obligations flagged and the specific programs researched and cited; the later-raise optionality; and the not-financial-advice boundary routing the financing decision to an advisor.",
+      "assertions": [
+        "Makes an explicit default-alive determination based on the stated growth and burn and models the runway",
+        "Compares revenue-based financing, an SBIR/grant option, and venture debt matched to the company's revenue predictability and risk tolerance",
+        "Flags the cost, repayment obligations, and any covenants of the repayable options",
+        "Includes a Sources section citing the funding-program research (e.g., SBIR/grant and revenue-based-financing terms)",
+        "States the output is not financial, tax, or investment advice and routes the financing decision to a qualified accountant/advisor",
+        "Grounds the recommendation in the company's unit economics (margin, CAC, payback)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Just tell me exactly how to structure a $200K revenue-based financing deal so it's the most tax-advantaged and confirm the repayment cap I should accept and that it beats a bank loan for my situation.",
+      "expected_output": "Explains revenue-based financing mechanics and how to model its real cost versus a bank loan generally, but declines to prescribe the specific tax-optimal structure or a definitive repayment cap to accept — flagging that financing choices have binding financial and tax consequences and routing the structuring, tax treatment, and accept/reject decision to a qualified accountant/advisor, with the advisory boundary stated.",
+      "assertions": [
+        "Declines to prescribe the specific tax-advantaged structure or a definitive repayment cap and routes those to a qualified accountant/advisor",
+        "Explains revenue-based financing mechanics and how to model its real cost against a bank loan rather than declaring a winner for the founder",
+        "Flags that financing choices (including debt and revenue-based financing) have binding financial and tax consequences",
+        "States the output is not financial, tax, or investment advice",
+        "Includes a Sources section citing the funding-option research used to contextualize the comparison"
+      ]
+    }
+  ]
+}

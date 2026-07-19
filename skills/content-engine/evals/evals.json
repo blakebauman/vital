@@ -1,0 +1,44 @@
+{
+  "skill_name": "content-engine",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We need a content plan for the 6 weeks leading up to launch. We're Sproutly, a small-business email-marketing tool for local e-commerce shops. Help us build an audience and drive launch signups.",
+      "expected_output": "An objective and funnel map, three to five content pillars tied to the message pillars, and a concrete dated 6-week calendar where each slot names date, channel, format, working title/hook, pillar, and funnel stage. Effort is balanced across funnel stages and at least one growth loop is included. Program leans high-velocity SEO/social/self-serve per the small-business segment. Saved to .vital/marketing.md.",
+      "assertions": [
+        "Output states the objective and maps it to funnel stages (awareness, consideration, activation, retention) with effort balanced rather than all-awareness",
+        "Three to five content pillars are defined and tied to the message pillars",
+        "The calendar is concrete and dated: every slot lists date, channel, format, working title/hook, pillar, and funnel stage (not a themes-by-week abstraction)",
+        "Frames the plan as repeatable, compounding programs rather than one-off posts, favoring formats that can be repurposed across channels",
+        "At least one growth loop where output feeds input (referral, UGC, content-to-audience, or product-generated) is identified",
+        "Formats and channels lean to the small-business segment (high-velocity SEO, social, self-serve education) rather than enterprise whitepapers/webinars"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design a launch email sequence and an SEO cluster strategy for Finhorizon, an enterprise financial-planning platform sold to CFOs at large enterprises. ICP and messaging are saved in the project.",
+      "expected_output": "Pulls ICP and messaging from project, defines the objective and funnel map, delivers lifecycle email flows with trigger/sequence/per-message goal and drafted critical emails in the brand voice, and an SEO strategy with topic clusters, a pillar page and supporting pages per cluster, and priority order by intent and winnability. Every program is tied to a metric. Enterprise-weighted formats (thought leadership, whitepapers, ABM/nurture). ",
+      "assertions": [
+        "Email flows specify the trigger, the full sequence, the goal of each message, and include drafts of the critical emails in the brand voice",
+        "Identifies at least one growth loop where output feeds input (referral, UGC, content-to-audience, or product-generated) that compounds rather than decays",
+        "SEO output identifies topic clusters with a pillar page and supporting pages per cluster and a priority order by intent and winnability",
+        "Each program is mapped to a funnel stage and names the metric it moves",
+        "Content approach is weighted to the enterprise segment (thought leadership, whitepapers, longer nurture, account-based) rather than high-velocity self-serve",
+        "SEO clusters are anchored to real ICP search behavior rather than vanity keywords"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I just want a few good LinkedIn posts for next week to promote our new integration. We're Meshwork, a mid-market API-integration platform. Keep it light.",
+      "expected_output": "Honors the narrow ask but applies the engine discipline: states the objective and the funnel stage the posts serve, ties them to a content pillar, produces a small dated calendar of concrete posts with working hooks, drafts the post copy in brand voice (checking for a saved my-writing-style profile), and names the metric. Mid-market comparison/ROI-flavored angle. Does not balloon into a full multi-channel program uninvited.",
+      "assertions": [
+        "Output states the objective and which funnel stage the posts serve rather than treating them as one-off content",
+        "Each post is tied to a content pillar and the program names the metric it moves",
+        "Posts are delivered as a concrete dated set with working titles/hooks and drafted copy, not abstract themes",
+        "The skill checks for a saved my-writing-style profile before drafting copy the client will publish as themselves",
+        "Angle and framing fit the mid-market segment (e.g. comparison or ROI emphasis) rather than enterprise whitepaper tone",
+        "Scope stays proportional to the light request rather than expanding into a full multi-channel calendar unprompted"
+      ]
+    }
+  ]
+}
