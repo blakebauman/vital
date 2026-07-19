@@ -10,7 +10,7 @@ metadata:
   version: "0.1.0"
 ---
 
-Design repeatable programs — not one-off posts — that create and capture demand, each mapped to a funnel stage. Pull the ICP from strategy and the messaging and voice from brand. Build the parts the request calls for; when drafting copy the client will publish as themselves, check for a saved `my-writing-style` profile first.
+Design repeatable programs — not one-off posts — that create and capture demand, each mapped to a funnel stage. Pull the ICP from strategy and the messaging and voice from brand. Build the parts the request calls for — but even a light, few-posts ask still ties each piece to a content pillar and names the one metric the program moves; that discipline is what separates a program from random posts. When drafting copy the client will publish as themselves, check for a saved `my-writing-style` profile first.
 
 Match the content program to the **client's segment** — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. Enterprise leans on thought leadership, whitepapers, webinars, case studies, and account-based campaigns to named targets with longer nurture; mid-market on comparison content, ROI calculators, and lifecycle email; small business on high-velocity SEO, social, and self-serve education.
 
