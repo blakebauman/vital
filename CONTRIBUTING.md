@@ -6,6 +6,7 @@ Vital is a Claude Code / Cowork plugin: a team of agents and a set of skills for
 
 ```
 .claude-plugin/plugin.json   # plugin manifest (name, version, description, metadata)
+.claude-plugin/marketplace.json # marketplace entry, so the repo installs via /plugin marketplace add
 agents/*.md                  # one subagent per file (YAML frontmatter + system prompt)
 skills/<name>/SKILL.md        # one skill per directory (YAML frontmatter + instructions)
 skills/<name>/references/     # optional deeper reference material for a skill
@@ -73,7 +74,7 @@ zip -r vital.plugin . -x ".git/*" ".github/*" "scripts/*" "*.plugin" \
 
 ## Releasing
 
-1. Bump `version` in `.claude-plugin/plugin.json` (semver).
+1. Bump `version` in **both** `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` (semver) — `scripts/validate.py` fails if they drift.
 2. Commit, then tag: `git tag v0.8.0 && git push origin v0.8.0`.
 3. The **Release** workflow validates, builds `vital.plugin`, and attaches it to a GitHub Release automatically.
 

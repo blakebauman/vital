@@ -3,6 +3,7 @@
 
 Checks the invariants that have broken installs before:
 - plugin.json is valid JSON, name is kebab-case, description <= 500 chars
+- marketplace.json is valid, lists the plugin, and agrees with plugin.json on version
 - every agent has valid YAML frontmatter, a 3-50 char kebab-case name,
   a description, a valid color, and (if set) a valid model; names are unique
 - every skill dir has a SKILL.md with valid frontmatter (name + description)
@@ -55,6 +56,36 @@ try:
         errors.append("plugin.json: missing description")
 except Exception as e:  # noqa: BLE001
     errors.append(f"plugin.json: {e}")
+    pj = {}
+
+# --- marketplace.json ---
+# This is what makes `/plugin marketplace add blakebauman/vital` work. Drift
+# between it and plugin.json is the failure mode that breaks installs.
+try:
+    mp = json.load(open(".claude-plugin/marketplace.json", encoding="utf-8"))
+    mp_name = mp.get("name", "")
+    if not KEBAB.fullmatch(mp_name):
+        errors.append(f"marketplace.json: name '{mp_name}' must be kebab-case")
+    if not mp.get("owner", {}).get("name"):
+        errors.append("marketplace.json: missing owner.name")
+    entries = mp.get("plugins") or []
+    if not entries:
+        errors.append("marketplace.json: plugins must list at least one plugin")
+    for entry in entries:
+        en = str(entry.get("name", ""))
+        if not KEBAB.fullmatch(en):
+            errors.append(f"marketplace.json: plugin name '{en}' must be kebab-case")
+        if not entry.get("source"):
+            errors.append(f"marketplace.json: plugin '{en}' is missing source")
+        if en == pj.get("name") and entry.get("version") != pj.get("version"):
+            errors.append(
+                f"marketplace.json: plugin '{en}' version {entry.get('version')!r} "
+                f"does not match plugin.json {pj.get('version')!r}"
+            )
+    if pj.get("name") and pj["name"] not in [str(e.get("name", "")) for e in entries]:
+        errors.append(f"marketplace.json: no entry for plugin '{pj['name']}'")
+except Exception as e:  # noqa: BLE001
+    errors.append(f"marketplace.json: {e}")
 
 # --- agents ---
 agent_names = []
@@ -102,7 +133,13 @@ for d in sorted(glob.glob("skills/*/")):
 content_files = (
     glob.glob("agents/**/*", recursive=True)
     + glob.glob("skills/**/*", recursive=True)
-    + ["README.md", "CONNECTORS.md", ".mcp.json", ".claude-plugin/plugin.json"]
+    + [
+        "README.md",
+        "CONNECTORS.md",
+        ".mcp.json",
+        ".claude-plugin/plugin.json",
+        ".claude-plugin/marketplace.json",
+    ]
 )
 for f in content_files:
     if not os.path.isfile(f):

@@ -7,6 +7,7 @@ This repo is the **Vital** plugin — agents and skills for an AI go-to-market a
 - **Agent names**: 3–50 chars, kebab-case, unique. Never a 2-char name.
 - **Agent colors**: only `red, blue, green, yellow, purple, orange, pink, cyan`. Never `magenta`. Repeats allowed.
 - **Manifest description**: `.claude-plugin/plugin.json` `description` must be ≤ 500 characters.
+- **Manifest version**: bump it in **both** `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` — the validator fails if they disagree.
 - **Skills**: each `skills/<name>/` needs a `SKILL.md` with `name` + `description` frontmatter.
 - **Design**: reference the **impeccable** design system only — never `stardust` (the validator fails on it).
 - **Capital discipline** (`capital` agent; `incorporation`, `fundraising`, `bootstrapping`, `pitch-deck` skills): advisory only. Keep the "not legal/tax/financial/investment advice; consult a qualified attorney/CPA" boundary in every one.
