@@ -15,7 +15,7 @@ In Claude Code:
 /plugin install vital@vital
 ```
 
-Prefer to vendor the files, or using a different agent? The 19 skills are the portable `SKILL.md` format and work in Cursor, Codex CLI, Gemini CLI and others — copy `skills/*` into that tool's skills directory. Full per-tool instructions, team-wide pinning, and what does and doesn't travel: **[docs/install.md](docs/install.md)**.
+Prefer to vendor the files, or using a different agent? The 20 skills are the portable `SKILL.md` format and work in Cursor, Codex CLI, Gemini CLI and others — copy `skills/*` into that tool's skills directory. Full per-tool instructions, team-wide pinning, and what does and doesn't travel: **[docs/install.md](docs/install.md)**.
 
 ## The team
 
@@ -50,6 +50,7 @@ Prefer to vendor the files, or using a different agent? The 19 skills are the po
 | `pricing-strategy` | Value metric, model, tiers/packaging, willingness-to-pay, price points, and a test plan. |
 | `customer-marketing` | Case studies, testimonials, references, reviews (G2/Capterra), advocacy, and expansion. |
 | `community-building` | Discord/Slack + open-source (GitHub) communities, DevRel, events, moderation, health metrics. |
+| `measurement` | North star and metric tree, metric definitions, event tracking plan, tooling, attribution, experiment power, dashboard. |
 | `incorporation` | *(Capital)* Entity choice, Delaware C-corp via Stripe Atlas, founder equity/vesting, 83(b), cap table. |
 | `fundraising` | *(Capital)* Raise-vs-bootstrap, stage/amount, SAFEs, valuation/dilution, investor list, data room. |
 | `bootstrapping` | *(Capital)* Default-alive, unit economics, customer-funded growth, non-dilutive funding. |

@@ -18,10 +18,10 @@ Vital is an agency that takes finished tech products and brings them to market. 
 | --- | --- | --- |
 | Orchestration | vital-lead | this playbook |
 | Strategy | strategy | positioning, competitive-teardown |
-| Go-to-market | gtm | gtm-plan, launch-plan, pricing-strategy, abm-playbook, rfp-response |
+| Go-to-market | gtm | gtm-plan, launch-plan, pricing-strategy, abm-playbook, rfp-response, measurement |
 | Brand | brand | brand-messaging |
 | Design | design | design-brief |
-| Marketing | marketing | content-engine, customer-marketing, community-building, abm-playbook |
+| Marketing | marketing | content-engine, customer-marketing, community-building, abm-playbook, measurement |
 | PR & comms | pr-comms | press-kit, analyst-relations |
 | Engineering (advisory) | engineering | technical/launch-readiness feedback, rfp-response (security-claim check) |
 | Capital | capital | incorporation, fundraising, bootstrapping, pitch-deck |
@@ -29,6 +29,8 @@ Vital is an agency that takes finished tech products and brings them to market. 
 **Enterprise gate-clearing skills:** `abm-playbook` (named-account programs), `analyst-relations` (Gartner/Forrester/IDC), and `rfp-response` (RFPs, security questionnaires, procurement enablement). Reach for these on enterprise and upper mid-market engagements — they address where enterprise launches actually stall.
 
 **Revenue & proof skills:** `pricing-strategy` (value metric, model, tiers, willingness-to-pay, price testing) sits with GTM and is invoked when pricing is the question. `customer-marketing` (case studies, references, reviews, advocacy, expansion) sits with marketing and runs once the client has successful customers — it converts existing customers into the most credible growth engine.
+
+**Measurement skill:** `measurement` (north star and metric tree, precise metric definitions, event tracking plan, tooling, attribution, experiment power, dashboard and review cadence) is the truth layer under every other discipline. The other skills each name the metric their work moves; `measurement` defines those numbers precisely, specifies how they get captured, and says how far to trust them. Run it before launch, not after — instrumentation that ships late cannot measure the moment it was built for.
 
 **Community skill:** `community-building` (Discord/Slack communities, GitHub open-source contributor communities, DevRel, events, moderation, health metrics) sits with marketing and pairs with a community-led GTM motion. For open-source and developer products the community is often the primary growth engine, not a side channel — reach for it early in those engagements.
 
@@ -49,8 +51,9 @@ Adapt to what the client already has and to their segment; skip phases they have
 5. **GTM** — motion, channels, pricing, funnel, phased launch (`gtm-plan`).
 6. **Marketing & PR** — content engine and campaigns (`content-engine`), press and launch-platform comms (`press-kit`), run in parallel.
 7. **Launch** — sequence and coordinate the moment (`launch-plan`).
-8. **Engineering check** — before launch, run the advisory pass: launch-readiness and technical-claim review.
-9. **Synthesize** — pull it all into one coherent launch plan with timeline, owners, and next actions.
+8. **Measurement** — before launch, make it measurable (`measurement`): the north star, the tracking plan the client's engineers implement, and the dashboard. Instrumentation has to ship *before* the traffic arrives; retrofitting it after launch loses the launch.
+9. **Engineering check** — before launch, run the advisory pass: launch-readiness and technical-claim review.
+10. **Synthesize** — pull it all into one coherent launch plan with timeline, owners, and next actions.
 
 For enterprise engagements, layer in as needed: `abm-playbook` during GTM (named-account targeting), `analyst-relations` alongside PR (analyst credibility), and `rfp-response` to clear procurement, security, and RFP gates that block the deal.
 
@@ -74,6 +77,7 @@ Every major deliverable is saved to a **`.vital/` directory at the root of the c
 | Community strategy & assets | `.vital/community.md` |
 | Press kit & media | `.vital/press-kit/` |
 | Analyst relations | `.vital/analyst-relations.md` |
+| Measurement plan, tracking plan & dashboard | `.vital/measurement.md` |
 | Launch-readiness & technical-claim review | `.vital/engineering-review.md` |
 | Capital track (incorporation, fundraising, bootstrapping, pitch deck) | `.vital/capital/` |
 | Engagement index (what exists, when it was written, what it assumed) | `.vital/INDEX.md` |

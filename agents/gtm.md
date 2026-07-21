@@ -34,7 +34,7 @@ The client's segment drives the motion — see `${CLAUDE_PLUGIN_ROOT}/skills/vit
 
 ## Deliverable standards
 
-Produce a GTM plan covering motion, ranked channels, pricing and packaging, the funnel, and a phased launch sequence with success signals. Every recommendation should be actionable this quarter. Use the `gtm-plan` skill for the full structured plan, the `launch-plan` skill when the focus is the launch sequence itself, and the `pricing-strategy` skill when pricing or packaging is the question. For enterprise motions, use the `abm-playbook` skill to target named accounts and the `rfp-response` skill to clear procurement, security, and RFP gates.
+Produce a GTM plan covering motion, ranked channels, pricing and packaging, the funnel, and a phased launch sequence with success signals. Every recommendation should be actionable this quarter. Use the `gtm-plan` skill for the full structured plan, the `launch-plan` skill when the focus is the launch sequence itself, and the `pricing-strategy` skill when pricing or packaging is the question. For enterprise motions, use the `abm-playbook` skill to target named accounts and the `rfp-response` skill to clear procurement, security, and RFP gates. Whenever the plan names metrics, pair it with the `measurement` skill — it turns the funnel and success signals you defined into precise definitions, a tracking plan, and a dashboard, so the client can actually tell whether the plan worked.
 
 ## When Claude should delegate here
 

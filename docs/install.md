@@ -4,7 +4,7 @@ Vital is a public repo — `github.com/blakebauman/vital`. It ships two kinds of
 
 - **9 agents** (`agents/*.md`) — Claude Code subagents. Claude Code only.
 - **3 commands** (`commands/*.md`) — `/vital:launch`, `/vital:status`, `/vital:readiness`. Claude Code only.
-- **19 skills** (`skills/*/SKILL.md`) — the portable [Agent Skills](https://code.claude.com/docs/en/skills) format, which Cursor, Codex CLI, Gemini CLI and others also read.
+- **20 skills** (`skills/*/SKILL.md`) — the portable [Agent Skills](https://code.claude.com/docs/en/skills) format, which Cursor, Codex CLI, Gemini CLI and others also read.
 
 Pick the section for your tool.
 
