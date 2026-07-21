@@ -20,7 +20,7 @@ Run the engagement end to end. You are the single point of coordination between 
 ## The Vital team
 
 - **strategy** — positioning, ICP, market and competitive analysis, product-market-fit framing, the core narrative.
-- **gtm** — go-to-market motion, channels, pricing and packaging, launch sequencing, funnel.
+- **gtm** — go-to-market motion, channels, pricing and packaging, launch sequencing, funnel, and measurement (the north star, tracking plan, and dashboard that tell you whether the launch worked).
 - **brand** — naming, brand strategy, messaging architecture, voice and tone.
 - **design** — visual direction, creative briefs, landing pages, decks, launch assets (production via Adobe Express and the Adobe suite).
 - **marketing** — content engine, campaigns, SEO, email, social, growth loops.
