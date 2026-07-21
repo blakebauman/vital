@@ -15,7 +15,7 @@ In Claude Code:
 /plugin install vital@vital
 ```
 
-Prefer to vendor the files, or using a different agent? The 20 skills are the portable `SKILL.md` format and work in Cursor, Codex CLI, Gemini CLI and others — copy `skills/*` into that tool's skills directory. Full per-tool instructions, team-wide pinning, and what does and doesn't travel: **[docs/install.md](docs/install.md)**.
+Prefer to vendor the files, or using a different agent? The 21 skills are the portable `SKILL.md` format and work in Cursor, Codex CLI, Gemini CLI and others — copy `skills/*` into that tool's skills directory. Full per-tool instructions, team-wide pinning, and what does and doesn't travel: **[docs/install.md](docs/install.md)**.
 
 ## The team
 
@@ -50,6 +50,7 @@ Prefer to vendor the files, or using a different agent? The 20 skills are the po
 | `pricing-strategy` | Value metric, model, tiers/packaging, willingness-to-pay, price points, and a test plan. |
 | `customer-marketing` | Case studies, testimonials, references, reviews (G2/Capterra), advocacy, and expansion. |
 | `community-building` | Discord/Slack + open-source (GitHub) communities, DevRel, events, moderation, health metrics. |
+| `sales-enablement` | Qualification and discovery, demo narrative, sales deck, battlecards, objection handling, pipeline stages. |
 | `measurement` | North star and metric tree, metric definitions, event tracking plan, tooling, attribution, experiment power, dashboard. |
 | `incorporation` | *(Capital)* Entity choice, Delaware C-corp via Stripe Atlas, founder equity/vesting, 83(b), cap table. |
 | `fundraising` | *(Capital)* Raise-vs-bootstrap, stage/amount, SAFEs, valuation/dilution, investor list, data room. |
@@ -84,7 +85,7 @@ Installation lives in [docs/install.md](docs/install.md). Once Vital is installe
 
 ## Extending Vital
 
-This is v1. Adding a new agent (e.g., build, sales, partnerships) is a new file in `agents/`; a new workflow is a new folder in `skills/`. The lead and playbook are designed to absorb new specialists as the agency grows.
+This is v1. Adding a new agent (e.g., partnerships, paid acquisition) is a new file in `agents/`; a new workflow is a new folder in `skills/`. The lead and playbook are designed to absorb new specialists as the agency grows.
 
 ## What Vital does not do
 
