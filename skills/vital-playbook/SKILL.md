@@ -18,7 +18,7 @@ Vital is an agency that takes finished tech products and brings them to market. 
 | --- | --- | --- |
 | Orchestration | vital-lead | this playbook |
 | Strategy | strategy | positioning, competitive-teardown |
-| Go-to-market | gtm | gtm-plan, launch-plan, pricing-strategy, abm-playbook, rfp-response, sales-enablement, measurement |
+| Go-to-market | gtm | gtm-plan, launch-plan, pricing-strategy, abm-playbook, rfp-response, sales-enablement, partnerships, measurement |
 | Brand | brand | brand-messaging |
 | Design | design | design-brief |
 | Marketing | marketing | content-engine, customer-marketing, community-building, abm-playbook, measurement |
@@ -27,6 +27,8 @@ Vital is an agency that takes finished tech products and brings them to market. 
 | Capital | capital | incorporation, fundraising, bootstrapping, pitch-deck |
 
 **Enterprise gate-clearing skills:** `abm-playbook` (named-account programs), `analyst-relations` (Gartner/Forrester/IDC), and `rfp-response` (RFPs, security questionnaires, procurement enablement). Reach for these on enterprise and upper mid-market engagements — they address where enterprise launches actually stall.
+
+**Partnerships skill:** `partnerships` (integrations, marketplaces, resellers, agencies/SIs, co-marketing, OEM, referral) covers distribution that runs through someone else. It starts by asking whether to partner at all — most partnerships fail because neither side needed the other, and pre-PMF they are usually a well-dressed distraction. Expect it to recommend the lightest structure that does the job, and sometimes to recommend none.
 
 **Sales skill:** `sales-enablement` (qualification and discovery, demo narrative, sales deck and battlecards, objection handling, pipeline stages, the founder-led-to-first-rep transition) sits with GTM and applies to any motion where a human sells. `abm-playbook` picks the accounts and `rfp-response` clears the gates; `sales-enablement` is what happens in the conversation between them. Vital produces the playbook and the words — the client's founders and reps run the calls.
 
@@ -80,6 +82,7 @@ Every major deliverable is saved to a **`.vital/` directory at the root of the c
 | Press kit & media | `.vital/press-kit/` |
 | Analyst relations | `.vital/analyst-relations.md` |
 | Sales playbook, battlecards & pipeline | `.vital/sales-enablement.md` |
+| Partnerships & channel program | `.vital/partnerships.md` |
 | Measurement plan, tracking plan & dashboard | `.vital/measurement.md` |
 | Launch-readiness & technical-claim review | `.vital/engineering-review.md` |
 | Capital track (incorporation, fundraising, bootstrapping, pitch deck) | `.vital/capital/` |
