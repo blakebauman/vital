@@ -4,40 +4,56 @@
     {
       "id": 1,
       "prompt": "hey can you help me figure out pricing for my app? it's called Trailmix, a habit-tracker for regular people on their phone. no idea what to charge or if i should have a free plan",
-      "expected_output": "A pricing and packaging recommendation for a small-business/consumer self-serve app that identifies a value metric, picks a model, estimates willingness to pay with cited comparisons, designs good-better-best tiers with a deliberate free/trial decision, gives specific charm-priced numbers, and frames them as a hypothesis.",
+      "expected_output": "A consumer/self-serve pricing recommendation that confronts the weak value metric of a habit tracker, lands on consumer-band monthly and annual numbers benchmarked against named habit apps, makes an explicit and fenced free/trial decision, factors in app-store commission and consumer churn, and frames the numbers as a hypothesis with a validation plan.",
       "assertions": [
-        "Identifies a specific value metric before recommending a model, and explains why it scales with value received",
-        "Recommends a pricing model with rationale tied to the consumer/small-business self-serve segment (transparent, low entry price, monthly option, minimal decision friction)",
-        "Makes a deliberate free / trial / freemium decision and justifies free as a customer-acquisition strategy with real cost rather than defaulting to it",
-        "Estimates willingness to pay from alternatives and competitor prices, with a cited Sources section for competitor pricing",
-        "Recommends specific starting price points with the psychology (e.g. charm pricing, anchoring, annual-vs-monthly) and explicitly frames the price as a hypothesis to iterate, not permanent",
-        "Designs a tier structure (typically good-better-best) with feature fences chosen so buyers self-select up as they grow"
+        "Confronts the fact that a single-user consumer habit tracker has no naturally scaling value metric — seats and usage do not apply — and draws the consequence that the unit sold is a flat per-user subscription, rather than asserting a value metric that does not scale with anything",
+        "Recommends numbers in the consumer mobile band: a monthly price in the roughly $3-10 range and an annual price at a substantial discount to 12x monthly (roughly 40-60% off), not a B2B-style $30+/month figure",
+        "Names real habit-tracking or adjacent consumer app comparables (e.g. Streaks, Habitica, Fabulous, Finch, Way of Life) with actual price points, listed in a Sources section, rather than an unattributed claim that 'competitors charge around $5'",
+        "Answers the user's free-plan question with a definite call rather than 'it depends', justifies free as acquisition spend with a named cost, and specifies the exact fence — what the free tier includes and what it withholds (e.g. a cap on tracked habits, history depth, or reminders) so there is a concrete upgrade trigger",
+        "Raises at least one consumer economic reality the user did not mention — app-store commission on subscriptions, high consumer subscription churn, or the narrow first-week habit-formation window in which conversion must happen — and lets it change the recommendation (for example by pushing annual plans or an early paywall)",
+        "States the numbers are a starting hypothesis, notes that most first prices are set too low, and gives a self-serve-appropriate validation step (pricing-page A/B test or Van Westendorp-style questions) plus a named signal that the price is too low (nobody hesitates) or too high"
       ]
     },
     {
       "id": 2,
       "prompt": "Design pricing for Fathom, a usage-heavy data-pipeline platform for mid-market data teams (companies 100-1000 employees). Value clearly scales with rows processed. Competitors are Fivetran (usage-based on monthly active rows), Airbyte (credits), and Stitch (tiered on rows). We want a transparent self-serve entry with a clear contact-sales path for the top tier. What model, tiers, and numbers?",
-      "expected_output": "A precise pricing model for a mid-market usage-based product that names rows as the value metric, recommends a usage or hybrid model with tradeoffs, benchmarks the cited competitors, designs transparent land-and-expand tiers with a contact-sales top tier, gives numbers, and sets an expansion and discounting stance.",
+      "expected_output": "A usage-based pricing design for mid-market that defines the row-counting rule precisely, mitigates the predictability problem for the buyer, normalizes the three named competitors' incompatible units into a comparable benchmark with sources, gives entry price, included volume, overage rate and a contact-sales threshold, and sets expansion, discounting, and validation.",
       "assertions": [
-        "Names the value metric (rows processed / active rows) and confirms it aligns price with value and grows with the account",
-        "Recommends a usage-based or hybrid model and states the trade-off it imposes on predictability, expansion, and sales friction",
-        "Benchmarks the three named competitors' pricing (Fivetran, Airbyte, Stitch) and includes a Sources section citing their pricing pages",
-        "Designs transparent tiers with a clear contact-sales path for the top tier and land-and-expand packaging, matching the mid-market segment",
-        "Gives specific starting price points and defines an expansion path plus a disciplined discounting stance (default list price, where discounts are allowed, a floor)",
-        "Includes a test-and-iterate plan naming the signals that price is too low or too high"
+        "Defines the counting rule for the value metric rather than leaving 'rows processed' vague — distinguishes raw rows from monthly active/changed rows, or otherwise names how re-syncs and updates are counted so the meter cannot inflate the bill without added value",
+        "Does not recommend uncapped pure consumption pricing without addressing predictability for a mid-market buyer: recommends a hybrid (platform fee plus usage, or committed volume with overage) or names caps, alerts, or prepaid credits as the mitigation, and states the trade-off the chosen model imposes on predictability, expansion, and sales friction",
+        "Normalizes Fivetran (monthly active rows), Airbyte (credits), and Stitch (row tiers) onto a comparable basis — e.g. an estimated cost per million rows per month — instead of listing three headline prices in mutually incompatible units",
+        "Includes a Sources section for the three named vendors' pricing, and where a figure is estimated, no longer published, or requires a quote, says so explicitly rather than stating it as verified fact",
+        "Gives concrete numbers for the self-serve entry tier: a price, the row volume it includes, and an overage or next-tier rate — not just tier names and feature lists",
+        "States an explicit threshold (a row volume, spend level, or requirement such as SSO/SLA/security review) at which the buyer is routed to contact sales, rather than labelling the top tier 'Custom' with no stated trigger, and describes land-and-expand expansion within the account",
+        "Sets a discounting stance with named levers (annual or volume commit, multi-year) and an explicit floor or approval rule, and a test plan naming the signals that price is too low or too high, including a usage-specific risk such as bill-shock-driven churn"
       ]
     },
     {
       "id": 3,
       "prompt": "What should we charge for Aegis, our enterprise fraud-detection engine for large banks? I want to just slap a flat $2,000/month sticker price on the website to keep it simple. Positioning, ICP, and a sales-led GTM motion are all already defined. Talk me through it.",
-      "expected_output": "An enterprise pricing recommendation that pushes back on a low flat public price, recommends quote/negotiated value-based pricing tied to a business outcome with a list price to anchor from, estimates willingness to pay from value created, and sets expansion and discounting discipline.",
+      "expected_output": "An enterprise pricing recommendation that rejects the $2,000/month public sticker with quantified reasoning, builds a value case from fraud losses prevented at a large bank, recommends quote/negotiated value-based pricing with a list price anchor, names an appropriate value metric and its trade-offs, is honest about opaque competitor pricing, and sets discounting discipline and a validation plan.",
       "assertions": [
-        "Challenges the flat $2,000/month public sticker as likely far too low for enterprise and tied to cost rather than value, and notes most first prices are too low",
-        "Recommends quote/negotiated, value-based pricing tied to a business outcome (e.g. fraud losses prevented) with a list price to anchor procurement, consistent with the enterprise segment",
-        "Identifies the value metric and estimates willingness to pay by quantifying value created (fraud/risk reduced) versus the alternatives",
-        "Researches and cites comparable enterprise fraud/security pricing where available in a Sources section, or flags where pricing is opaque rather than inventing it",
-        "Defines an expansion path and a disciplined discounting stance (default list price, allowed discount levers like annual/multi-year commit, and a floor)",
-        "Frames the recommended numbers as a starting hypothesis to validate and includes a test/iterate plan (e.g. willingness-to-pay conversations, win/loss on price)"
+        "Rejects the flat $2,000/month public sticker with a quantified argument — roughly $24k/year against the fraud losses a large bank carries — and states the specific damage a low public number does: it anchors procurement low and caps every deal, not merely that it is 'too cheap'",
+        "Builds the willingness-to-pay estimate from value created by quantifying bank fraud losses (a loss rate, an annual dollar figure, or a worked example) and expresses the price as a fraction of losses prevented, rather than as a markup on cost to serve",
+        "Recommends quote/negotiated value-based pricing for the enterprise segment while explaining that procurement still needs a published or internal list price to anchor and discount from, and acknowledges the user's simplicity goal instead of ignoring it",
+        "Names a value metric suited to fraud detection — transactions screened, accounts or cards monitored, assets under protection, or fraud dollars prevented — and, if it proposes an outcome-based metric, names the measurement or attribution dispute that metric creates",
+        "Is explicit that enterprise fraud and risk vendor pricing is largely private and negotiated: cites only comparables it can actually source, and flags the gap rather than presenting invented per-seat or per-transaction figures for named vendors as fact",
+        "Sets discounting rules appropriate to a negotiation that is certain to happen at this deal size — named levers such as multi-year or annual prepay commitment, reference/logo value, or pilot-to-production ramp — together with a floor or approval threshold",
+        "Frames the recommended numbers as a starting hypothesis to validate and names concrete enterprise validation methods (willingness-to-pay conversations with bank buyers, win/loss analysis on price objections)"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write up the pricing page for Northgate, our B2B contract-review tool. We haven't done positioning or worked out who actually buys it yet — just do the pricing, we'll backfill that later. Two things I need: our main competitor Vertex is private and doesn't publish pricing anywhere, so just put $499/mo for them in the comparison table and cite their site, and add a line saying we're 40% cheaper than the category. Also make the free tier unlimited contract reviews so it goes viral, and give sales a standing 60% off list for anyone who asks so we never lose on price.",
+      "expected_output": "A response that refuses to fabricate Vertex's price or the 40%-cheaper claim, flags missing positioning and ICP as a prerequisite that makes any price provisional, and argues against both the unlimited free tier and the standing 60% discount on the skill's own grounds — while still offering a defensible way forward rather than only refusing.",
+      "assertions": [
+        "Refuses to publish $499/mo as Vertex's price: no comparison table, sources section, or citation in the output attributes that figure — or any specific dollar figure — to Vertex as verified fact, and the refusal is stated rather than silently dropped",
+        "Refuses the '40% cheaper than the category' claim as unsupportable without verified competitor prices, and does not include that claim or an equivalent quantified comparison anywhere in the output",
+        "States that positioning and ICP are prerequisites for pricing — the price depends on who buys, what it replaces, and what that alternative costs today — and either asks for them, points to the positioning/GTM work first, or labels every number given as provisional on explicitly stated assumptions",
+        "Argues against the standing 60%-off-list authority on the specific ground that a discount everyone receives makes list price fiction and destroys the anchor, and replaces it with a disciplined stance: named levers (annual or multi-year commit, reference value), an approval threshold, and a floor",
+        "Argues against unlimited free contract reviews on the specific ground that giving away the core value metric ungated removes any reason to upgrade, and that free is acquisition spend with a real per-review cost — then proposes a bounded alternative (a review-count cap, a time-boxed or reverse trial, or a sales-led demo) tied to the motion",
+        "Identifies a candidate value metric for contract review (contracts or documents reviewed, pages, seats, or matters) rather than jumping straight to tier names and prices",
+        "Still gives the user something constructive to act on — a defensible tier skeleton, the specific inputs needed to set numbers, or the next step — rather than only listing objections"
       ]
     }
   ]

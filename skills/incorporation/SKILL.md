@@ -16,6 +16,8 @@ Help a founder choose a legal structure and incorporate cleanly. Get this right 
 
 > **Not legal or tax advice.** Vital provides information and frameworks only. Entity, equity, and tax choices are binding and jurisdiction-specific. Tell the founder to have a qualified startup attorney and CPA review before filing, issuing equity, or signing anything. Incorporation services referenced here (Stripe Atlas and others) are not law firms.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Entity choice
 
 Match the entity to the company's path:
@@ -43,7 +45,7 @@ Present a short recommendation with the reason, not a generic list.
 
 ## 4. Cap table & equity housekeeping
 
-Explain the starting cap table (founders' shares, authorized vs. issued, par value), the option pool (created when hiring/raising), and why keeping the cap table clean matters for future rounds. Recommend a cap-table tool (e.g., Carta, Pulley, or the formation provider's) once there is more than founder stock. Deliver a simple starting cap-table view if useful (xlsx skill).
+Explain the starting cap table (founders' shares, authorized vs. issued, par value), the option pool (created when hiring/raising), and why keeping the cap table clean matters for future rounds. Recommend a cap-table tool (e.g., Carta, Pulley, or the formation provider's) once there is more than founder stock. Deliver a simple starting cap-table view if useful — the `xlsx` skill when available, a markdown table otherwise.
 
 ## 5. Post-incorporation checklist
 

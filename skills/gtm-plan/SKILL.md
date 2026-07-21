@@ -13,6 +13,8 @@ Turn positioning into a concrete, sequenced plan to reach, convert, and retain c
 
 Anchor the whole plan to the **client's segment** (enterprise / mid-market / small business) — it drives motion, pricing, cycle length, and launch shape. See `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. Broadly: enterprise → sales-led/ABM with pilots, procurement, security review, annual contracts; mid-market → hybrid self-serve + sales-assist, land-and-expand; small business → product-led, self-serve, transparent monthly pricing.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Motion
 
 Choose the dominant go-to-market motion and justify it from the price point, buyer, product complexity, **and the client's segment**:

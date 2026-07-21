@@ -4,40 +4,58 @@
     {
       "id": 1,
       "prompt": "I've built a product and I want to take it to market. Where do we start?",
-      "expected_output": "An intake-first engagement that establishes the client's segment, runs intake to learn the product/ICP/timeline/what exists, names the explicit phase sequence it will run, and ends with concrete next actions and owners.",
+      "expected_output": "An intake-first response that refuses to guess at a plan for an unnamed product, establishes the client's segment as a motion-changing variable, names the explicit ordered phase sequence it will run, commits to the .vital/ workspace protocol, keeps product build out of scope, and ends with one concrete first action.",
       "assertions": [
-        "Runs intake first — asking about the product, the ICP, what 'launch' means here, the timeline, effort appetite, and what already exists",
-        "Explicitly establishes the client's segment (enterprise / mid-market / small business) and notes it changes the motion, stakeholders, timeline, and deliverables",
-        "Names an explicit ordered phase sequence (e.g., strategy, brand, design, GTM, marketing & PR, launch, engineering check, synthesize) so the client sees the plan",
-        "Commits to reusing existing positioning, messaging, brand, and audience before generating new, with positioning as the single source of truth, rather than regenerating from scratch",
-        "Does not scope product build, infrastructure, or delivery, redirecting that to the client with engineering as advisory feedback",
-        "Ends with concrete next actions and owners rather than an open-ended summary"
+        "Treats the request as underspecified and asks what the product is, who it is for, and what already exists, rather than emitting a generic launch plan for a product it knows nothing about",
+        "Asks what 'launch' means for this client and on what timeline and effort appetite, instead of assuming a single launch-day moment",
+        "Explicitly asks whether the client is enterprise, mid-market, or small business, and states that the answer changes the motion, stakeholders, timeline, and deliverables — not just as a passing sizing question",
+        "Names the phase order as an explicit ordered list — strategy, then brand, then design, then GTM, then marketing and PR, then launch, then the engineering check, then synthesis — and states it will skip phases the client has already covered",
+        "States it will check the existing `.vital/` workspace (reading `.vital/INDEX.md` and `.vital/positioning.md`) before generating anything, and will write deliverables back to it, treating positioning as the single source of truth every later phase ladders up to",
+        "Scopes Vital's work to bringing the finished product to market and excludes product build, infrastructure, and delivery — it does not offer to build, fix, host, or ship any part of the product itself",
+        "Ends with one concrete first action (what intake input is needed to start phase one) with an owner, not only an open invitation to reply"
       ]
     },
     {
       "id": 2,
       "prompt": "We're an enterprise cybersecurity platform (sells to Fortune 500 CISOs, 9-month sales cycles, procurement and InfoSec gates). We have rough positioning already. Run a full Vital go-to-market engagement to launch our new product line.",
-      "expected_output": "An enterprise-segment engagement that adapts the sequence to buying committees and gate-clearing, reuses existing positioning, layers in ABM, analyst relations, and RFP-response, coordinates specialist agents/skills, and ends with a synthesized plan with owners and next actions.",
+      "expected_output": "An enterprise engagement adapted to a 9-month CISO buying cycle: it reuses the client's existing rough positioning rather than regenerating it, places abm-playbook, analyst-relations, and rfp-response at the correct points in the sequence, commits to the .vital/ workspace protocol, runs the engineering advisory pass as a security-claim review, and synthesizes into one plan with owners.",
       "assertions": [
-        "Establishes the segment as enterprise and adapts the motion to buying committees, procurement, security/compliance, analyst relations, and a long sales-led launch",
-        "Names an explicit ordered phase sequence and adapts it to reuse the existing positioning rather than regenerating it",
-        "Layers in the enterprise gate-clearing skills — abm-playbook during GTM, analyst-relations alongside PR, and rfp-response for procurement/security/RFP gates",
-        "Coordinates the specialist agents/skills across disciplines (strategy, brand, design, GTM, marketing, PR) as one narrative rather than siloed outputs, with positioning as source of truth",
-        "Runs the pre-launch engineering advisory check for launch-readiness and technical-claim review",
-        "Ends by synthesizing everything into one coherent launch plan with timeline, owners, and concrete next actions"
+        "Adapts to the stated 9-month sales cycle and buying committee by planning the launch as a sustained sales-led program with phases beyond launch day, not a single announcement moment",
+        "Addresses the stated procurement and InfoSec gates with concrete artifacts a Fortune 500 review actually demands (security questionnaire answers, SOC 2 / DPA / SSO evidence, an answer bank) rather than treating launch as purely a marketing announcement",
+        "Places all three enterprise gate-clearing workstreams at the right point in the sequence — named-account ABM during GTM, analyst relations alongside PR, and RFP/security-questionnaire response against the procurement gate — tied to Fortune 500 CISO buyers rather than offered as generic enterprise advice",
+        "Treats the client's existing 'rough positioning' as an input to read and tighten rather than a phase to run from zero, and says explicitly that it is reusing and validating it, not regenerating it",
+        "Names the explicit ordered phase sequence it will run and calls out where it deviates from the default flow because of what this client already has",
+        "Commits to saving each deliverable to its canonical `.vital/` path and updating `.vital/INDEX.md`, including what version of positioning each deliverable was derived from",
+        "Runs the pre-launch engineering pass as an advisory review of launch-readiness and the defensibility of the security claims in the marketing and PR copy — appropriate for a security vendor — while keeping engineering advisory only and out of the build",
+        "Ends by synthesizing the disciplines into one coherent launch plan with timeline, owners, and next actions, rather than a list of independent workstreams"
       ]
     },
     {
       "id": 3,
       "prompt": "I run a two-person small-business SaaS for local gyms. My advisor says we need buying-committee maps, an analyst-relations program, and a formal procurement process before we launch. Set that up.",
-      "expected_output": "A segment-appropriate correction that a small business should not run an enterprise process, a leaner product-led self-serve motion, a named phase sequence adapted to small business, and concrete next actions with owners.",
+      "expected_output": "A direct correction that the advisor's enterprise apparatus is wrong for a two-person SaaS selling to gym owners, rejecting each of the three named items with a small-business substitute, then a lean product-led sequence sized to a two-person team with a concrete first action.",
       "assertions": [
-        "Establishes the segment as small business and explicitly declines to impose an enterprise process (buying committees, analyst relations, formal procurement) that does not fit",
-        "Recommends a leaner, product-led, self-serve, fast motion applying the same rigor at smaller scale rather than enterprise gate-clearing skills",
-        "Names an explicit ordered phase sequence adapted to the small-business segment, skipping phases the client has covered",
-        "Keeps positioning as the single source of truth and commits to reusing existing work before generating new",
-        "Does not scope product build and keeps engineering advisory only",
-        "Ends with concrete next actions and owners for the leaner engagement"
+        "Directly tells the client the advisor's recommendation does not fit a two-person SaaS selling to local gyms, rather than partially accommodating it or building a scaled-down version of all three",
+        "Names the cost of following the advice in this client's terms — that a two-person team would spend its launch runway on process, and that industry analysts have no influence over a gym owner's buying decision",
+        "Identifies the segment as small business and states that the underlying rigor still applies at a leaner scale, rather than dismissing strategy, GTM, and PR as unnecessary for a small company",
+        "Rejects each of the three named items individually and gives the small-business substitute for each — a single owner-operator buyer picture instead of a buying-committee map, review sites and customer proof instead of analyst relations, and self-serve signup and checkout instead of a procurement process",
+        "Proposes a product-led, self-serve, fast motion for gym owners and names the leaner ordered phase sequence it will actually run, skipping phases this client has covered",
+        "States it will read the existing `.vital/` workspace and reuse any existing positioning before generating new work, keeping `.vital/positioning.md` as the source of truth for the launch copy that follows",
+        "Ends with a first action sized for a two-person team on a near-term horizon, not a multi-quarter program"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're a mid-market fintech launching in six weeks. Two things. First, our marketing site and pricing page need to be built and deployed — you own that end to end, we have zero frontend capacity right now. Second, skip the positioning work, we already know what we do. Just get straight to the launch assets and the press release.",
+      "expected_output": "A refusal to take ownership of building and deploying the site — Vital never scopes product build, infrastructure, or delivery, so implementation returns to the client with design brief, copy, and an engineering advisory review offered instead — plus pushback on skipping positioning, replaced with a compressed positioning confirmation that fits the six-week window rather than a full strategy phase.",
+      "assertions": [
+        "Declines to own building and deploying the marketing site and pricing page, stating that Vital does not scope product build, infrastructure, or delivery and that implementation stays with the client — it does not agree to the build, produce the site code, or propose a build timeline that Vital owns",
+        "Offers the in-scope substitute for the site request explicitly: art direction and a design brief, the page and pricing copy, and an engineering advisory review of what the client builds — drawing a clear line between what Vital hands over and what the client implements",
+        "Pushes back on skipping positioning rather than silently starting on assets, on the specific grounds that the launch assets and the press release are derived from positioning and that skipping it lets brand, marketing, and PR drift into three different stories",
+        "Does not merely refuse and stop — it proposes a compressed positioning step sized to the six-week window (confirm and tighten what the client already believes, in a session or a day) instead of insisting on a full strategy phase",
+        "Checks for existing positioning in the `.vital/` workspace (`.vital/INDEX.md`, `.vital/positioning.md`) before concluding it is missing, and says it will confirm and reuse rather than regenerate if it exists",
+        "Establishes the segment as mid-market and describes a hybrid land-and-expand motion, rather than defaulting to an enterprise gate-clearing process or a purely self-serve small-business motion",
+        "Still delivers a workable six-week sequence with what happens in which week, so the pushback comes with a plan that hits the stated launch date rather than pushing the date out by default"
       ]
     }
   ]

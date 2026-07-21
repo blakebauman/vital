@@ -12,6 +12,8 @@ metadata:
 
 Build a focused account-based program that concentrates effort on a small set of high-value accounts and orchestrates marketing and sales against each buying committee. ABM inverts the funnel: pick the accounts first, then generate demand within them. Use for enterprise and upper mid-market motions — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Account selection
 
 Define the ideal account profile (firmographics: industry, size, tech stack, triggers) from strategy's ICP, then build a target list. Recommend a deliberately small list per tier — quality over volume. Score accounts on fit (match to profile) and intent (observable buying signals: hiring, funding, tech changes, leadership moves, competitor churn).
@@ -48,4 +50,4 @@ Recommend account-level metrics, not lead volume: account engagement/coverage (h
 
 ## Output
 
-Deliver the account profile, a tiered target list with scoring logic, buying-committee maps for Tier 1, a play library mapped to roles and stages, the marketing-sales orchestration model, the personalized content list, and account-level metrics. Consider delivering the target list and account plans as a spreadsheet (xlsx skill) or shareable tracker. Save the program to `.vital/abm.md`.
+Deliver the account profile, a tiered target list with scoring logic, buying-committee maps for Tier 1, a play library mapped to roles and stages, the marketing-sales orchestration model, the personalized content list, and account-level metrics. Deliver the target list and account plans as a spreadsheet via the `xlsx` skill when available, and as a markdown table otherwise. Save the program to `.vital/abm.md`.

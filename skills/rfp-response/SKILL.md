@@ -15,6 +15,8 @@ Help the client clear the process gates that stall enterprise deals — procurem
 
 > **Accuracy is non-negotiable.** Never state a certification, control, or capability the client does not actually have. Overstating on a security questionnaire is a broken deal (or worse) later. Where the client lacks something, say so and frame the roadmap or compensating control honestly. When a claim is unverified, flag it for the client to confirm — and consider routing technical claims through the `engineering` agent for a credibility check.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Establish what's being asked
 
 Determine which gate this is:
@@ -27,7 +29,7 @@ Gather the client's real posture: certifications (SOC 2 Type I/II, ISO 27001, HI
 
 ## 2. Build a reusable answer bank
 
-Create a structured answer bank the client can reuse across deals: each common question, the approved answer, the evidence/link, and a "status" (yes / roadmap / no). This is the highest-leverage asset — most questionnaires overlap heavily. Deliver it as a spreadsheet (xlsx skill) so the client maintains it.
+Create a structured answer bank the client can reuse across deals: each common question, the approved answer, the evidence/link, and a "status" (yes / roadmap / no). This is the highest-leverage asset — most questionnaires overlap heavily. Deliver it as a spreadsheet via the `xlsx` skill when available so the client maintains it; when that skill is not present, deliver the same columns as a markdown table — the answer bank is the point, the file format is not.
 
 ## 3. Draft the responses
 

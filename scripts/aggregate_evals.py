@@ -2,10 +2,15 @@
 """Aggregate graded eval runs into a benchmark.json (with/without-skill delta).
 
 Walks an iteration directory produced by prepare_eval_run.py and, for each
-eval, reads with_skill/grading.json and without_skill/grading.json (plus
-timing.json when present). Computes per-config mean/stddev of pass_rate,
-tokens, and duration, and the with-minus-without delta — the number that
-tells you what the skill buys and what it costs.
+eval, reads every repeat run under with_skill/ and without_skill/ (run-1/,
+run-2/, ...), plus the legacy flat layout when no run-* dirs are present.
+Computes per-config mean/stddev of pass_rate, tokens, and duration, and the
+with-minus-without delta — the number that tells you what the skill buys and
+what it costs.
+
+Repeats matter: a single run per config cannot separate a real delta from
+run-to-run variance. Each eval row also reports the spread across its repeats,
+so a wide spread is visible rather than averaged away.
 
 Grading files follow the agentskills.io schema:
     {"summary": {"passed": N, "failed": M, "total": T, "pass_rate": 0.xx}}
@@ -29,6 +34,11 @@ def _read(path: Path):
     return json.loads(path.read_text()) if path.exists() else None
 
 
+def _mean(vals):
+    vals = [v for v in vals if v is not None]
+    return round(statistics.mean(vals), 4) if vals else None
+
+
 def _stats(vals):
     vals = [v for v in vals if v is not None]
     if not vals:
@@ -40,21 +50,39 @@ def _stats(vals):
     }
 
 
+def _run_dirs(cfg_dir: Path) -> list[Path]:
+    """Repeat dirs for a config, newest layout first, legacy flat as fallback."""
+    runs = sorted(p for p in cfg_dir.glob("run-*") if p.is_dir())
+    return runs or ([cfg_dir] if cfg_dir.is_dir() else [])
+
+
 def collect(iter_dir: Path) -> dict:
     per_cfg = {c: {"pass_rate": [], "tokens": [], "duration_ms": []} for c in CONFIGS}
     evals = []
     for eval_dir in sorted(p for p in iter_dir.glob("eval-*") if p.is_dir()):
         row = {"eval": eval_dir.name}
         for cfg in CONFIGS:
-            grading = _read(eval_dir / cfg / "grading.json")
-            timing = _read(eval_dir / cfg / "timing.json")
-            pr = (grading or {}).get("summary", {}).get("pass_rate")
-            tok = (timing or {}).get("total_tokens")
-            dur = (timing or {}).get("duration_ms")
-            row[cfg] = {"pass_rate": pr, "tokens": tok, "duration_ms": dur}
-            per_cfg[cfg]["pass_rate"].append(pr)
-            per_cfg[cfg]["tokens"].append(tok)
-            per_cfg[cfg]["duration_ms"].append(dur)
+            prs, toks, durs = [], [], []
+            for run_dir in _run_dirs(eval_dir / cfg):
+                grading = _read(run_dir / "grading.json")
+                timing = _read(run_dir / "timing.json")
+                prs.append((grading or {}).get("summary", {}).get("pass_rate"))
+                toks.append((timing or {}).get("total_tokens"))
+                durs.append((timing or {}).get("duration_ms"))
+            clean = [v for v in prs if v is not None]
+            row[cfg] = {
+                "pass_rate": round(statistics.mean(clean), 4) if clean else None,
+                "pass_rate_runs": prs,
+                "pass_rate_spread": round(max(clean) - min(clean), 4) if clean else None,
+                "tokens": _mean(toks),
+                "duration_ms": _mean(durs),
+                "repeats": len(prs),
+            }
+            # Every repeat feeds the config-level stats, so stddev reflects real
+            # run-to-run variance rather than only between-eval variance.
+            per_cfg[cfg]["pass_rate"].extend(prs)
+            per_cfg[cfg]["tokens"].extend(toks)
+            per_cfg[cfg]["duration_ms"].extend(durs)
         evals.append(row)
 
     run_summary = {}

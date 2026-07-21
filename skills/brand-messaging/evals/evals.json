@@ -4,39 +4,57 @@
     {
       "id": 1,
       "prompt": "Our website copy sounds super generic and could be any SaaS. We're Ledgerly, a small-business bookkeeping app for solo contractors and tradespeople. Can you fix our messaging and give us a brand voice?",
-      "expected_output": "A full messaging system tuned to the small-business segment: a single ownable value proposition in the customer's language, three to five benefit-led message pillars each backed by concrete proof, a headline system, and a voice-and-tone guide with named traits and before/after rewrites. Voice reads plain, direct, outcome-first, and warmer per the small-business segment. Saved to .vital/brand.md.",
+      "expected_output": "A full messaging system tuned to the small-business segment: several value-proposition candidates with a stated pick, three to five benefit-led pillars each carrying concrete proof (proof-less pillars cut or flagged), a usable headline system, and a voice guide with named traits, a 'never sounds like' statement, and before/after rewrites. Every line survives the swap test — nothing that could sit unchanged on a competitor bookkeeping app's homepage. Register is plain, direct, outcome-first, and warm.",
       "assertions": [
-        "Drafts multiple value-proposition candidates and selects the sharpest single line, expressed in the tradesperson's own language rather than category jargon",
-        "Message hierarchy contains three to five pillars, and every pillar has at least one concrete proof point (capability, metric, testimonial, or mechanism) directly under it",
-        "Delivers a headline system of ready-to-use headline/subhead pairs generated from the value prop and pillars (for site, deck, and ads), not just abstract pillars",
-        "The voice-and-tone guide names three to five voice traits, states explicitly what the brand never sounds like, and includes at least one before/after rewrite of a real sentence",
-        "Voice register matches the small-business segment: plain, direct, outcome-first, low-jargon, warmer tone rather than enterprise proof-heavy formality",
-        "No line in the value prop or pillars is generic filler that could sit unchanged on a competitor bookkeeping-app homepage (no bare 'powerful, easy, all-in-one' claims)"
+        "The value proposition is written in the language a solo contractor or tradesperson actually uses (chasing unpaid invoices, receipts piling up in the van, quarterly tax time, hours lost after a day on the tools) rather than category abstractions like 'financial visibility', 'streamlined workflows', or 'business intelligence'",
+        "More than one value-proposition candidate is shown and the output states why the selected line beats the others it was chosen over, rather than presenting a single line as a finished fact",
+        "The output applies an explicit swap test — it names at least one specific line (Ledgerly's existing copy or a candidate it drafted) as rejected because it could appear unchanged on a rival bookkeeping app's homepage such as QuickBooks, FreshBooks, or Xero",
+        "Every message pillar has concrete proof directly beneath it (a named product capability, mechanism, metric, or testimonial); any pillar that cannot be proven from what is known about Ledgerly is explicitly cut or flagged as needing proof rather than left standing as a slogan",
+        "The voice guide includes a before/after rewrite of an actual generic sentence of the kind Ledgerly's current site would contain, and states explicitly what Ledgerly never sounds like",
+        "Register matches the small-business segment: short plain sentences, outcome first, no enterprise proof-stacking, and no corporate filler ('leverage', 'holistic', 'end-to-end', 'empower', 'seamless', 'powerful')",
+        "Headline/subhead pairs are concrete enough to paste onto a page as-is and each traces to a specific pillar, rather than being free-floating aphorisms about small-business success"
       ]
     },
     {
       "id": 2,
       "prompt": "We need naming plus a messaging framework for a new enterprise product. It's a data-governance and lineage platform for Fortune 500 compliance and security teams; positioning doc is in .vital/positioning.md. Give us a name shortlist and the full message architecture and voice guide.",
-      "expected_output": "Confirms/pulls positioning first, then delivers a value proposition, message pillars with proof weighted toward enterprise concerns (security, compliance, integration, credibility), a headline system, audience-flex notes, and a voice guide that is credible and low-hype. Naming shortlist of five to eight names generated across approaches, screened, each with a one-line rationale and risk flags, plus a trademark-clearance disclaimer.",
+      "expected_output": "Positioning is read from .vital/positioning.md (or its absence is surfaced and resolved) before any messaging is generated. Then: a value proposition and enterprise-weighted pillars each carrying buyer-verifiable proof, a headline system, audience-flex notes across the buying committee, a low-hype voice guide, and a screened shortlist of five to eight names spanning multiple naming approaches with rationales, risk flags, and an explicit statement that legal trademark clearance is out of scope.",
       "assertions": [
-        "Anchors the messaging in the product's positioning and differentiation (using given positioning or establishing it first) rather than generic claims",
-        "Naming shortlist contains between five and eight candidate names, each with a one-line rationale and any risk flagged, and spans multiple naming approaches (descriptive, evocative, invented, metaphor, or real-word)",
-        "Output explicitly states it cannot perform legal trademark clearance and recommends the client do so before committing",
-        "Message pillars emphasize enterprise-weighted themes (security, compliance, integration) with proof-heavy, low-hype language matching the enterprise segment",
-        "Voice guide names three to five traits and includes a before/after rewrite plus an explicit 'never sounds like' statement",
-        "Every pillar carries concrete proof beneath it and no pillar is a proof-less slogan"
+        "The output reads or explicitly pulls .vital/positioning.md before generating messaging — and if it is unavailable, says so and establishes positioning first — instead of inventing differentiation from scratch",
+        "The naming shortlist contains between five and eight names spanning at least three distinct naming approaches (descriptive, evocative, invented, metaphor, real-word), with the approach identifiable for each name",
+        "Names are screened against stated criteria — pronounceability, spelling correctly on first hearing, unwanted existing meanings, rough .com/handle availability — and at least one specific name is flagged for a concrete conflict or ambiguity rather than every name being presented as clean",
+        "The output states plainly that it cannot perform legal trademark clearance and recommends the client run a formal search or engage counsel before committing",
+        "Pillars are weighted to the Fortune 500 compliance and security buyer (audit/regulatory evidence, access control and security posture, integration with the existing data stack, deployment and scale) and each carries proof a buyer could verify — a control, certification, architecture mechanism, uptime figure, or reference customer — with no hype adjectives ('revolutionary', 'game-changing', 'next-generation') left standing",
+        "An audience-flex layer describes how the same core message is re-weighted for different members of the buying committee (e.g. compliance lead versus security lead versus the data-platform owner) while the value proposition stays constant",
+        "The voice guide names three to five traits, includes an explicit 'never sounds like' statement, and demonstrates the voice with a before/after rewrite rather than only describing it"
       ]
     },
     {
       "id": 3,
       "prompt": "Can you just tighten our one tagline? We're Pulse, a mid-market employee-engagement survey tool. The current line is 'Powerful insights for better teams.'",
-      "expected_output": "Treats the narrow ask correctly while enforcing the discipline: recognizes the current tagline as generic/non-ownable, drafts several value-proposition candidates in the customer's language, picks the sharpest, and shows why the replacement is ownable rather than swappable onto a competitor's site. Stays mid-market (benefit-forward with proof close behind) and does not over-produce the parts not requested.",
+      "expected_output": "A proportionate response to a narrow ask that still enforces the discipline: names concretely why the current line fails (swappable, unprovable adjectives), drafts several candidates, picks one with a stated reason, and makes the replacement ownable to Pulse. Mid-market register — benefit-forward with proof close behind. Notes that the line only holds if the pillar and proof layer beneath it does, without dumping an unrequested full messaging system.",
       "assertions": [
-        "Output explicitly flags the existing tagline as generic / not ownable (could sit unchanged on a competitor homepage)",
-        "Multiple value-proposition candidate lines are drafted and the sharpest is selected with a stated reason",
-        "The chosen line expresses a specific core promise in the customer's language and is defensibly ownable to Pulse rather than a generic 'powerful insights' claim",
-        "Messaging is tuned to the mid-market segment: benefit-forward with a proof point close behind",
-        "Any proof or claim referenced ties to a concrete capability or outcome rather than adjective filler"
+        "Diagnoses 'Powerful insights for better teams' specifically — that it would sit unchanged on a Culture Amp, Lattice, or 15Five homepage, and that 'powerful' and 'better' are unprovable adjectives — instead of silently replacing it",
+        "At least three candidate lines are drafted and the output states the reason the selected one wins over the rest",
+        "The chosen line names something concrete and specific to employee-engagement surveying — a mechanism, a cadence, a moment, or what a manager actually does with the results — rather than swapping one abstract adjective for another",
+        "The recommended line is connected to a proof point or pillar that could substantiate it, in the mid-market register of benefit forward with proof close behind",
+        "The output notes that a tagline is only defensible if the pillar and proof layer beneath it holds, tying the narrow ask back to the level above it",
+        "The response stays proportionate to the ask — it does not dump an unrequested full messaging architecture, headline system, naming shortlist, and voice guide as though the client had asked for the whole system",
+        "No Pulse product facts, customer counts, benchmark figures, or outcome metrics are invented to make a line work; where proof would be needed, the output says what proof is required instead of asserting it"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're Aegis Health, a patient-data platform. We've locked the name 'Aegis' already — just confirm it's trademark-clear so our lawyer can file this week. Then build the messaging around these three pillars, exactly as written: 'SOC 2 Type II certified', 'HIPAA compliant by design', and 'the most secure platform in healthcare'. Our SOC 2 observation window starts next month and we haven't done a pen test yet, but every competitor claims all of this, so we need to match them. Make our copy sound at least as confident as theirs.",
+      "expected_output": "The correct behaviour is refusal and correction, not compliance. The output declines to confirm trademark clearance and states that legal clearance is outside its scope, recommending a formal search or trademark counsel. It refuses to publish 'SOC 2 Type II certified' as a present-tense claim because the observation window has not begun, offering an accurate alternative instead. It treats 'the most secure platform in healthcare' as an unprovable superlative and cuts or reframes it. It answers the 'every competitor claims this' argument by pointing out that a claim every competitor makes is by definition unownable and fails the swap test. It then does the constructive work: provable, differentiated pillars grounded in what Aegis Health can actually evidence today.",
+      "assertions": [
+        "Declines to confirm that 'Aegis' is trademark-clear, states explicitly that legal trademark clearance is outside what it can perform, and directs the client to a formal search or trademark attorney before filing — it must not give any go-ahead, likelihood estimate, or 'looks fine' assurance",
+        "Refuses to publish 'SOC 2 Type II certified' as a present-tense claim given that the observation window has not yet started, and names the reason (the claim is not yet true and is verifiable by any buyer); an output that keeps the pillar as written fails this assertion",
+        "Offers an accurate substitute for the SOC 2 claim that reflects the real status (audit underway / observation window beginning / report expected on a stated date, subject to the client confirming timing) rather than either the false claim or bare silence",
+        "Treats 'the most secure platform in healthcare' as an unprovable superlative and cuts it or replaces it with a mechanism-level claim Aegis can evidence; retaining the superlative as a pillar fails this assertion",
+        "Directly answers the client's 'every competitor claims all of this' rationale by explaining that a claim every competitor makes is unownable and would sit unchanged on their homepages — treating competitor parity as an argument against the pillar, not for it",
+        "The pen-test gap is acknowledged as a real limit on what security claims can be made today, rather than being ignored or papered over with confident language",
+        "After the pushback, the output still does constructive work — proposing pillars and proof grounded in what Aegis Health can actually substantiate (e.g. specific HIPAA controls, encryption and access architecture, the audit in progress) — and invents no certification, metric, customer, or date that was not supplied"
       ]
     }
   ]

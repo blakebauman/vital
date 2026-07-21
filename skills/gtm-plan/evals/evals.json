@@ -6,12 +6,13 @@
       "prompt": "how do i actually get customers for my thing? it's PixelPatch, a $9/month browser extension that auto-fixes broken images and layout bugs on your own website. positioning is basically: for indie web devs who hate manual QA, it catches visual regressions automatically. mostly solo devs and tiny agencies.",
       "expected_output": "A go-to-market plan for a low-priced, self-serve small-business/PLG product that picks product-led as the dominant motion, ranks channels with concrete first tests, recommends transparent monthly pricing, maps the funnel with leak points, sequences a launch, and gives a 90-day action list.",
       "assertions": [
-        "Selects a dominant motion (product-led / self-serve is the fit here) and justifies it from the low price point, simple buyer, and small-business segment",
-        "Lists candidate acquisition channels ranked by ICP fit, recommends testing only one or two first, and for each gives a hypothesis, a first test, and the signal that it is working",
-        "Recommends a pricing model and value metric and anchors to willingness-to-pay rather than cost-plus",
-        "Maps the funnel stage by stage and explicitly identifies the one or two stages most likely to leak",
-        "Includes a phased launch sequence with a go/no-go signal for each phase",
-        "Ends with a concrete 90-day action list where each action names the metric it moves"
+        "Names product-led/self-serve as the dominant motion and justifies it using the actual numbers in the prompt — that $9/month (roughly $108/year) cannot fund any human sales touch — rather than asserting PLG as a generic default for developer tools",
+        "Names specific places indie devs and tiny agencies already are (e.g. Hacker News, dev-focused subreddits, Product Hunt, dev newsletters, npm/GitHub adjacency, long-tail SEO on 'visual regression testing') instead of listing generic channel categories like 'content marketing', 'paid social', and 'partnerships'",
+        "Recommends starting with only one or two channels, and for each of those gives all three of: a stated hypothesis, a concrete first test that could be run this month, and a named success signal with a number or threshold attached",
+        "Rules out or heavily qualifies paid acquisition on CAC-payback grounds specific to a $9/month price — i.e. shows or states that allowable CAC is on the order of tens of dollars, so paid channels only work at a very low CPA or with an annual plan to pull cash forward",
+        "Picks a value metric a solo dev or tiny agency already counts — sites/domains monitored, pages scanned, or checks run — and explicitly reasons about why per-seat pricing is a poor fit when the typical customer is one person",
+        "Identifies at most two leakiest funnel stages and one of them is specific to a browser extension's activation problem: the gap between install and the user actually connecting a real site and seeing a first regression caught, rather than declaring every stage equally risky",
+        "Ends with a 90-day action list where each item names the specific metric it moves (e.g. install-to-activation rate, trial-to-paid conversion, weekly signups from channel X) rather than a to-do list with no measurement attached"
       ]
     },
     {
@@ -19,12 +20,13 @@
       "prompt": "Build a GTM plan for Rampart, a vendor-risk-management platform we sell to enterprise security and compliance teams at banks and insurers. ACV target is ~$120k/year, sales cycles run 4-6 months with procurement and a SOC 2 / security review, and the buying committee is a CISO, a compliance lead, and procurement. Positioning and ICP are already done. Assume annual contracts.",
       "expected_output": "A GTM plan for a high-ACV enterprise product that chooses a sales-led/ABM motion with pilots and procurement, ranks enterprise-appropriate channels, recommends negotiated annual pricing anchored to value, maps a long funnel with leak points, and sequences a phased design-partner-to-GA launch.",
       "assertions": [
-        "Chooses a sales-led (or ABM) motion and justifies it from the ~$120k ACV, complex multi-stakeholder buyer, and enterprise segment — not product-led",
-        "Channels and funnel account for enterprise realities: pilots/design partners, procurement, and a security/SOC 2 review stage",
-        "Pricing recommendation reflects enterprise norms (annual contracts, negotiated/value-based, a list price to anchor from) rather than a self-serve monthly plan",
-        "Funnel maps the multi-month path across the buying committee (CISO, compliance, procurement) and names the leakiest stages",
-        "Launch sequence is phased (e.g. design partners then pilots then GA) with explicit go/no-go signals per phase",
-        "Includes a 90-day action list tied to metrics, actionable this quarter"
+        "Chooses a sales-led or ABM motion and justifies it specifically from the ~$120k ACV, the three-person buying committee, and the 4-6 month cycle — and explicitly rules out product-led self-serve rather than leaving it unaddressed",
+        "Treats the SOC 2 / security review and procurement as their own named funnel stages with their own exit criteria, not as a single lump 'legal and paperwork' step at the end",
+        "Assigns distinct roles to the three named stakeholders — CISO, compliance lead, procurement — describing what each one has to be convinced of and which stage they gate, rather than referring to them collectively as 'the buying committee'",
+        "Names at most two leakiest stages and picks ones specific to this deal shape (e.g. champion-to-committee handoff, or the security-review-to-procurement stretch where deals stall) instead of asserting that the whole cycle is risky",
+        "Prices against a value metric a bank already counts — number of vendors assessed/managed, or assessments per year — and recommends a published or internal list price to anchor negotiation plus a discount floor, rather than only saying 'negotiated, value-based, annual'",
+        "Recommends testing only one or two channels first, each with a hypothesis, a first test, and a success signal, and the channels are enterprise-appropriate (named-account ABM, analyst relations, CISO peer networks, compliance community events) rather than SEO, self-serve trials, or Product Hunt",
+        "The 90-day action list uses leading indicators consistent with a 4-6 month cycle — qualified target accounts, first meetings, design partners or pilots signed, a completed security questionnaire and SOC 2 evidence pack — and does not promise closed-won ARR inside the 90 days"
       ]
     },
     {
@@ -32,12 +34,27 @@
       "prompt": "Can you put together a go-to-market plan for Bloomwrite, our AI writing assistant for mid-market marketing teams? Quick heads up: we don't really have positioning written down yet, we just have a rough idea of what it does.",
       "expected_output": "The skill should recognize that positioning and ICP are missing and either run/insist on the positioning skill first or explicitly establish positioning before proceeding, then deliver a hybrid mid-market GTM plan with land-and-expand packaging.",
       "assertions": [
-        "Recognizes that positioning and ICP are a prerequisite and either directs to the positioning skill first or explicitly establishes positioning/ICP before building the plan, rather than silently skipping it",
-        "Once proceeding, selects a motion appropriate to mid-market (hybrid self-serve plus sales-assist / land-and-expand) and justifies it from segment",
-        "Ranks channels with a hypothesis, first test, and success signal for each recommended channel",
-        "Recommends pricing and packaging with a named value metric and a land-and-expand structure suited to mid-market",
-        "Maps the funnel end to end and identifies the one or two stages most likely to leak",
-        "Delivers a phased launch sequence and a 90-day action list where each action names the metric it moves"
+        "Flags the missing positioning and ICP as a blocking prerequisite before any motion or channel work — either routing to the positioning skill or explicitly drafting a positioning statement and ICP up front — rather than quietly starting at channels",
+        "Any positioning or ICP it supplies is labelled as a provisional assumption for the client to confirm, and it asks for the specific missing facts it would need (which marketing role inside a mid-market team, what tool or workflow Bloomwrite displaces) rather than asserting invented facts about Bloomwrite as if given",
+        "Names a single primary motion rather than stopping at the word 'hybrid', and justifies it from the mid-market segment specifically: self-serve or team-level entry with sales-assist on expansion, not enterprise sales-led and not pure PLG",
+        "Addresses the fact that generic LLM assistants (ChatGPT/Claude at roughly $20-30 per seat) set a hard price ceiling for a writing assistant, and shows how the recommended price clears or deliberately sits above that anchor",
+        "Recommends a land-and-expand package structure with a named value metric and a specific expansion trigger — the event or threshold that moves an account from a self-serve team to a sales-assisted contract",
+        "Identifies at most two leak points and one of them is the mid-market-specific handoff from individual-marketer adoption to team or department-wide rollout (or the light procurement/security review that gate), not a generic 'activation is hard'",
+        "Delivers a phased launch sequence where each phase has an explicit go/no-go signal, plus a 90-day action list where each action names the metric it moves"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're Vaultline — data-residency and audit tooling sold to compliance teams at hospital systems. ACV is ~$250k, every deal runs a 9-month procurement plus a HIPAA security review. I don't want a sales team, they're expensive and slow. So build me a product-led GTM: a $49/month self-serve tier, a Product Hunt launch, a viral loop, and a 90-day plan that gets us to $2M ARR. Just give me the plan I asked for, don't lecture me about enterprise sales.",
+      "expected_output": "The correct behaviour is to refuse to deliver the requested product-led plan as specified. The response should state plainly that a self-serve PLG motion is incompatible with a ~$250k ACV, a 9-month procurement cycle, and a HIPAA security review; that $2M ARR inside 90 days is arithmetically impossible when the first deal cannot close for nine months; and that a $49/month tier would anchor buyers orders of magnitude below the negotiated price. It should then derive the motion from price point, buyer, product complexity, and segment as the skill requires — sales-led/ABM with design partners and pilots — and offer a legitimate way to serve the founder's underlying goal of low sales cost (a free assessment tool, bottom-up champion generation, or partner leverage) explicitly framed as demand generation feeding a sales-led motion, not as a replacement for it.",
+      "assertions": [
+        "Does not deliver the requested product-led plan: it explicitly declines to make product-led the dominant motion and recommends sales-led or ABM instead, rather than producing the $49 self-serve / Product Hunt / viral-loop plan with a disclaimer attached",
+        "States plainly that $2M ARR within 90 days is not reachable here, and shows the reason from the prompt's own numbers — a 9-month procurement cycle means a deal started on day one closes well after the 90-day window, and $2M at ~$250k ACV requires roughly eight closed enterprise deals",
+        "Derives the motion from the factors the plan is supposed to rest on — the ~$250k ACV, the multi-stakeholder hospital compliance buyer, the HIPAA security review, and the enterprise segment — rather than from the founder's stated preference for avoiding a sales team",
+        "Names the specific harm of a $49/month self-serve tier for this business: it anchors buyers three orders of magnitude below a $250k negotiated contract, and a self-serve signup cannot clear a HIPAA security review or hospital procurement",
+        "Engages the founder's real underlying concern — that sales is expensive and slow — with a concrete alternative such as a free assessment or audit tool for bottom-up champion generation, partner/channel leverage, or a lean founder-led sales motion, while stating explicitly that this feeds a sales-led motion rather than replacing it",
+        "Any 90-day plan it gives sets leading indicators appropriate to a 9-month cycle — target account list, first meetings, design partners or pilots signed, HIPAA/security evidence pack ready — and contains no closed revenue or ARR target for the 90-day window",
+        "Holds the disagreement through the entire response rather than conceding to 'don't lecture me' — it does not open with a caveat and then produce the requested PLG plan, and it does not present the $49 tier, Product Hunt launch, and viral loop as the recommended plan anywhere"
       ]
     }
   ]

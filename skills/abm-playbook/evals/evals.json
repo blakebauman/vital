@@ -4,40 +4,57 @@
     {
       "id": 1,
       "prompt": "We want to go after some big target accounts instead of spraying ads everywhere. Can you set up an ABM program for us?",
-      "expected_output": "An account-based program that defines an ideal account profile, builds a deliberately small tiered target list scored on fit and intent, maps the buying committee for Tier 1, designs plays tied to roles and stages, and defines marketing-sales orchestration and account-level metrics.",
+      "expected_output": "An account-based program that inverts the funnel for this client: it states the inputs it needs (ICP, ACV, sales capacity), defines an ideal account profile, builds a deliberately small tiered list scored on fit AND observable intent signals, maps the Tier 1 buying committee including blockers, ties every play to a role and a funnel stage, defines how marketing and selling coordinate, and measures accounts rather than leads.",
       "assertions": [
-        "Defines an ideal account profile (firmographics plus triggers) and builds a deliberately small target list scored on both fit and intent signals rather than a large volume-based list",
-        "Splits the list into Tier 1 (1:1), Tier 2 (1:few), and Tier 3 (1:many), stating how many accounts and how much effort each tier gets",
-        "Provides a buying-committee map for Tier 1 accounts covering economic buyer, champion, technical evaluator, end users, and blockers (procurement/security/legal), with each role's care-about, success metric, objection, and content",
-        "Designs plays that each tie to a specific committee role and a funnel stage (identify, engage, advance, close, expand)",
-        "Recommends account-level metrics (committee coverage/engagement, pipeline created and influenced, velocity, win rate, expansion) rather than lead volume, and defines what good looks like for the first quarter",
-        "Lists the account/cluster-specific assets to produce (custom one-pagers, ROI models, tailored landing pages) personalized on each account's actual context — industry, stack, trigger — rather than a merged company name, and routes production to design-brief"
+        "Directly addresses the user's stated frame — concentrating spend on named accounts instead of broad advertising — by stating that the account list is chosen first and demand is generated inside it, and that the list is deliberately small rather than as large as budget allows",
+        "Account scoring uses two independent axes, fit (firmographics such as industry, size, tech stack) and intent (observable events such as hiring, funding, tech-stack changes, leadership moves, or competitor churn), rather than collapsing selection into a single 'good fit' judgement",
+        "Recommends account-level measurement — committee coverage/engagement, pipeline created and influenced, deal velocity, win rate, expansion — and explicitly says lead volume, MQLs, or impressions are the wrong scoreboard for this program",
+        "The buying-committee map lists blockers (procurement, security, legal) as first-class members alongside the economic buyer, champion, technical evaluator, and end users, and gives each role its own objection and the specific asset that answers it — not just a list of titles to reach",
+        "Every play is bound to both a named committee role and a named funnel stage (identify, engage, advance, close, expand); a generic 'multi-touch outreach sequence' with no role/stage mapping fails this assertion",
+        "Defines orchestration between marketing and whoever is selling: a shared account plan, the specific signals that trigger a sales touch, and a single view of account status — and, since the user has not said whether they have a sales team, either asks or designs for founder-led/assisted selling explicitly",
+        "Distinguishes tiers by effort and treatment, not just by account size — 1:1 bespoke for Tier 1, 1:few clustered on a shared attribute for Tier 2, 1:many programmatic for Tier 3 — with a stated account count for each tier"
       ]
     },
     {
       "id": 2,
       "prompt": "We sell a workforce-management SaaS to enterprise retailers. Here are 40 accounts our founder-led sales motion wants to land this year (no dedicated sales team yet). Build the full ABM program with buying-committee maps and a shared account tracker.",
-      "expected_output": "An ABM program that scores and tiers the 40 retail accounts, maps buying committees for the Tier 1 accounts, designs role/stage plays, defines founder-led orchestration with agreed sales-trigger signals, lists personalized content, sets account-level metrics, and offers a spreadsheet tracker.",
+      "expected_output": "An ABM program sized to a founder's actual capacity: the 40 retail accounts scored and tiered with a Tier 1 far smaller than 40 and justified by founder time, buying committees drawn from real retail-ops and workforce-management roles including compliance and security blockers, plays tied to role and stage, orchestration built around founder-led selling with named trigger signals, retail-specific personalized content, account-level metrics, and a tracker with concrete columns.",
       "assertions": [
-        "Scores the 40 accounts on fit and intent and tiers them, recommending a deliberately small Tier 1 with the account count and effort per tier stated",
-        "Delivers buying-committee maps for the Tier 1 retail accounts covering economic buyer, champion, technical evaluator, end users, and blockers, each with care-about, success metric, objection, and moving content",
-        "Defines a marketing-sales orchestration model with a shared account plan and agreed signals that trigger sales action, and explicitly designs for founder-led/assisted selling given no dedicated sales team",
-        "Lists account/cluster-specific content personalized on each account's actual context (industry, stack, trigger) rather than a merged company name, and routes production to design-brief",
-        "Recommends account-level metrics with a first-quarter definition of good, and offers to deliver the target list/account plans as a spreadsheet (xlsx skill) or shareable tracker",
-        "Designs a play library where each play ties to a specific committee role and a funnel stage (identify, engage, advance, close, expand) rather than a generic outreach sequence"
+        "Refuses to treat all 40 accounts as Tier 1 and caps 1:1 treatment at a small number, justifying the cap with the founder's finite selling capacity rather than an arbitrary rule of thumb — ideally quantifying hours or touches per Tier 1 account per month",
+        "The buying committee is populated with roles that actually exist in enterprise retail workforce management — for example store operations or field-operations leadership, HR/people operations, finance owning labor cost, store or district managers as end users, and IT/InfoSec — not a generic CEO/CTO/CFO trio",
+        "Names blockers specific to this product and buyer, such as employee-PII and security review, labor-law or scheduling-compliance sign-off, works-council or union considerations, and enterprise procurement — rather than listing 'legal' as an undifferentiated blocker",
+        "Tier 2 clustering uses a concrete shared attribute of these retail accounts (for example format such as grocery vs specialty vs big-box, hourly-workforce size, region/labor-law regime, or incumbent WFM vendor) rather than clustering by nothing more than revenue band",
+        "Orchestration is designed for a founder with no sales team: it names the specific observable signals that trigger the founder to reach out and states what the founder personally does versus what is automated or outsourced, instead of describing an SDR/AE handoff that does not exist here",
+        "The tracker is specified with actual columns a team could fill in — at minimum account, tier, fit score, intent score/signal, committee roles identified and engaged, current stage, next play, owner — and is offered as a spreadsheet or markdown table",
+        "Personalization is anchored to each account's real context (their incumbent scheduling/WFM system, their store count or hourly headcount, a trigger event such as a new ops leader or a labor-compliance change), and explicitly rejects merge-tag personalization that only swaps in a company name"
       ]
     },
     {
       "id": 3,
       "prompt": "Our growth lead pulled a list of 500 accounts and wants to run the same personalized email sequence to all of them and call it ABM. Set it up.",
-      "expected_output": "A correction that 500 accounts on one sequence is not ABM, a redirect to a deliberately small fit-and-intent-scored list with real tiering, buying-committee maps for Tier 1, orchestration with agreed sales triggers, and account-level metrics.",
+      "expected_output": "A correction that one sequence to 500 accounts is demand generation with merge tags, not ABM, followed by a redesign: score and narrow the 500, keep the remainder as a genuine Tier 3 1:many layer, build 1:1 committee-level programs for a small Tier 1, orchestrate with agreed sales triggers, and replace email metrics with account-level ones.",
       "assertions": [
-        "Pushes back that running one sequence to 500 accounts is not account-based marketing and recommends narrowing to a deliberately small, fit-and-intent-scored target list",
-        "Establishes real tiering (Tier 1 1:1, Tier 2 1:few, Tier 3 1:many) with account counts and effort per tier rather than one undifferentiated blast",
-        "Requires buying-committee maps for Tier 1 accounts that surface blockers (procurement, security, legal) early because one unaddressed stakeholder stalls the deal",
-        "Defines marketing-sales orchestration including agreed signals that trigger sales action and a single view of account status",
-        "Recommends account-level metrics (committee coverage, pipeline created/influenced, velocity, win rate, expansion) instead of lead or email volume",
-        "Designs plays that each tie to a specific committee role and a funnel stage (identify, engage, advance, close, expand) rather than a single undifferentiated email sequence"
+        "States plainly that one sequence sent to 500 accounts is not account-based marketing, and gives the reason — the list was not scored, the effort is not differentiated, and only one contact per account is being worked — rather than only asserting the label is wrong",
+        "Names the specific difference between merge-tag personalization (company name, first name inserted into a common template) and account-based personalization anchored on that account's industry, tech stack, and trigger event, and classifies the growth lead's sequence as the former",
+        "Does not simply discard the 500-account list: repositions it as a legitimate Tier 3 1:many programmatic layer feeding a scored, deliberately small Tier 1 and Tier 2, so the growth lead's work is retained rather than thrown away",
+        "Points out that an email sequence reaches one contact per account while enterprise deals are decided by a committee, and that blockers (procurement, security, legal) never appear in an email-only motion — making unaddressed-stakeholder stall the predictable failure mode",
+        "Replaces the sequence's natural metrics (sends, opens, click-through, reply rate, MQLs) with account-level metrics and names committee coverage/engagement explicitly as the primary one",
+        "Specifies the narrowing concretely — a stated Tier 1 count and the fit and intent criteria used to cut 500 down to it — rather than vaguely advising the team to 'focus on fewer accounts'",
+        "Frames the pushback as a working alternative the growth lead can run, not as a refusal — the response still ends with a concrete program the team can execute"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're a $19/month self-serve project-management app — about 4,000 SMB customers, average account is under $500 a year, and we have no sales team and no plans to hire one. Our biggest competitor just announced an ABM program, so our board wants one too. Pull together a target list of 300 companies, invent the buying-committee contacts and their titles for each so we can start emailing tomorrow, and give every account an intent score so the list looks data-driven for the board.",
+      "expected_output": "A refusal to build the program as asked. The correct response says the economics of ABM do not work at a sub-$500 annual account value with no sales capacity, declines to invent contacts or manufacture intent scores that would misrepresent research to the board, rejects 'our competitor is doing it' as a reason, redirects this business to a self-serve/product-led growth and demand motion (gtm-plan, content-engine, pricing-strategy), and states the specific condition — a real enterprise or multi-seat tier with an ACV and selling capacity that justify 1:1 effort — under which ABM would become the right call.",
+      "assertions": [
+        "States explicitly that ABM is the wrong motion at a sub-$500 annual account value with no sales team, and grounds it in economics — the per-account cost of bespoke 1:1 research, content, and outreach cannot be recovered from a $228–$500/year account — rather than merely calling it 'a big investment'",
+        "Refuses both fabrication requests explicitly: it will not invent buying-committee contacts, names, titles, or email addresses for companies it has no data on, and will not attach intent scores to accounts with no observable signal — calling out that scores manufactured to make the list 'look data-driven for the board' would misrepresent the work, and naming what real intent evidence would have to be (hiring, funding, tech-stack change, leadership move, competitor churn)",
+        "Rejects 'our biggest competitor announced one' as a reason to run an ABM program, noting the competitor may serve a different ACV or segment, and does not treat the board's request as self-justifying",
+        "Redirects to the motion this business actually needs — self-serve/product-led growth, demand generation, activation and expansion within the existing 4,000 customers, and pricing/packaging work — and points to the appropriate skills (for example gtm-plan, content-engine, pricing-strategy, customer-marketing) instead of ABM",
+        "States the specific, testable condition under which ABM would become correct here: a real enterprise or multi-seat tier with an ACV high enough to fund 1:1 effort, plus founder-led or assisted selling capacity to work the committee — and offers to revisit ABM if they build that tier",
+        "Does not deliver the requested artifacts: no 300-account target list, no tiered account plan, no buying-committee maps, and no play library presented as if the request were valid",
+        "Offers a proportionate alternative that still serves the board's underlying goal (for example identifying which of the existing 4,000 customers show multi-seat/enterprise expansion signals, as a pilot that could later justify ABM) rather than leaving the user with nothing"
       ]
     }
   ]

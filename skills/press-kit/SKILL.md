@@ -15,6 +15,8 @@ Earn third-party attention for the launch. Coverage comes from a specific story 
 
 Tailor the press approach to the **client's segment** — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. For enterprise, weight **analyst relations** (Gartner, Forrester, IDC briefings), trade/vertical press, and named-customer proof; for mid-market, tech and vertical press plus founder narrative; for small business, launch platforms, niche newsletters, and community-driven attention over analyst relations.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Find the angle
 
 "We launched a product" is not news. Tie the launch to something a journalist's readers care about: a trend, a tension or conflict, a surprising data point, a genuinely new capability, or a notable founder story. Draft two or three candidate angles and pick the strongest. If the launch is honestly not newsworthy to press, say so and redirect effort to launch platforms and communities.

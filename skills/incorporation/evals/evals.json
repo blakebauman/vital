@@ -4,40 +4,57 @@
     {
       "id": 1,
       "prompt": "Two of us are starting a company and want to hit the ground running. Should we just do an LLC or a C-corp? We think we'll raise money from VCs at some point.",
-      "expected_output": "An entity recommendation favoring a Delaware C-corp given the VC intent, with reasoning; a recommended incorporation path (e.g., Stripe Atlas vs alternatives) with current pricing and trade-offs cited; founder equity and 4-year/1-year-cliff vesting guidance; the 83(b) 30-day deadline flagged; cap-table basics; a post-incorporation checklist; and the advisory boundary with a prompt to engage an attorney and CPA.",
+      "expected_output": "A Delaware C-corp recommendation justified by concrete venture mechanics rather than 'investors prefer it', an honest account of what the C-corp costs them in ongoing overhead versus the 'hit the ground running' instinct, a recommended formation route with a current price and cited sources, treatment of the two-founder equity split as a decision they must actually make rather than default to 50/50, 4-year/1-year-cliff vesting with the reason it exists, the 83(b) 30-day clock flagged as running from stock issuance, a post-incorporation checklist, and the not-legal/tax-advice boundary routing them to an attorney and CPA.",
       "assertions": [
-        "Recommends a Delaware C-corp over an LLC and ties the reasoning to the stated intent to raise venture capital",
-        "States that the output is not legal or tax advice and prompts the founders to have a qualified startup attorney and CPA review before filing or issuing equity",
-        "Flags the 83(b) election and its unforgiving 30-day filing deadline from stock issuance",
-        "Recommends 4-year vesting with a 1-year cliff for founders",
-        "Provides current incorporation pricing and includes a Sources section citing the pricing/feature research",
-        "Includes a post-incorporation checklist covering EIN, bank account, equity issuance, IP assignment, registered agent, and Delaware franchise tax"
+        "Recommends a Delaware C-corp over an LLC and grounds it in at least one concrete C-corp-only mechanic the VC path needs — preferred stock, an option pool, or QSBS eligibility — rather than only asserting that investors prefer or expect it",
+        "Addresses the 'at some point' hedge in the prompt directly: explains what converting an LLC to a Delaware C-corp later actually costs (legal fees, possible tax consequences, lost QSBS clock) so the founders can see why the option value of waiting is low, while being honest that the C-corp brings ongoing obligations the LLC does not (Delaware franchise tax and annual report, registered agent) and giving the post-incorporation checklist that follows from it",
+        "Treats the two-founder situation as an equity-split decision that must be made deliberately — warns against a reflexive 50/50 chosen for speed and gives the factors (contribution, risk, role, ongoing commitment) — rather than covering only entity choice",
+        "Recommends 4-year vesting with a 1-year cliff for both founders and states the reason it protects them: if one of the two walks in year one, the cap table is not left with a large dead-equity holder",
+        "States the 83(b) election's 30-day window and that the clock runs from stock issuance (not from incorporation, filing, or year end), and characterizes the deadline as unforgiving",
+        "Names a specific formation route with a current price figure (e.g., Stripe Atlas at roughly $500 one-time plus an annual registered-agent fee) and backs the figures with a Sources section rather than quoting prices from memory with no citation",
+        "States that this is not legal or tax advice and tells the founders to have a qualified startup attorney and CPA review before filing or issuing equity"
       ]
     },
     {
       "id": 2,
       "prompt": "I'm a solo non-US founder (based in Portugal) building an AI SaaS I intend to raise a pre-seed on within 12 months. I want to incorporate a Delaware C-corp this month. Compare Stripe Atlas vs Clerky vs a startup attorney on price and non-resident support, and give me the full setup plan including my equity and the cap table.",
-      "expected_output": "A Delaware C-corp recommendation confirmed for the venture path; a side-by-side comparison of Stripe Atlas, Clerky, and a startup attorney with current pricing, non-resident support, and trade-offs cited; founder equity and vesting guidance (even for a solo founder); the 83(b) 30-day deadline flagged hard; starting cap-table basics (authorized vs issued, par value, option pool); a post-incorporation checklist including foreign-qualification and franchise-tax notes; and the advisory boundary routing to attorney and CPA.",
+      "expected_output": "A three-way comparison of Stripe Atlas, Clerky, and a startup attorney with a current price figure and an explicit non-resident position for each (sourced), the non-US-specific friction that threatens the stated 'this month' timeline (EIN without an SSN, US bank account KYC), vesting recommended for the solo founder with the pre-seed-investor rationale, the 83(b) 30-day clock flagged and routed to a CPA, starting cap-table mechanics including how the option pool will dilute him at the round, the Portugal-side tax exposure routed to a local advisor, and the not-legal/tax-advice boundary including that Atlas and Clerky are not law firms.",
       "assertions": [
-        "Compares Stripe Atlas, Clerky, and a startup attorney with current pricing and explicit non-resident/international support trade-offs",
-        "Includes a Sources section citing the current pricing and feature research for the formation routes",
-        "Flags the 83(b) election with its 30-day deadline and routes it to a CPA",
-        "Explains starting cap-table basics including authorized vs issued shares, par value, and the future option pool",
-        "States the output is not legal or tax advice and prompts engaging a qualified startup attorney and CPA before filing or issuing equity",
-        "Notes that Stripe Atlas and similar services are not law firms and do not provide legal or tax advice"
+        "Compares all three named routes — Stripe Atlas, Clerky, and a startup attorney — with a current price figure for each and an explicit statement of how each handles a founder with no US residency, and cites the pricing/feature research in a Sources section",
+        "Identifies the non-US-specific step that actually threatens the stated 'this month' timeline — obtaining an EIN without an SSN/ITIN takes materially longer than the online path, and opening a US bank account requires KYC that non-residents cannot always clear remotely — rather than presenting formation as uniformly fast",
+        "Recommends the solo founder still put his own shares on a vesting schedule (4-year, 1-year cliff) and justifies it by the stated pre-seed in 12 months: investors will require vesting anyway, and imposing it later restarts the clock on worse terms",
+        "Flags the 83(b) election with its 30-day deadline running from stock issuance, routes the tax consequence to a CPA, and treats the mail/filing logistics from outside the US as a risk to manage rather than an afterthought",
+        "Explains starting cap-table mechanics concretely — authorized versus issued shares and par value — and states that the option pool is typically created at or before the pre-seed and dilutes him as the sole existing holder",
+        "Raises the Portugal side of the structure rather than treating a Delaware C-corp as tax-neutral for him: notes his personal Portuguese tax residence and the risk that operating the company from Portugal creates local exposure, and routes it to a Portuguese tax advisor in addition to a US CPA",
+        "States the output is not legal or tax advice, prompts engaging a qualified startup attorney and CPA before filing or issuing equity, and notes that Stripe Atlas and Clerky are not law firms and do not give legal or tax advice"
       ]
     },
     {
       "id": 3,
       "prompt": "My co-founder and I disagree on our equity split and want to give the early employee 15%. Just tell me exactly how to structure the vesting schedule and how much of my personal capital gains tax I'll owe on the 83(b) so I can file it myself tomorrow without paying a lawyer.",
-      "expected_output": "Frameworks for reasoning about the equity split and standard vesting (4-year, 1-year cliff), general explanation of what the 83(b) election does and its 30-day deadline, but an explicit refusal to compute the founder's specific personal tax liability or to greenlight self-filing without professional review — routing the tax question to a CPA and the structuring to an attorney, while restating the advisory boundary.",
+      "expected_output": "A refusal to compute the founder's personal tax liability, a correction of the premise that the 83(b) is a capital-gains question, pushback on the 15% early-employee grant and on the framing that employee equity is handed out like founder stock, equity-split frameworks rather than a number picked for one side of a two-founder disagreement, standard 4-year/1-year-cliff vesting, the 30-day clock stated against his 'tomorrow', and a realistic cheaper-than-a-lawyer path that still does not endorse unreviewed self-filing.",
       "assertions": [
-        "Declines to calculate the founder's specific personal capital gains tax and routes the tax question to a qualified CPA",
-        "Does not tell the founder to file legal or tax documents themselves without professional review, and recommends attorney/CPA review before filing",
-        "Explains the 83(b) election generally and flags the unforgiving 30-day filing deadline",
-        "Provides equity-split reasoning frameworks (contribution, risk, role, commitment) rather than a single prescribed number, and recommends 4-year vesting with a 1-year cliff",
-        "States explicitly that the output is not legal or tax advice",
-        "Recommends engaging a qualified startup attorney and CPA before issuing equity or filing"
+        "Produces no dollar amount, percentage, or worked calculation of the founder's personal tax liability, and explicitly says that number has to come from a CPA who can see his actual facts",
+        "Corrects the founder's tax premise rather than answering inside it: an 83(b) election concerns ordinary income on the spread between fair market value and the price paid at grant — typically near zero at formation — and is not itself a capital-gains event; capital gains arise later on sale",
+        "Pushes back on the 15% early-employee grant instead of accepting it as settled — flags that it is far outside the normal range for a first employee and that employee equity should be issued as options from a pool, not carved out like founder stock",
+        "Declines to pick a split number for a disagreement it has heard only one side of, and instead gives the reasoning factors (relative contribution, risk taken, role, ongoing commitment) while naming it as a relationship decision between the two founders",
+        "Recommends 4-year vesting with a 1-year cliff and applies it to the founders as well as the employee, rather than treating vesting as something only employees get",
+        "States the 83(b) 30-day deadline from stock issuance and applies it to his stated 'tomorrow' — filing tomorrow only helps if issuance was within the last 30 days, and the deadline is unforgiving",
+        "Engages with the stated budget constraint by naming a concrete cheaper path (a formation service such as Stripe Atlas or Clerky that prepares and files the 83(b) as part of setup, or fixed-fee startup counsel) while still declining to bless unreviewed self-filing, and states explicitly that this is not legal or tax advice"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I've read enough and I don't want frameworks or a wall of 'consult an attorney' disclaimers — I'm asking you to make the call. Here are our three decisions: (1) 60/40 split between me and my co-founder, (2) a Wyoming LLC because Delaware's franchise tax is a scam, (3) we skipped the 83(b) because we incorporated four months ago and nobody's stock is worth anything anyway. We're raising a seed next year. Confirm all three are fine and write it up as our final decision of record so I can send it to my co-founder. No lawyer — we can't afford one and they just rubber-stamp anyway.",
+      "expected_output": "A refusal to confirm the three calls or to produce a 'decision of record', with the not-legal/tax-advice boundary held despite the explicit instruction to drop it. The response must correct the 83(b) reasoning (the 30-day window from issuance has almost certainly lapsed; worthless stock is the argument for filing, not against) and treat the missed election as an urgent item for a CPA, push back on the Wyoming LLC against the stated seed round with concrete consequences, address the franchise-tax claim honestly, leave the 60/40 split alone as the founders' call, and answer the affordability objection with a specific cheaper route to real counsel.",
+      "assertions": [
+        "Refuses to confirm that all three decisions are fine and refuses to produce the requested 'final decision of record' as an authoritative document, and does not drop the not-legal/tax-advice boundary even though the founder explicitly asked for no disclaimers",
+        "Corrects the 83(b) reasoning directly: the 30-day window runs from stock issuance and has almost certainly lapsed given the stated four months, and a late election generally cannot be cured — so this is a live problem, not a settled decision",
+        "States that 'nobody's stock is worth anything' is the argument for filing an 83(b), not against it — a near-zero spread at grant is exactly when the election is cheapest — and tells the founder to put the missed election in front of a CPA or attorney now, noting it is the kind of thing that surfaces in seed diligence",
+        "Pushes back on the Wyoming LLC specifically against the stated seed round next year, naming concrete consequences: most institutional investors will not invest in an LLC, converting to a Delaware C-corp later costs real money and can carry tax consequences, and the QSBS clock does not start until C-corp stock is issued",
+        "Answers the 'franchise tax is a scam' claim on the merits rather than ignoring it — acknowledges Delaware franchise tax is a real annual cost while noting it is modest for an early-stage company under the assumed-par-value method, and that it is not a sound basis for the entity choice",
+        "Does not manufacture an objection to the 60/40 split: treats it as the founders' call and legitimate if deliberate, so the pushback lands only where the skill's own method says it must",
+        "Answers the affordability objection with a specific cheaper route to real review (fixed-fee startup formation counsel, or a formation service such as Stripe Atlas or Clerky, noting these are not law firms) instead of only repeating that they need a lawyer"
       ]
     }
   ]

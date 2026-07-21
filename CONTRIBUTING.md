@@ -8,9 +8,9 @@ Vital is a Claude Code / Cowork plugin: a team of agents and a set of skills for
 .claude-plugin/plugin.json   # plugin manifest (name, version, description, metadata)
 .claude-plugin/marketplace.json # marketplace entry, so the repo installs via /plugin marketplace add
 agents/*.md                  # one subagent per file (YAML frontmatter + system prompt)
+commands/*.md                 # slash commands — the plugin's entry points
 skills/<name>/SKILL.md        # one skill per directory (YAML frontmatter + instructions)
 skills/<name>/references/     # optional deeper reference material for a skill
-.mcp.json                     # MCP server wiring (Slack pre-wired)
 CONNECTORS.md                 # recommended connectors
 scripts/validate.py           # structure validator (run before every commit)
 .github/workflows/            # CI: validate on push/PR, build .plugin on tag
@@ -33,9 +33,21 @@ These come from Claude Code's plugin spec and from install failures we have alre
 **Skills** (`skills/<name>/SKILL.md`)
 
 - Every skill directory must contain a `SKILL.md` with valid YAML frontmatter.
-- `name` and `description` are required; the description should be third-person with trigger phrases in quotes.
-- Add `allowed-tools` (e.g. `WebSearch, WebFetch, Read, Write`) for skills that do web research or produce files, so those turns don't stop for permission prompts.
+- `name` must match the directory name. `description` is required and should be third-person with trigger phrases in quotes. Both agent and skill descriptions are capped at 1024 chars.
+- Add `allowed-tools` (e.g. `WebSearch, WebFetch, Read, Write`) for skills that do web research or produce files, so those turns don't stop for permission prompts. Only real tool names pass validation.
 - Keep `SKILL.md` lean; move long reference material to `references/`.
+- **Reference paths must be `${CLAUDE_PLUGIN_ROOT}`-prefixed.** Write `${CLAUDE_PLUGIN_ROOT}/skills/<skill>/references/<file>.md`, never a bare `references/<file>.md` — the harness expands the variable at load time, but a bare relative path is resolved against the user's working directory and silently fails once the plugin is installed. The validator enforces the prefix and checks the target exists.
+- **Degrade gracefully across hosts.** `pptx`, `xlsx`, `dataviz`, and `my-writing-style` are not present in every host. Reference them only with a stated fallback ("...via the `xlsx` skill when available, a markdown table otherwise"), and add any new external dependency to `EXTERNAL_SKILLS` in `scripts/validate.py`.
+- **Every skill reads the workspace before generating** and writes its deliverable back, per `skills/vital-playbook/references/workspace.md`.
+
+**Evals** (`skills/<name>/evals/evals.json`)
+
+- Ids 1-3 are happy-path cases; **id 4 is adversarial** — a prompt where the correct behaviour is to push back, refuse, or state an uncomfortable truth. At least one of its assertions must fail if the model simply complies.
+- Assertions test judgment anchored to that prompt's specifics, never the presence of a section. A skill scoring 1.00 with_skill has no headroom and needs harder assertions. Full guidance: `docs/evaluating-skills.md`.
+
+**MCP servers**
+
+- Vital ships **none**, deliberately. Installing a go-to-market plugin should not add network endpoints to a user's session. Document connectors in `CONNECTORS.md` for the user to opt into instead.
 
 **Manifest** (`.claude-plugin/plugin.json`)
 

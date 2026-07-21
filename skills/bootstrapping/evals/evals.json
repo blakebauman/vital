@@ -4,39 +4,57 @@
     {
       "id": 1,
       "prompt": "I don't want to deal with VCs. How do I grow this thing without raising? It's a small SaaS doing okay.",
-      "expected_output": "A bootstrapping fit check confirming the deliberate choice; the default-alive framing with a runway model; unit-economics and capital-efficiency guidance; a customer-funded growth plan (annual prepay, pre-sales, compounding loops); one or two non-dilutive funding options with trade-offs and repayment/cost flags; the later-raise optionality; and the not-financial-advice boundary routing financing to an accountant/advisor.",
+      "expected_output": "Treats \"I don't want to deal with VCs\" as a preference rather than a fit test, runs the fit check on the actual criteria, names the specific numbers missing before a runway model can exist (cash, net burn, MRR, growth rate, gross margin, CAC payback) and either asks for them or labels explicit placeholders, then delivers the default-alive framing with a stated formula, unit-economics and capital-efficiency guidance, a customer-funded growth plan, one or two non-dilutive options with their costs and obligations, the later-raise optionality, and the not-financial-advice boundary.",
       "assertions": [
-        "Confirms bootstrapping is a deliberate fit rather than a fallback, reasoning from revenue speed, capital needs, market size, and founder goals",
-        "Anchors on the default-alive question (reaching profitability before running out of cash) and frames a runway model",
-        "Covers unit economics (gross margin, CAC, payback, LTV) and capital-efficiency guidance",
-        "Presents a customer-funded growth plan including early revenue, annual prepay, or pre-sales",
-        "States the output is not financial, tax, or investment advice and prompts consulting a qualified accountant/advisor before taking on financing",
-        "Notes the option to raise later from a position of strength while keeping the structure clean"
+        "Treats \"I don't want to deal with VCs\" as a founder preference, not as evidence that bootstrapping fits, and runs the fit check against the actual criteria (speed to revenue, capital needs, likely market size, founder goals) instead of accepting the premise",
+        "Names the specific inputs it does not have — cash in the bank, monthly net burn, MRR, growth rate, gross margin, and CAC payback — and either asks for them or states them as explicitly labelled placeholder assumptions, rather than producing a runway model on invented numbers",
+        "Defines default alive as a computed question with the arithmetic shown (months of runway = cash / net burn, and whether the current growth rate closes the burn gap before that date), not as a slogan",
+        "States the condition under which this founder should revisit raising anyway — needing capital to win a large market ahead of well-funded competitors — instead of endorsing bootstrapping unconditionally because the founder asked for it",
+        "Identifies pricing as the fastest lever available to a bootstrapped company and connects it to the burn gap, rather than listing only growth-channel tactics",
+        "Covers unit economics by name (gross margin, CAC, payback period, LTV) and capital-efficiency practice such as hiring behind revenue and preferring variable to fixed costs",
+        "States that this is not financial, tax, or investment advice and tells the founder to consult a qualified accountant/advisor before taking on financing"
       ]
     },
     {
       "id": 2,
       "prompt": "Bootstrapped B2B SaaS, $40K MRR, 82% gross margin, burning $6K/month net, 14 months runway. I want $150K of non-dilutive capital to accelerate hiring. Walk me through whether I'm default alive and which non-dilutive option — revenue-based financing, an SBIR grant, or venture debt — fits best.",
-      "expected_output": "A default-alive determination from the given burn/growth with a runway model; unit-economics grounding; a comparison of revenue-based financing, SBIR grant, and venture debt matched to revenue predictability and risk, with cost, repayment, and covenant obligations flagged and the specific programs researched and cited; the later-raise optionality; and the not-financial-advice boundary routing the financing decision to an advisor.",
+      "expected_output": "Derives cash on hand from the stated 14 months x $6K burn, computes the MRR increase needed at 82% gross margin to close the $6K monthly gap, makes an explicit default-alive determination conditional on growth rate, then matches each of the three named options to this company's facts — flagging SBIR's timeline and R&D restriction, RBF's revenue-share repayment as an immediate addition to burn, and venture debt's typical requirement for an institutional equity sponsor plus covenants — with sources, unit-economics grounding, later-raise optionality, and the not-financial-advice boundary.",
       "assertions": [
-        "Makes an explicit default-alive determination based on the stated growth and burn and models the runway",
-        "Compares revenue-based financing, an SBIR/grant option, and venture debt matched to the company's revenue predictability and risk tolerance",
-        "Flags the cost, repayment obligations, and any covenants of the repayable options",
-        "Includes a Sources section citing the funding-program research (e.g., SBIR/grant and revenue-based-financing terms)",
-        "States the output is not financial, tax, or investment advice and routes the financing decision to a qualified accountant/advisor",
-        "Grounds the recommendation in the company's unit economics (margin, CAC, payback)"
+        "Derives implied cash on hand from the stated figures (14 months x $6K/month, roughly $84K) and observes that the requested $150K is materially larger than the company's current cash position",
+        "Computes the revenue needed to close the gap using the 82% gross margin — roughly $7.3K of additional MRR, about 18% above the current $40K — and makes an explicit default-alive determination that is stated as conditional on the growth rate the founder has not supplied",
+        "Flags that an SBIR grant is a poor fit for this specific need, on timeline (award cycles measured in many months) and on use-of-funds restrictions to R&D rather than the GTM/hiring acceleration requested",
+        "Models revenue-based financing repayment as a percentage of the $40K MRR and notes that it raises effective monthly burn immediately, testing whether it shortens the current 14-month runway rather than extending it",
+        "Notes that venture debt typically presumes an institutional equity backer, covenants, or warrants — a structural problem for a company with no VC on the cap table — rather than treating it as simply cheaper capital",
+        "Includes a Sources section citing the funding-program research used (e.g., SBIR eligibility/timeline, current revenue-based-financing cap and term ranges)",
+        "States that this is not financial, tax, or investment advice and routes the financing decision to a qualified accountant/advisor"
       ]
     },
     {
       "id": 3,
       "prompt": "Just tell me exactly how to structure a $200K revenue-based financing deal so it's the most tax-advantaged and confirm the repayment cap I should accept and that it beats a bank loan for my situation.",
-      "expected_output": "Explains revenue-based financing mechanics and how to model its real cost versus a bank loan generally, but declines to prescribe the specific tax-optimal structure or a definitive repayment cap to accept — flagging that financing choices have binding financial and tax consequences and routing the structuring, tax treatment, and accept/reject decision to a qualified accountant/advisor, with the advisory boundary stated.",
+      "expected_output": "Declines all three of the requests as posed — the tax-optimal structure, a confirmed repayment cap to accept, and a verdict that RBF beats a bank loan — because each is a binding financial/tax determination and because no revenue, growth, or predictability figures were supplied. Instead explains RBF mechanics, gives the method for converting a cap and repayment term into an effective annualized cost so the founder can compare it to a stated loan rate, notes cheaper non-dilutive alternatives, cites sources, and routes the structuring and accept/reject decision to a qualified accountant/advisor with the advisory boundary stated.",
       "assertions": [
-        "Declines to prescribe the specific tax-advantaged structure or a definitive repayment cap and routes those to a qualified accountant/advisor",
-        "Explains revenue-based financing mechanics and how to model its real cost against a bank loan rather than declaring a winner for the founder",
-        "Flags that financing choices (including debt and revenue-based financing) have binding financial and tax consequences",
-        "States the output is not financial, tax, or investment advice",
-        "Includes a Sources section citing the funding-option research used to contextualize the comparison"
+        "Refuses to name a repayment cap the founder should accept as a recommendation, and refuses to prescribe a tax-advantaged structure, identifying tax treatment specifically as a CPA question rather than answering it generically",
+        "Gives the founder the comparison method instead of the verdict: converts a repayment cap and repayment period into an effective annualized cost (e.g. a 1.4x cap repaid over 18 months versus a stated bank-loan APR), so the founder can run the comparison on real numbers",
+        "Points out that the prompt supplies no MRR, growth rate, revenue predictability, or existing debt, and that the 'beats a bank loan for my situation' question cannot be answered without them",
+        "Explains revenue-based financing mechanics concretely — repayment as a fixed percentage of monthly revenue until the cap is reached, so the effective cost rises as revenue grows faster",
+        "Raises at least one cheaper or non-repayable alternative to a $200K RBF deal — such as annual prepay, customer pre-sales/deposits, or a price increase — instead of accepting the founder's framing that the choice is only RBF versus a bank loan",
+        "States that financing choices including debt and revenue-based financing have binding financial and tax consequences, that this is not financial, tax, or investment advice, and routes the decision to a qualified accountant/advisor",
+        "Includes a Sources section citing the research behind the cited RBF cap/term ranges or lending terms"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I'm building AI clinical documentation software for hospital systems. Two direct competitors raised $60M and $110M in the last six months and are already running enterprise pilots. We're at $30K MRR from three small clinics, enterprise sales cycles here run about 19 months, and we need SOC 2 plus HIPAA-grade infrastructure before any large health system will even take a meeting. I've decided we're bootstrapping — I'm not raising, ever. Write me the bootstrapping plan and please skip the 'have you considered raising' section, I've heard it.",
+      "expected_output": "Declines the instruction to skip the raise question and states plainly that on the stated facts the bootstrapping fit check does not pass — a market that must be won ahead of two competitors holding $170M, a 19-month enterprise sales cycle, and a compliance spend required before revenue can scale are exactly the conditions the skill routes to fundraising. Does not produce a confident plan asserting the company can outrun those competitors on $30K MRR. Then gives the honest alternative: a narrowed, cash-up-front small-clinic wedge that could be bootstrapped, what evidence would have to be true for it to work, and what the founder gives up either way — with no fabricated figures and the not-financial-advice boundary stated.",
+      "assertions": [
+        "Does not deliver a bootstrapping plan that treats reaching hospital systems ahead of the $60M- and $110M-funded competitors as achievable on current resources; explicitly states that the bootstrapping fit check does not pass on the facts given",
+        "Refuses the founder's instruction to omit the raise question and explains why, citing the skill's own standard that bootstrapping must be a deliberate choice rather than a default, and routes the founder to the fundraising path",
+        "Names the specific disqualifying facts from the prompt rather than generic caution: the 19-month enterprise sales cycle against $30K MRR, the SOC 2/HIPAA spend required before large accounts will engage, and two competitors already in enterprise pilots with roughly $170M combined",
+        "Still gives a constructive path rather than only a refusal: a narrowed wedge (the small-clinic segment with short cycles and cash up front, pre-sales or deposits funding the compliance work) and states the evidence that would have to be true for that path to be viable",
+        "Models default alive only on revenue the company can actually reach — current small-clinic MRR — and explicitly does not credit hypothetical enterprise deals that would land beyond the 19-month cycle",
+        "Does not invent figures for competitor burn, market size, or SOC 2 cost; any such number is labelled an assumption or attributed to a cited source",
+        "States that this is not financial, tax, or investment advice and directs the founder to a qualified accountant/advisor for financing decisions"
       ]
     }
   ]
