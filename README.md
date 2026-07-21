@@ -6,6 +6,17 @@ You build and deliver the product. Vital owns everything else about the launch �
 
 **Who Vital serves:** primarily **enterprise and mid-market** clients, while still **driving small-business success** with a leaner version of the same rigor. The client's segment reshapes the whole launch — enterprise means buying committees, procurement, security/compliance, analyst relations, and phased sales-led launches; mid-market is a hybrid land-and-expand motion; small business stays product-led, self-serve, and fast. The per-discipline playbook lives in `skills/vital-playbook/references/segments.md`, and every relevant skill adapts to it.
 
+## Install
+
+In Claude Code:
+
+```
+/plugin marketplace add blakebauman/vital
+/plugin install vital@vital
+```
+
+Prefer to vendor the files, or using a different agent? The 19 skills are the portable `SKILL.md` format and work in Cursor, Codex CLI, Gemini CLI and others — copy `skills/*` into that tool's skills directory. Full per-tool instructions, team-wide pinning, and what does and doesn't travel: **[docs/install.md](docs/install.md)**.
+
 ## The team
 
 | Agent | Role |
@@ -55,6 +66,8 @@ Positioning is the source of truth — set once by strategy, everything else lad
 Agents and skills use the documented [subagent](https://code.claude.com/docs/en/sub-agents) and [skill](https://code.claude.com/docs/en/skills) frontmatter. Each agent declares a valid `color` (blue, cyan, green, purple, pink, orange, yellow, red — one per specialist), a `model` (`inherit`, so the team runs at your session's model tier), and `tools` where access should be restricted (the engineering advisor is read-only + web). The research skills (`competitive-teardown`, `analyst-relations`, `press-kit`) pre-approve `WebSearch`/`WebFetch` via `allowed-tools`, and the production skills (`design-brief`) pre-approve `Read`/`Write`, so those turns don't stop for permission prompts.
 
 ## Setup
+
+Installation lives in [docs/install.md](docs/install.md). Once Vital is installed:
 
 - **Connectors** (optional but recommended): Google Workspace (Gmail, Calendar, Drive) via your Claude connector settings; Slack is pre-wired in `.mcp.json` (swap for Microsoft Teams if that's your stack). See `CONNECTORS.md`.
 - **Adobe**: The design work is built for Adobe Express and the Adobe suite — Vital hands you build-ready specs you execute there. No connection required.
