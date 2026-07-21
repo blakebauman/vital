@@ -9,9 +9,22 @@
       "name": "vital",
       "source": "./",
       "description": "An AI agency that takes the tech products you build to market — specialist agents (strategy, GTM, brand, design, marketing, PR, engineering advisory, capital) plus a lead orchestrator, with skills spanning company formation and financing through launch.",
-      "version": "0.8.0",
+      "version": "0.9.0",
       "homepage": "https://github.com/blakebauman/vital",
-      "license": "MIT"
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "go-to-market",
+        "gtm",
+        "launch",
+        "positioning",
+        "branding",
+        "marketing",
+        "pr",
+        "design",
+        "startup",
+        "fundraising"
+      ]
     }
   ]
 }

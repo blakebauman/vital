@@ -17,18 +17,17 @@ Help a founder decide whether to raise, then run the raise well if they do. A fu
 
 > **Not investment, legal, or financial advice.** Vital provides information, benchmarks, and drafts only. Fundraising is regulated by securities law and every deal has binding legal and tax consequences. Tell the founder to engage a startup attorney for any financing documents and to understand the securities rules before soliciting investors. Nothing here is a recommendation to raise, to invest, or a valuation opinion.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. The fork: raise or bootstrap?
 
 Before any raise mechanics, help the founder decide honestly. Venture capital suits a minority of companies — those with a large market, a path to venture-scale outcomes, and a need for capital to win before competitors. If the business can grow on revenue, or the market can't support a venture outcome, bootstrapping keeps control and optionality. Reason from market size, capital intensity, growth ambition, competitive dynamics, and the founder's own goals. If bootstrapping fits better, route to the `bootstrapping` skill and stop — do not talk them into a raise.
 
 ## 2. Stage, amount, and milestone
 
-Tie the raise to the **specific milestone that unlocks the next round**, not to a generic runway number. Under-raising starves the milestone; over-raising over-dilutes and raises the bar for the next round. Use current benchmarks (research them; the market moves) — as of 2025, rough ranges:
+Tie the raise to the **specific milestone that unlocks the next round**, not to a generic runway number. Under-raising starves the milestone; over-raising over-dilutes and raises the bar for the next round.
 
-- **Pre-seed** — ~$250K–$1.5M (up to ~$2M for strong/AI teams). Instrument almost always a post-money SAFE, cap ~$5M–$15M. Combined dilution ~10–18%. Expectation: working prototype, first 10–50 users, validated problem (50+ discovery interviews), founding team assembled.
-- **Seed** — ~$2.5M–$5M ($6M–$10M for AI/deep-tech). Post-money valuation median ~$24M (~$20M–$30M). Dilution ~18–25% (more with stacked SAFEs; often includes a 10–15% option pool). Roughly half SAFEs, half priced; priced rounds dominate at $3M+. Expectation: working product with real users and early metrics (e.g., $5K–$50K MRR SaaS; retention signals).
-
-Confirm current numbers with fresh research and cite them, since these shift.
+**Research the current numbers before you quote any.** Round sizes, valuations, and dilution shift with the market, and a stale figure stated confidently is worse than no figure. Look them up, cite the source, and use `${CLAUDE_PLUGIN_ROOT}/skills/fundraising/references/benchmarks.md` only as a sanity check on what you find — that file carries a "last verified" date and is stale by default. Benchmarks tell you whether an ask is unusual; the milestone tells you whether it is right.
 
 ## 3. Instrument
 
@@ -49,7 +48,7 @@ Build a targeted investor list, not a spray. Identify the funds and angels that 
 - **Pitch deck** — route to the `pitch-deck` skill.
 - **Narrative & one-liner** — inherit from `strategy` positioning and `brand` messaging.
 - **Data room** — the organized set investors will diligence: incorporation docs, cap table, financial model and metrics, key contracts, IP assignments, product/traction data, team. Build the checklist and structure; note that content must be real and accurate.
-- **The model** — a simple, credible financial model showing the milestone the raise buys and the trajectory (xlsx skill).
+- **The model** — a simple, credible financial model showing the milestone the raise buys and the trajectory — the `xlsx` skill when available, a markdown table with stated assumptions otherwise.
 
 ## 6. Process & close
 
@@ -58,3 +57,7 @@ Run it as a process: warm intros → first meetings → partner meetings/diligen
 ## Output
 
 Deliver: the raise-vs-bootstrap recommendation; if raising, the stage/amount tied to a milestone, the instrument recommendation with dilution modeled, a tiered and warm-intro-mapped investor list, the materials and data-room checklist, and a process plan with timeline — all with the not-investment/legal-advice boundary stated and a prompt to engage an attorney. Include a Sources section for benchmarks and investor research. Save the plan to `.vital/capital/fundraising.md`.
+
+## Additional resources
+
+- **`${CLAUDE_PLUGIN_ROOT}/skills/fundraising/references/benchmarks.md`** — pre-seed and seed round-size, valuation, and dilution anchors with a "last verified" date. Stale by default; re-research before quoting.

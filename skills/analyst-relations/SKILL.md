@@ -13,6 +13,8 @@ metadata:
 
 Build an analyst-relations program that earns enterprise credibility by influencing the analysts enterprise buyers trust. AR is a long game — it compounds over quarters, not days. Use for enterprise motions where buyers consult Gartner, Forrester, or IDC — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Set the objective
 
 Clarify what AR is for: getting on an analyst's radar, being included in a landscape/market report, competing for a Magic Quadrant / Forrester Wave position, or simply getting expert validation for the sales cycle. Objectives drive who you engage and how. Be realistic about timelines — inclusion in ranked reports often takes 12+ months of relationship.
@@ -27,7 +29,7 @@ Build the analyst-facing narrative (distinct from press and marketing): the mark
 
 ## 4. Build the briefing kit
 
-Assemble the briefing deck and materials: market context, the client's differentiated approach, proof (customers, metrics, architecture where relevant), roadmap, and the specific questions to leave the analyst thinking about. Keep it tight and evidence-led. Route deck production to the pptx skill and visuals to `design-brief`. Prepare a short pre-read and a concise leave-behind.
+Assemble the briefing deck and materials: market context, the client's differentiated approach, proof (customers, metrics, architecture where relevant), roadmap, and the specific questions to leave the analyst thinking about. Keep it tight and evidence-led. Route deck production to the `pptx` skill when available (slide-by-slide markdown otherwise) and visuals to `design-brief`. Prepare a short pre-read and a concise leave-behind.
 
 ## 5. Engagement plan
 

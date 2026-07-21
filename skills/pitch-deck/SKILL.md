@@ -12,9 +12,11 @@ metadata:
   version: "0.1.0"
 ---
 
-Build a fundraising pitch deck that earns the next meeting. A deck is not a document — it is the argument for why this company is a venture-scale opportunity, told in a sequence an investor can follow in ten minutes. Inherit the positioning from `strategy`, the messaging from `brand`, the model from `gtm`/`pricing-strategy`, and the raise details from `fundraising`. Production goes through the `design` agent and the pptx skill.
+Build a fundraising pitch deck that earns the next meeting. A deck is not a document — it is the argument for why this company is a venture-scale opportunity, told in a sequence an investor can follow in ten minutes. Inherit the positioning from `strategy`, the messaging from `brand`, the model from `gtm`/`pricing-strategy`, and the raise details from `fundraising`. Production goes through the `design` agent and the `pptx` skill when it is available.
 
 > **Not investment advice.** Vital helps craft the narrative and materials. Any figures (traction, financials, projections) must be true and the founder's own; investors diligence them. Fundraising is regulated — the founder's attorney should review what goes to investors.
+
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
 
 ## 1. The story first
 
@@ -49,8 +51,8 @@ Too many words per slide; leading with the product instead of the problem; a top
 
 ## 5. Design & production
 
-Route art direction and build to the `design` agent / `design-brief` skill (and the pptx skill for the actual file). The deck must be visually clean and credible — investors read production quality as a signal — but substance and clarity beat decoration. Run the impeccable anti-slop check on the visuals.
+Route art direction and build to the `design` agent / `design-brief` skill (and the `pptx` skill for the actual file, when available — otherwise deliver slide-by-slide markdown the founder can build). The deck must be visually clean and credible — investors read production quality as a signal — but substance and clarity beat decoration. Run the impeccable anti-slop check on the visuals.
 
 ## Output
 
-Deliver: the one-sentence thesis, the slide-by-slide content (headline + key points + what data goes on each), guidance on send vs. present versions, a mistakes check against the draft, and the hand-off to design/pptx for production. Ensure every figure is the founder's own and consistent across deck, model, and data room. Save the deck content and file to `.vital/capital/pitch-deck.md`.
+Deliver: the one-sentence thesis, the slide-by-slide content (headline + key points + what data goes on each), guidance on send vs. present versions, a mistakes check against the draft, and the hand-off to design for production. Ensure every figure is the founder's own and consistent across deck, model, and data room. Save the deck content and file to `.vital/capital/pitch-deck.md`.

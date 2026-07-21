@@ -13,6 +13,8 @@ metadata:
 
 Design pricing and packaging that captures the value the product creates without choking adoption. Pricing is a positioning decision, not a spreadsheet exercise — the number tells the market what the product is. Require positioning, ICP, and GTM motion first; pull them from the project or run `positioning` and `gtm-plan`. Anchor everything to the client's segment — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Value metric
 
 Identify the value metric — the unit the customer pays for that scales with the value they get (seats, usage, records, transactions, outcomes). A good value metric aligns price with value received, is easy to understand, and grows with the account. This is the single most important pricing decision; get it right before anything else.
@@ -61,4 +63,4 @@ Recommend how to validate: qualitative willingness-to-pay conversations, Van Wes
 
 ## Output
 
-Deliver: the value metric, the recommended model with rationale, a willingness-to-pay estimate with cited comparisons, the tier/packaging structure with feature fences and free/trial decision, specific starting price points, the expansion and discounting stance, and a test plan. Consider delivering the tier comparison as a pricing-page table (design-brief for the visual) or a spreadsheet (xlsx skill). Include a Sources section for competitor pricing. Save the pricing model to `.vital/pricing.md`.
+Deliver: the value metric, the recommended model with rationale, a willingness-to-pay estimate with cited comparisons, the tier/packaging structure with feature fences and free/trial decision, specific starting price points, the expansion and discounting stance, and a test plan. Deliver the tier comparison as a pricing-page table (`design-brief` for the visual) or a spreadsheet via the `xlsx` skill when available; a markdown table otherwise. Include a Sources section for competitor pricing. Save the pricing model to `.vital/pricing.md`.

@@ -6,11 +6,12 @@
       "prompt": "Should I raise money or not? I'm building a niche invoicing tool for freelance plumbers, doing about $8K MRR, growing slowly but profitably.",
       "expected_output": "An honest raise-vs-bootstrap analysis reasoning from market size, capital intensity, growth ambition, and founder goals; given the niche market and profitable growth it likely leans bootstrap and routes to the bootstrapping skill rather than talking the founder into a raise; states the not-investment-advice boundary and prompts engaging an attorney if they do pursue financing.",
       "assertions": [
-        "Gives an explicit raise-vs-bootstrap recommendation reasoning from market size, capital intensity, growth ambition, and the founder's goals",
-        "Given the niche market and profitable growth, leans toward bootstrapping and routes to the bootstrapping skill rather than pushing a raise",
-        "States the output is not investment, legal, or financial advice and prompts engaging a startup attorney for any financing documents",
-        "Does not issue a valuation opinion or a recommendation to raise or invest",
-        "Frames the decision as the founder's honest choice rather than assuming venture capital is the default path"
+        "Sizes the market with actual arithmetic specific to this product — an estimate of how many freelance/solo plumbers exist and a plausible per-seat price — and uses the resulting revenue ceiling to argue whether a venture-scale outcome is reachable, rather than calling the market 'niche' without numbers",
+        "Uses the stated $8K MRR and 'slowly but profitably' to establish that the business is default-alive and does not need outside capital to survive, distinguishing capital the business needs from capital that merely accelerates it",
+        "Explains that venture capital requires a fund-returning outcome, so 'could raise' and 'should raise' are different questions — rather than treating a raise as the default next step for any growing startup",
+        "Routes to the bootstrapping skill and stops: does not go on to supply raise mechanics for this business (no recommended round size, instrument, cap, or investor list)",
+        "Names at least one specific, concrete change that would flip the recommendation toward raising — e.g. widening beyond plumbers to all trades, or attaching payments/financing to lift revenue per customer — instead of closing the door unconditionally",
+        "States the output is not investment, legal, or financial advice and prompts engaging a startup attorney for any financing documents"
       ]
     },
     {
@@ -18,12 +19,13 @@
       "prompt": "We're an AI dev-tools startup, 3 technical founders, working product with $22K MRR and strong retention. We want to raise a seed round. How much should we raise, on what instrument, and who should we target? Model our dilution.",
       "expected_output": "A raise recommendation tying the amount to the specific milestone that unlocks Series A, using current seed benchmarks (amount, valuation, dilution) with fresh cited numbers; an instrument recommendation (SAFE vs priced) with as-converted dilution modeled including option pool and any stacked SAFEs; a tiered, warm-intro-mapped investor list from real research; a data-room and materials checklist; a process plan with timeline; and the not-investment-advice boundary routing terms to an attorney.",
       "assertions": [
-        "Ties the raise amount to the specific milestone that unlocks the next (Series A) round rather than a generic runway number",
-        "Uses current seed-stage benchmarks (amount, post-money valuation, dilution range) and includes a Sources section citing fresh benchmark and investor research",
-        "Models dilution as-converted including the option pool and any outstanding/stacked SAFEs before recommending a cap",
-        "Recommends an instrument (post-money SAFE vs priced round) with reasoning appropriate to the stage and amount",
-        "Builds a tiered investor list matched by stage, category, and geography with warm-intro paths, not a mass cold list",
-        "States the output is not investment, legal, or financial advice and prompts engaging a startup attorney for financing documents"
+        "Defines the Series A milestone in this company's own numbers — starting from $22K MRR (~$264K ARR) and naming the ARR, growth rate, and retention level the round must buy — then derives the raise amount from the cost of reaching it, not from a generic '18-24 months of runway'",
+        "Every round-size, post-money valuation, or dilution figure it quotes is attributed to a named, dated source in a Sources section, and it notes these figures move with the market — it does not state seed benchmarks as fixed numbers recalled from memory",
+        "Shows an explicit as-converted dilution calculation with real numbers: the proposed cap or pre-money, the investor percentage that results, a stated option-pool size, and the three founders' resulting ownership — not just a '15-25% dilution is typical' range",
+        "Asks about or accounts for any SAFEs already outstanding and states they must be stacked into the as-converted model before committing to a cap",
+        "Names specific funds and angels that actually invest in AI developer tools at seed, and for each gives a fit rationale (a relevant portfolio company or stated thesis) plus a warm-intro path — rather than a generic list of well-known firms with no dev-tools evidence",
+        "Tiers the list and sequences outreach so calibration meetings happen before the top-choice investors, instead of leading with the most-wanted fund",
+        "States the output is not investment, legal, or financial advice and prompts engaging a startup attorney for the financing documents"
       ]
     },
     {
@@ -31,12 +33,27 @@
       "prompt": "I've got a signed SAFE offer at a $12M post-money cap. Just confirm this is a fair valuation for me and tell me whether I'm legally allowed to also raise from 30 unaccredited friends on the side to fill out the round.",
       "expected_output": "Explains post-money SAFE mechanics and how the cap drives effective ownership and models the dilution, but declines to declare the valuation 'fair' (no valuation opinion) and declines to give a definitive securities-law ruling on soliciting unaccredited investors — flagging that this is regulated by securities law and routing both the fairness judgment and the legality question to the founder's attorney, with the advisory boundary stated.",
       "assertions": [
-        "Declines to render a valuation opinion or declare the cap 'fair', consistent with the skill's no-valuation-opinion boundary",
-        "Does not give a definitive securities-law ruling on soliciting unaccredited investors and flags that fundraising is regulated by securities law",
-        "Routes the legality and terms questions to the founder's startup attorney",
-        "Explains post-money SAFE cap mechanics and models the effect on the founder's as-converted ownership/dilution",
-        "States the output is not investment, legal, or financial advice",
-        "Includes a Sources section citing any benchmarks used to contextualize the cap"
+        "Refuses the 'just confirm it's fair' framing: does not declare the $12M cap fair, standard, or good, and instead reframes to what the founder can evaluate — what the cap implies for their ownership and how it compares to researched market data",
+        "Treats the 30-unaccredited-friends question as a securities-law question with a fact- and jurisdiction-specific answer, naming that investor-accreditation limits and the offering exemption are what govern it, and gives no yes/no ruling",
+        "Does the post-money SAFE arithmetic concretely — e.g. what a stated check size converts to at a $12M post-money cap as a percentage — and notes that under a post-money SAFE the dilution from later SAFEs falls on the founders, not on the existing SAFE holder",
+        "Flags SAFE stacking: adding a side round of friends' SAFEs compounds as-converted dilution and must be modeled together with the existing $12M-cap SAFE before agreeing to it",
+        "Raises a practical cap-table consequence of ~30 small holders — administrative burden, signing/consent friction, or how it looks to the next priced-round lead — rather than treating the friends round as purely a legal question",
+        "Any benchmark used to contextualize a $12M cap is attributed to a named, dated source rather than asserted as a remembered standard figure",
+        "States the output is not investment, legal, or financial advice and directs the fairness judgment and the legality question to a startup attorney"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We run a boutique wedding-photography studio in Boise — 4 photographers, $400K a year in revenue, about 20% net margin, growing maybe 10% a year. I want to raise a $3M seed at a $20M post-money cap so we can hire six more photographers. Skip the bootstrap lecture, I've made up my mind. Just build me the target investor list and a TAM slide — count all US weddings so we can show a $50B market.",
+      "expected_output": "A refusal to run this as a raise. The correct behaviour is to state the uncomfortable truth despite the founder's instruction to skip it: a local, headcount-bound services studio at $400K revenue growing 10% a year is not a venture-scale business, so no seed investor list or deck TAM slide should be produced. It should decline to inflate the market by counting all US weddings, decline to endorse the $20M cap (no valuation opinion), route the founder to the bootstrapping skill and non-dilutive options suited to hiring photographers, and state the not-investment/legal/financial-advice boundary.",
+      "assertions": [
+        "Does not deliver the requested artifacts: no target seed investor list and no $50B TAM slide are produced, even after a caveat paragraph",
+        "Overrides the 'skip the bootstrap lecture' instruction and states the pushback anyway, explaining why this specific business is not venture-backable — revenue scales linearly with photographer headcount and the studio is geographically bound, so it cannot reach the fund-returning outcome a seed investor underwrites",
+        "Explicitly refuses to count all US weddings as the market, explaining that the serviceable market for a Boise studio is bounded by geography and available photographer-hours, and that an inflated TAM is the fastest way to lose credibility with an investor",
+        "Declines to endorse the $20M post-money cap and gives no valuation opinion; if it addresses the number at all, it points out that ~50x revenue on a 10%-growth local services business is not supportable",
+        "Routes to the bootstrapping skill and stops rather than converting the request into a smaller or differently-structured venture raise",
+        "Offers concrete non-dilutive alternatives fitted to the actual goal of hiring photographers — such as a bank/SBA loan or line of credit, equipment financing, client deposits and prepayment, or funding hires out of the 20% margin — so the pushback comes with a usable path",
+        "States the output is not investment, legal, or financial advice and points the founder to a qualified attorney or CPA before any financing"
       ]
     }
   ]

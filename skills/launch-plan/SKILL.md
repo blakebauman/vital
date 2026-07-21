@@ -11,6 +11,8 @@ metadata:
 
 Build a coordinated launch: the timeline, the assets, the channels, and the owners, so nothing is missed on launch day. Pull the message from brand and the motion from GTM; this skill sequences the moment.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Define the launch
 
 Establish the launch type and goal:
@@ -51,4 +53,4 @@ Note the two or three most likely things to go wrong (site down, low traction, n
 
 ## Output
 
-Deliver a launch plan with type/goal, message and CTA, channel plan, asset checklist with owners, a dated three-window timeline, readiness checks, and contingencies. Consider delivering it as a shareable HTML tracker the client will revisit. Offer to set up scheduled reminders for key launch milestones. Save the plan to `.vital/launch-plan.md`.
+Deliver a launch plan with type/goal, message and CTA, channel plan, asset checklist with owners, a dated three-window timeline, readiness checks, and contingencies. Consider delivering it as a shareable HTML tracker the client will revisit. Offer to set up scheduled reminders for key launch milestones if the host supports scheduling. Save the plan to `.vital/launch-plan.md`.

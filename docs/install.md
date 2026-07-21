@@ -3,6 +3,7 @@
 Vital is a public repo — `github.com/blakebauman/vital`. It ships two kinds of content:
 
 - **9 agents** (`agents/*.md`) — Claude Code subagents. Claude Code only.
+- **3 commands** (`commands/*.md`) — `/vital:launch`, `/vital:status`, `/vital:readiness`. Claude Code only.
 - **19 skills** (`skills/*/SKILL.md`) — the portable [Agent Skills](https://code.claude.com/docs/en/skills) format, which Cursor, Codex CLI, Gemini CLI and others also read.
 
 Pick the section for your tool.
@@ -11,7 +12,7 @@ Pick the section for your tool.
 
 ## Claude Code — plugin (recommended)
 
-Installs agents, skills, and the Slack MCP server in one step, and keeps them updatable.
+Installs the agents and skills in one step, and keeps them updatable. Vital ships no MCP servers — connectors are opt-in, see [`CONNECTORS.md`](../CONNECTORS.md).
 
 ```
 /plugin marketplace add blakebauman/vital
@@ -82,7 +83,7 @@ cp -R /path/to/vital/agents/* .claude/agents/
 cp -R /path/to/vital/skills/* .claude/skills/
 ```
 
-A manual copy does **not** carry over the root `.mcp.json` (the Slack server). Merge that by hand if you want it — see [`CONNECTORS.md`](../CONNECTORS.md).
+Connectors are configured separately either way — see [`CONNECTORS.md`](../CONNECTORS.md).
 
 ---
 
@@ -167,4 +168,4 @@ Then `git pull` in `~/src/vital` updates every tool at once.
 - **Agents don't travel.** `agents/*.md` are Claude Code subagent definitions (`color`, `model: inherit`, `tools`). Only Claude Code loads them.
 - **Outside Claude Code you get the skills.** That's most of the value, but the `vital-lead` orchestration becomes manual: invoke `vital-playbook` yourself and name the discipline you want rather than letting the lead sequence specialists for you.
 - **`allowed-tools` pre-approvals are Claude Code-specific.** Elsewhere the research and production skills will still work, they'll just ask for permission the way that tool normally does.
-- **MCP connectors are per-tool.** The Slack server in `.mcp.json` only comes along with the Claude Code plugin install; Google Workspace is configured in your Claude connector settings either way. See [`CONNECTORS.md`](../CONNECTORS.md).
+- **MCP connectors are per-tool and opt-in.** Vital installs no MCP servers of its own; Slack, Google Workspace, and anything else are configured in your own settings. See [`CONNECTORS.md`](../CONNECTORS.md).

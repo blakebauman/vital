@@ -4,40 +4,57 @@
     {
       "id": 1,
       "prompt": "I want to build a community for my open-source project. It's Quantforge, a Rust library for backtesting trading strategies. We have ~800 GitHub stars but almost no contributors. Help me get contributors.",
-      "expected_output": "Names the community's primary job, recommends a GitHub-centric home (plus Discord satellite) with rationale, designs the contributor funnel user->maintainer with friction removed at each step, and drafts the concrete OSS assets (CONTRIBUTING.md, good-first-issues, code of conduct, README guidance). Distinguishes healthy signals from vanity (stars are awareness, not health) and gives two to three health metrics with a first-quarter target. Saved to .vital/community.md.",
+      "expected_output": "Diagnoses the stars-without-contributors gap as a specific drop-off in the contributor funnel (engaged user -> first-time contributor), reframes the 800 stars as awareness rather than health, and prescribes friction removal that is concrete to a Rust backtesting library: real cargo setup/test commands in CONTRIBUTING.md, candidate good-first-issues a stranger could actually pick up, and a numeric time-to-first-response target on issues and PRs. Keeps GitHub as the primary home with at most a Discord satellite, and reports contributor-side health metrics with a first-quarter target instead of a star goal. Saved to .vital/community.md.",
       "assertions": [
-        "Output names the community's primary job (e.g. contribution) among the listed purposes rather than leaving it undefined",
-        "Recommends one primary platform (GitHub for OSS) plus at most one or two satellites, with rationale, not a spread across many platforms",
-        "Designs the contributor funnel (user, engaged user, first-time contributor, repeat contributor, maintainer) and addresses friction at each step",
-        "Drafts concrete OSS assets requested/implied: at least a CONTRIBUTING.md and good-first-issues on-ramp, plus code of conduct",
-        "Explicitly distinguishes vanity from health (stars are awareness, not health) and names two to three health metrics with a realistic first-quarter target",
-        "Includes a time-to-first-response target on issues/PRs, reflecting that slow response is the top contributor killer"
+        "Explains the contributor gap through friction specific to this project — Rust toolchain/build or test setup, the size or opacity of the backtesting codebase, or the trading-domain knowledge needed to judge a change — rather than asserting a generic 'lower the barrier to contribute'",
+        "States that the ~800 stars are an awareness signal and not a measure of project health, and does not propose growing the star count as a goal or metric",
+        "Locates Quantforge at a specific step of the user -> engaged user -> first-time contributor -> repeat contributor -> maintainer funnel (the engaged-user-to-first-contribution step) and targets the intervention there, rather than describing the funnel abstractly end to end",
+        "Commits to a named numeric time-to-first-response target on issues and PRs (e.g. 48 hours) and identifies slow maintainer response as the leading cause of losing contributors, rather than listing responsiveness as one virtue among many",
+        "The good-first-issues on-ramp lists candidate issues a stranger could plausibly pick up in this specific library — e.g. adding an indicator or metric, a data-source adapter, a worked example in the docs, better error messages on malformed input — instead of instructing the maintainer to 'label some issues good first issue'",
+        "The CONTRIBUTING.md draft contains the actual commands a Rust contributor runs (cargo build / cargo test, and fmt or clippy), not language-agnostic placeholder setup steps",
+        "Keeps GitHub as the single primary home and treats Discord (if recommended at all) as a satellite, giving a reason tied to contribution happening in Issues and PRs rather than in chat"
       ]
     },
     {
       "id": 2,
       "prompt": "We want a private customer community for Northwind, an enterprise supply-chain platform used by large manufacturers. Our CSMs think it'll help retention. What should we build?",
-      "expected_output": "Anchors to the enterprise segment: a curated customer community / user group (private Slack, advisory board, executive roundtables) rather than a large public Discord, notes the overlap with the reference program in customer-marketing, defines purpose, a minimal channel/structure, a seeding plan starting with power users, compounding rituals, and health metrics with targets.",
+      "expected_output": "Treats retention as a hoped-for outcome rather than a job, and forces a primary job to be named (peer support, product feedback, or advocacy) before designing anything. Recommends a curated enterprise format — private Slack, advisory board, executive roundtables — over a large public server, with the rationale grounded in how large-manufacturer users actually behave. Reuses the customer-marketing reference program rather than standing up a parallel one, seeds from named power-user accounts via their CSMs with a response guarantee, keeps the structure small because low-frequency enterprise posters make empty channels obvious, and sets 2-3 health metrics with a first-quarter target that avoid member count and let the retention claim be tested.",
       "assertions": [
-        "Recommendation matches the enterprise segment: a curated customer community / user group (private Slack, advisory board, or executive roundtables) rather than a large public server",
-        "Output names the primary community job (e.g. support, retention, or product feedback) driving the design",
-        "Notes the overlap with the reference program in customer-marketing",
-        "Provides a seeding/early-growth plan that starts with existing power users/design partners and ensures early messages get responses, not opening a large empty room",
-        "Channel/structure is kept minimal (start small, add channels on real need) with an onboarding/welcome flow and a code of conduct / moderation path",
-        "Names two to three health metrics that fit this community's job with a realistic first-quarter target"
+        "Does not accept 'CSMs think it'll help retention' as the community's purpose — states that retention is an outcome rather than a job and names the primary job (peer support, product feedback, or advocacy) that the design will actually serve",
+        "Rejects a large or public community for this audience and recommends a curated enterprise format (private Slack, advisory board, or executive roundtable), justifying it with how large-manufacturer users behave — reluctance to post operational problems where competitors or their own customers can read them, procurement/NDA constraints, or small numbers of senior users",
+        "Notes the overlap with the reference program in customer-marketing and proposes drawing on the same accounts rather than building a second, parallel advocacy program",
+        "The seeding plan names a specific first cohort — existing Northwind power users or design-partner accounts, invited individually by their CSM — and commits that every early post gets a reply from the Northwind team",
+        "Argues for a deliberately small channel or structure set, explicitly connecting the choice to the fact that a low-frequency enterprise membership makes a wide channel list look dead, with channels added only when a real need appears",
+        "Names two or three health metrics fitting this job with a first-quarter target, avoids total member count as a headline metric, and includes at least one measure that would actually test the retention claim (e.g. comparing renewal or expansion among member accounts against non-member accounts)",
+        "Assigns named ownership for moderation, the code of conduct, and answering questions rather than assuming the CSM team will absorb it alongside existing work"
       ]
     },
     {
       "id": 3,
       "prompt": "Should we spin up a Discord, a Slack, a subreddit, and a Discourse forum for our new prosumer video-editing app Cutloop so we're everywhere at launch?",
-      "expected_output": "Pushes back on fragmenting across four platforms at launch; recommends one primary home plus at most one or two satellites chosen from where the prosumer audience already is and the community's job, warns that a quiet/empty room reads as abandoned, and provides a seeding plan, onboarding first-action, rituals, recognition systems, and health metrics for the small-business/prosumer segment. Names the primary purpose.",
+      "expected_output": "Says no to all four, picks one primary home for Cutloop's prosumer editors with reasoning that discriminates between the four named options (including why Slack is wrong for a public prosumer community and why a subreddit is reach rather than a home), warns that four rooms at launch guarantees four quiet rooms, and gives a seeding plan that runs invite-only from beta and waitlist editors before any public opening. Onboarding's first action is specific to video editors, programs are creator-style showcases and challenges, and the metrics are activity and week-4 return rather than member count.",
       "assertions": [
-        "Output rejects launching on all four platforms and recommends one primary home plus at most one or two satellites with rationale",
-        "Platform choice is justified by where the prosumer audience already is and the community's job, not novelty or being 'everywhere'",
-        "Warns against opening a large empty community publicly because a quiet room reads as abandoned, and provides a seeding plan starting with power users/design partners",
-        "Defines an onboarding flow with a clear first action for new members and a code of conduct / moderation approach",
-        "Programs fit the small-business/prosumer segment (lighter-weight, social, creator-style; recognition and events drive stickiness)",
-        "Names the primary community purpose and two to three health metrics with a first-quarter target"
+        "Explicitly declines all four and recommends one primary home plus at most one or two satellites, saying which of Discord, Slack, subreddit, and Discourse are dropped",
+        "The reasoning discriminates between the four named options rather than making a generic 'focus on one' argument — at minimum it rules Slack out for a public prosumer community on grounds such as history limits, discovery, or its B2B fit",
+        "Treats the subreddit (and any social channel) as top-of-funnel reach the company does not own, distinct from the community home, rather than as an interchangeable fourth option",
+        "States that launching four rooms at once means four visibly quiet rooms and that an empty community reads as abandoned, then gives a seeding plan naming Cutloop's realistic first members (beta users, waitlist signups, existing followers) with the team present daily",
+        "The new-member first action is specific to video editors — e.g. posting a clip, project, or before/after in a show-and-tell channel — not a generic 'introduce yourself'",
+        "The compounding programs are creator-style and fit prosumer editors (showcases, edit challenges, preset or template swaps, creator spotlights, recognition) rather than an OSS contributor funnel or an enterprise advisory board",
+        "Names the community's primary purpose and two or three health metrics with a first-quarter target that measure activity or return rate (e.g. week-4 return of new members, % questions answered) rather than total member count"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're pre-launch on Loomstack, a dev tool — zero users, product ships in six weeks. Leadership set the Q1 OKR at 10,000 Discord members and 5,000 GitHub stars. I want you to just build the server out now: 32 channels covering every feature area, open it to the public next week, and give me the growth hacks to hit those numbers. I don't need strategy, skip it — just the channel list and the tactics.",
+      "expected_output": "Refuses to deliver the request as specified. States that opening a 32-channel public server with zero users produces a visibly dead room, that member count and stars are awareness/vanity rather than health, and that skipping the purpose step is what turns a community into a dead channel. Proposes instead an invite-only seed group drawn from the waitlist, design partners, and any existing audience, a minimal channel set that grows on demonstrated need, a gate that must be met before going public, and replacement Q1 targets built on activity, response time, and week-4 return. Declines count-inflating tactics and explains the damage they do.",
+      "assertions": [
+        "Does not deliver what was asked — the output does not consist of a 32-channel architecture plus tactics for reaching 10,000 members and 5,000 stars; a response that simply complies with the request as stated fails this assertion",
+        "States directly that opening the server publicly next week with zero users is the wrong move because an empty or quiet room reads as abandoned, and specifies a gate or condition (e.g. a seeded core of active members, or product availability) that must be met before it opens publicly",
+        "Names the 10,000-member and 5,000-star OKR as vanity metrics — explicitly saying stars measure awareness, not health — declines to optimize for them, and proposes replacement Q1 targets based on activity, time-to-first-response, retention/return rate, or contributors",
+        "Refuses the 'skip strategy' instruction rather than honoring it, on the stated grounds that a community without a clear job becomes a dead channel, and requires Loomstack's primary job (support, feedback, contribution, advocacy, belonging) to be named or asks the questions needed to name it",
+        "Counters the 32-channel request with a deliberately minimal channel set (roughly five to eight, named) and states that further channels get added only when a real need emerges, not preemptively per feature area",
+        "Recognizes that with zero users the only available seed is the waitlist, design partners, teammates, or an existing audience, and builds the early plan around individually inviting that small group rather than around public promotion",
+        "Declines or warns against count-inflating tactics (paid or giveaway-driven member drives, swag- or reciprocity-for-stars campaigns, mass invite links) and explains that they buy numbers without members, rather than supplying them because leadership asked"
       ]
     }
   ]

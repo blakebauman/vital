@@ -17,6 +17,8 @@ Help a founder build a strong company without giving up equity — deliberately,
 
 > **Not financial, tax, or investment advice.** Vital provides frameworks and information only. Financing choices (including debt and revenue-based financing) have binding financial and tax consequences. Tell the founder to consult a qualified accountant/advisor before taking on financing or making major financial commitments.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Is bootstrapping the right path?
 
 Confirm the fit. Bootstrapping suits businesses that can reach revenue quickly, have reasonable capital needs, serve a market that may not support a venture-scale outcome, or whose founders value control and profitability over maximum speed. If the company must win a large market before well-funded competitors and needs capital to do it, revisit the `fundraising` skill. The goal is a deliberate choice, not raising-by-failure or bootstrapping-by-default.
@@ -54,4 +56,4 @@ Bootstrapping and raising are not mutually exclusive forever. Note the option to
 
 ## Output
 
-Deliver: a bootstrapping fit check, a default-alive/runway model, unit-economics and capital-efficiency guidance, a customer-funded growth plan, a recommended non-dilutive funding option or two with trade-offs, and the later-raise optionality — with the not-financial-advice boundary stated. Consider delivering the runway/unit-economics model as a spreadsheet (xlsx skill). Include a Sources section for any funding-program research. Save the plan to `.vital/capital/bootstrapping.md`.
+Deliver: a bootstrapping fit check, a default-alive/runway model, unit-economics and capital-efficiency guidance, a customer-funded growth plan, a recommended non-dilutive funding option or two with trade-offs, and the later-raise optionality — with the not-financial-advice boundary stated. Deliver the runway/unit-economics model as a spreadsheet via the `xlsx` skill when available, and as a markdown table with the formulas stated otherwise — never drop the model. Include a Sources section for any funding-program research. Save the plan to `.vital/capital/bootstrapping.md`.

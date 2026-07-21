@@ -12,6 +12,8 @@ metadata:
 
 Produce a competitive teardown that reveals where the client can win, not just a feature matrix. Research real competitors using web search; do not invent details.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Define the set
 
 List competitors across three rings:

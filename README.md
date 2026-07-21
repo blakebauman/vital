@@ -53,13 +53,21 @@ Prefer to vendor the files, or using a different agent? The 19 skills are the po
 | `incorporation` | *(Capital)* Entity choice, Delaware C-corp via Stripe Atlas, founder equity/vesting, 83(b), cap table. |
 | `fundraising` | *(Capital)* Raise-vs-bootstrap, stage/amount, SAFEs, valuation/dilution, investor list, data room. |
 | `bootstrapping` | *(Capital)* Default-alive, unit economics, customer-funded growth, non-dilutive funding. |
-| `pitch-deck` | *(Capital)* Fundraising narrative and slide sequence; produced via design + pptx. |
+| `pitch-deck` | *(Capital)* Fundraising narrative and slide sequence; produced via design. |
+
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `/vital:launch [what you're launching]` | Scopes the engagement, sequences the specialists, and runs it end to end. |
+| `/vital:status` | Read-only. Reports what Vital has produced, what has gone stale, and what is next. |
+| `/vital:readiness` | Runs the pre-launch engineering pass: launch readiness plus a technical-claim review. |
 
 ## How to use it
 
 Just describe what you need. Broad requests ("take my product to market", "help me launch") route to the lead, which scopes and runs the whole engagement. Narrow requests ("write my press release", "build a content calendar") go straight to the right skill.
 
-Positioning is the source of truth — set once by strategy, everything else ladders up to it. Vital saves major deliverables to your Project so each session and each agent builds on the last.
+Positioning is the source of truth — set once by strategy, everything else ladders up to it. Vital saves every major deliverable into a `.vital/` directory in your project and indexes it in `.vital/INDEX.md`, recording which version of the positioning each one assumed. Specialists read that index before generating, so each session builds on the last — and when positioning changes, Vital tells you which downstream deliverables it just invalidated instead of letting them quietly contradict each other.
 
 ## Built to Claude Code spec
 
@@ -69,7 +77,7 @@ Agents and skills use the documented [subagent](https://code.claude.com/docs/en/
 
 Installation lives in [docs/install.md](docs/install.md). Once Vital is installed:
 
-- **Connectors** (optional but recommended): Google Workspace (Gmail, Calendar, Drive) via your Claude connector settings; Slack is pre-wired in `.mcp.json` (swap for Microsoft Teams if that's your stack). See `CONNECTORS.md`.
+- **Connectors** (optional but recommended): Google Workspace (Gmail, Calendar, Drive) via your Claude connector settings; Slack or Teams via your own MCP config. Vital ships no MCP servers of its own. See `CONNECTORS.md`.
 - **Adobe**: The design work is built for Adobe Express and the Adobe suite — Vital hands you build-ready specs you execute there. No connection required.
 - **Impeccable** (optional): Vital's design uses the [impeccable](https://github.com/pbakaus/impeccable) design-quality system (Apache-2.0) as its craft layer — direction dimensions and an anti-slop checklist applied to every asset. If you install the impeccable skill/plugin, Vital's design agent defers to its commands (`/impeccable init | shape | craft | critique | audit | polish`) and detector; if not, it applies the principles by hand. For a full existing-site redesign, hand off to impeccable directly. See `skills/design-brief/references/impeccable.md`.
 

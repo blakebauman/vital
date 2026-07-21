@@ -14,6 +14,8 @@ metadata:
 
 Turn existing customers into the most credible growth engine the client has: proof that closes new deals, references that unblock enterprise buyers, and advocacy that compounds. Customer marketing starts after there are customers with real outcomes — confirm the client has willing, successful customers before building programs. Anchor to the client's segment — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Identify the proof
 
 Map the customers worth featuring: who got a real, quantifiable outcome, who is willing to go public, and who represents an ICP the client wants more of. Prioritize stories that mirror the target buyer — a prospect believes a customer who looks like them. For each candidate note the outcome, the metric, the segment fit, and the reference willingness (logo only, quote, full story, live reference call).

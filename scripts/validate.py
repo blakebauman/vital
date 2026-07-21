@@ -26,6 +26,11 @@ except ImportError:
 
 VALID_COLORS = {"red", "blue", "green", "yellow", "purple", "orange", "pink", "cyan"}
 VALID_MODELS = {"inherit", "sonnet", "opus", "haiku", "fable"}
+VALID_TOOLS = {
+    "Bash", "Edit", "Glob", "Grep", "NotebookEdit", "Read", "Task",
+    "TodoWrite", "WebFetch", "WebSearch", "Write",
+}
+MAX_DESCRIPTION = 1024
 KEBAB = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 
 # Run from the repo root regardless of where the script is invoked.
@@ -122,10 +127,60 @@ for d in sorted(glob.glob("skills/*/")):
     if fm is None:
         errors.append(f"{skill_md}: no YAML frontmatter")
         continue
-    if not fm.get("name"):
+    sk_name = str(fm.get("name", ""))
+    if not sk_name:
         errors.append(f"{skill_md}: missing name")
+    elif sk_name != os.path.basename(d.rstrip("/")):
+        errors.append(
+            f"{skill_md}: name '{sk_name}' does not match its directory "
+            f"'{os.path.basename(d.rstrip('/'))}'"
+        )
     if not fm.get("description"):
         errors.append(f"{skill_md}: missing description")
+    for tool in [t.strip() for t in str(fm.get("allowed-tools", "")).split(",") if t.strip()]:
+        if tool not in VALID_TOOLS:
+            errors.append(f"{skill_md}: allowed-tools names unknown tool '{tool}'")
+
+# --- description length ---
+# Every agent and skill description is loaded into every session. Long ones are
+# both a token cost and, past the harness limit, a truncation risk.
+for f in sorted(glob.glob("agents/*.md")) + sorted(glob.glob("skills/*/SKILL.md")):
+    fm = frontmatter(f) or {}
+    desc = " ".join(str(fm.get("description", "")).split())
+    if len(desc) > MAX_DESCRIPTION:
+        errors.append(f"{f}: description is {len(desc)} chars (max {MAX_DESCRIPTION})")
+
+# --- reference paths must resolve at runtime ---
+# A bare `references/foo.md` is resolved against the *user's* cwd, not the skill
+# directory, so it silently fails to load once the plugin is installed. Only
+# ${CLAUDE_PLUGIN_ROOT}-prefixed paths are expanded by the harness.
+REF_MENTION = re.compile(r"`([^`]*references/[^`]+\.md)`")
+for f in sorted(glob.glob("agents/*.md")) + sorted(glob.glob("skills/*/SKILL.md")):
+    for path in REF_MENTION.findall(open(f, encoding="utf-8").read()):
+        if not path.startswith("${CLAUDE_PLUGIN_ROOT}/"):
+            errors.append(
+                f"{f}: reference path '{path}' must start with ${{CLAUDE_PLUGIN_ROOT}}/ "
+                "or it will not resolve once installed"
+            )
+            continue
+        rel = path[len("${CLAUDE_PLUGIN_ROOT}/"):]
+        if not os.path.isfile(rel):
+            errors.append(f"{f}: reference path '{path}' points at a missing file")
+
+# --- referenced skills must exist ---
+# Catches hand-offs to a skill that was renamed, or to a skill that only exists
+# in another host (the pptx/xlsx family). External ones must be declared here so
+# the dependency is explicit and the skill text carries a fallback.
+EXTERNAL_SKILLS = {"pptx", "xlsx", "dataviz", "my-writing-style", "impeccable"}
+local_skills = {os.path.basename(p.rstrip("/")) for p in glob.glob("skills/*/")}
+SKILL_MENTION = re.compile(r"`([a-z0-9]+(?:-[a-z0-9]+)*)`\s+skill")
+for f in sorted(glob.glob("agents/*.md")) + sorted(glob.glob("skills/*/SKILL.md")):
+    for ref in set(SKILL_MENTION.findall(open(f, encoding="utf-8").read())):
+        if ref not in local_skills and ref not in EXTERNAL_SKILLS:
+            errors.append(
+                f"{f}: references skill '{ref}', which is neither a Vital skill "
+                "nor a declared external skill (see EXTERNAL_SKILLS in this script)"
+            )
 
 # --- no stardust references in plugin content ---
 # Scope to shipped plugin content; the meta files (CONTRIBUTING/AGENTS/this
@@ -136,7 +191,6 @@ content_files = (
     + [
         "README.md",
         "CONNECTORS.md",
-        ".mcp.json",
         ".claude-plugin/plugin.json",
         ".claude-plugin/marketplace.json",
     ]

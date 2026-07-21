@@ -36,7 +36,7 @@ Vital is an agency that takes finished tech products and brings them to market. 
 
 ## Who Vital serves
 
-Vital focuses on **enterprise and mid-market** clients while still **driving small-business success** with a leaner version of the same rigor. The client's segment changes the motion, stakeholders, timeline, and deliverables across every discipline — enterprise means buying committees, procurement, security/compliance, analyst relations, and long sales-led launches; mid-market is a hybrid land-and-expand motion; small business stays product-led, self-serve, and fast. Establish the segment at intake and adapt every phase. Full per-discipline guidance: `references/segments.md`. Never make a small business run an enterprise process, or launch an enterprise product with a small-business motion.
+Vital focuses on **enterprise and mid-market** clients while still **driving small-business success** with a leaner version of the same rigor. The client's segment changes the motion, stakeholders, timeline, and deliverables across every discipline — enterprise means buying committees, procurement, security/compliance, analyst relations, and long sales-led launches; mid-market is a hybrid land-and-expand motion; small business stays product-led, self-serve, and fast. Establish the segment at intake and adapt every phase. Full per-discipline guidance: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. Never make a small business run an enterprise process, or launch an enterprise product with a small-business motion.
 
 ## The default engagement flow
 
@@ -50,9 +50,9 @@ Adapt to what the client already has and to their segment; skip phases they have
 6. **Marketing & PR** — content engine and campaigns (`content-engine`), press and launch-platform comms (`press-kit`), run in parallel.
 7. **Launch** — sequence and coordinate the moment (`launch-plan`).
 8. **Engineering check** — before launch, run the advisory pass: launch-readiness and technical-claim review.
+9. **Synthesize** — pull it all into one coherent launch plan with timeline, owners, and next actions.
 
 For enterprise engagements, layer in as needed: `abm-playbook` during GTM (named-account targeting), `analyst-relations` alongside PR (analyst credibility), and `rfp-response` to clear procurement, security, and RFP gates that block the deal.
-9. **Synthesize** — pull it all into one coherent launch plan with timeline, owners, and next actions.
 
 ## The engagement workspace — where deliverables live
 
@@ -74,14 +74,16 @@ Every major deliverable is saved to a **`.vital/` directory at the root of the c
 | Community strategy & assets | `.vital/community.md` |
 | Press kit & media | `.vital/press-kit/` |
 | Analyst relations | `.vital/analyst-relations.md` |
+| Launch-readiness & technical-claim review | `.vital/engineering-review.md` |
 | Capital track (incorporation, fundraising, bootstrapping, pitch deck) | `.vital/capital/` |
+| Engagement index (what exists, when it was written, what it assumed) | `.vital/INDEX.md` |
 
-`.vital/positioning.md` is the source of truth every other file ladders up to. When a specialist challenges and overrides an assumption in the brief (which they are empowered to do), update `.vital/positioning.md` and flag the change so downstream disciplines stay consistent with one narrative.
+`.vital/positioning.md` is the source of truth every other file ladders up to, and `.vital/INDEX.md` records what exists and which version of positioning each deliverable was derived from. Every specialist follows the same three rules — read before generating, write back and update the index, and flag what a positioning change invalidates. The full protocol, including the index format and the staleness rule, is in `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`; read it before running an engagement.
 
 ## How to run it well
 
 - **One narrative.** Positioning is set once and everything else expresses it. Do not let brand, marketing, and PR drift into three different stories.
-- **Reuse before generating.** Check `.vital/` for existing positioning, messaging, brand, and audience before creating new. Save every major deliverable back to `.vital/` (see the workspace table above) so the next session and the next agent build on it.
+- **Reuse before generating.** Read `.vital/INDEX.md` and the existing positioning, messaging, brand, and audience before creating new. Save every major deliverable back to `.vital/` and update the index (see the workspace table and protocol above) so the next session and the next agent build on it — and so drift is visible when positioning moves.
 - **The client builds; Vital launches.** Never scope product build, infrastructure, or delivery. Redirect that to the client and offer feedback via the engineering agent instead.
 - **Make it legible.** The client should always know where they are in the launch, what is done, and what is next. Use a task list for multi-phase engagements.
 - **Every deliverable earns its place** by changing what the client does next.
@@ -89,3 +91,8 @@ Every major deliverable is saved to a **`.vital/` directory at the root of the c
 ## Starting an engagement
 
 If the request is broad or the starting point is unclear, begin here: run intake, propose the sequence, then delegate phase by phase. If the request is narrow (e.g., "write my press release"), go straight to the relevant skill — but check that the positioning and message it depends on exist first, and generate them quickly if not.
+
+## Additional resources
+
+- **`${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`** — how each discipline adapts to enterprise, mid-market, and small-business clients.
+- **`${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`** — the `.vital/` workspace protocol: read-before-generate, the `INDEX.md` format, and how a positioning change invalidates downstream deliverables.

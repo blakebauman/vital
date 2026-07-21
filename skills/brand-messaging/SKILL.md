@@ -14,6 +14,8 @@ Turn positioning into the verbal identity: the value proposition, the message hi
 
 Tune the message and voice to the **client's segment** — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. Enterprise messaging is credible and proof-heavy with security/compliance/integration pillars and low hype; mid-market is benefit-forward with proof close behind; small-business messaging is plain, direct, and outcome-first with a warmer voice.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## Messaging architecture
 
 Build top-down; do not move to a lower level until the one above is sharp.

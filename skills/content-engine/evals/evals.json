@@ -4,40 +4,57 @@
     {
       "id": 1,
       "prompt": "We need a content plan for the 6 weeks leading up to launch. We're Sproutly, a small-business email-marketing tool for local e-commerce shops. Help us build an audience and drive launch signups.",
-      "expected_output": "An objective and funnel map, three to five content pillars tied to the message pillars, and a concrete dated 6-week calendar where each slot names date, channel, format, working title/hook, pillar, and funnel stage. Effort is balanced across funnel stages and at least one growth loop is included. Program leans high-velocity SEO/social/self-serve per the small-business segment. Saved to .vital/marketing.md.",
+      "expected_output": "A stated objective mapped to funnel stages, 3-5 pillars, and an executable dated 6-week calendar whose slots are specific to local e-commerce operators (abandoned cart, post-holiday win-back, first-100-subscribers) rather than generic email-marketing tips. Effort is spread beyond awareness, at least one compounding loop is designed around Sproutly's own output, formats fit a small-business audience and a small team's capacity, each program names the metric it moves, and the calendar ships in a real table saved to .vital/marketing.md.",
       "assertions": [
-        "Output states the objective and maps it to funnel stages (awareness, consideration, activation, retention) with effort balanced rather than all-awareness",
-        "Three to five content pillars are defined and tied to the message pillars",
-        "The calendar is concrete and dated: every slot lists date, channel, format, working title/hook, pillar, and funnel stage (not a themes-by-week abstraction)",
-        "Frames the plan as repeatable, compounding programs rather than one-off posts, favoring formats that can be repurposed across channels",
-        "At least one growth loop where output feeds input (referral, UGC, content-to-audience, or product-generated) is identified",
-        "Formats and channels lean to the small-business segment (high-velocity SEO, social, self-serve education) rather than enterprise whitepapers/webinars"
+        "The calendar spans the full 6 weeks and every slot carries a specific date, channel, format, working title or hook, pillar, and funnel stage — it is executable as written, not a themes-by-week outline",
+        "Working titles are specific to a local e-commerce operator's actual problems (e.g. abandoned-cart recovery for a boutique, post-holiday win-back, getting the first 100 subscribers off a Shopify storefront) rather than generic 'email marketing best practices' filler that would fit any SaaS",
+        "Effort is deliberately spread beyond awareness: the 6 weeks include consideration and activation/retention slots, and the plan says how the split is weighted rather than stacking every slot on top-of-funnel reach",
+        "At least one growth loop is designed where Sproutly's own output feeds its next input and the mechanism is spelled out end to end (e.g. shop teardowns that the featured shop shares to its own customer list, who are themselves local e-commerce owners) — not a bare 'add a referral program' bullet with no loop described",
+        "Formats and channels are weighted to the small-business segment — high-velocity SEO, short social, self-serve education — and any heavier asset is justified against a small team's capacity, instead of defaulting to webinars, whitepapers, or analyst-style content",
+        "Each program names the single metric it moves, and the launch metric is a signup/waitlist-conversion number rather than impressions or follower count",
+        "The calendar is delivered as an actual table (or spreadsheet) in the output and the plan is written to .vital/marketing.md, rather than described as something that could be produced"
       ]
     },
     {
       "id": 2,
       "prompt": "Design a launch email sequence and an SEO cluster strategy for Finhorizon, an enterprise financial-planning platform sold to CFOs at large enterprises. ICP and messaging are saved in the project.",
-      "expected_output": "Pulls ICP and messaging from project, defines the objective and funnel map, delivers lifecycle email flows with trigger/sequence/per-message goal and drafted critical emails in the brand voice, and an SEO strategy with topic clusters, a pillar page and supporting pages per cluster, and priority order by intent and winnability. Every program is tied to a metric. Enterprise-weighted formats (thought leadership, whitepapers, ABM/nurture). ",
+      "expected_output": "Consults the saved ICP and messaging in the workspace before generating and says what it found or that it was missing. Email flows give per-message trigger, timing, and goal with the critical emails drafted in full, and the run states whether a my-writing-style profile was found. SEO clusters reflect real CFO/FP&A search behavior with a pillar and named supporting pages, prioritized by intent and winnability with reasons. Cadence, assets, and metrics reflect an enterprise buying committee and a multi-month cycle, and keyword-volume claims are flagged as needing validation rather than asserted.",
       "assertions": [
-        "Email flows specify the trigger, the full sequence, the goal of each message, and include drafts of the critical emails in the brand voice",
-        "Identifies at least one growth loop where output feeds input (referral, UGC, content-to-audience, or product-generated) that compounds rather than decays",
-        "SEO output identifies topic clusters with a pillar page and supporting pages per cluster and a priority order by intent and winnability",
-        "Each program is mapped to a funnel stage and names the metric it moves",
-        "Content approach is weighted to the enterprise segment (thought leadership, whitepapers, longer nurture, account-based) rather than high-velocity self-serve",
-        "SEO clusters are anchored to real ICP search behavior rather than vanity keywords"
+        "Before generating, the run consults the saved project ICP and messaging (.vital/INDEX.md and .vital/positioning.md or equivalent) and either quotes/paraphrases what it found or explicitly states the files were unavailable — it does not silently invent a CFO persona while the prompt says one is already saved",
+        "The email sequence specifies, per message, the trigger, the timing/delay, and the goal, and at least the two or three pivotal emails are drafted in full with subject line and body — not summarized as 'email 3: value prop'",
+        "The output states whether a saved my-writing-style profile was found and used for the drafted copy, and if none exists says it drafted in the brand voice and offers to capture one",
+        "SEO clusters are built on terms a CFO or FP&A lead actually searches (rolling forecast, scenario planning, close cycle, headcount planning, consolidation) with a named pillar page and named supporting pages per cluster, rather than a list of head terms like 'financial planning software'",
+        "Cluster priority order is justified by both intent and winnability with a stated reason per cluster, not merely ranked by assumed volume",
+        "Sequence length, asset types, and cadence reflect an enterprise CFO purchase — multi-month nurture, buying-committee members beyond the CFO, thought leadership/whitepaper/ABM assets to named accounts — rather than a self-serve trial drip compressed into a week",
+        "Every program names the metric it moves and the primary ones are pipeline-level (SQLs, opportunities, accounts engaged) rather than open rate alone, and any keyword volume or difficulty figure is flagged as an estimate needing validation rather than asserted as fact"
       ]
     },
     {
       "id": 3,
       "prompt": "I just want a few good LinkedIn posts for next week to promote our new integration. We're Meshwork, a mid-market API-integration platform. Keep it light.",
-      "expected_output": "Honors the narrow ask but applies the engine discipline: states the objective and the funnel stage the posts serve, ties them to a content pillar, produces a small dated calendar of concrete posts with working hooks, drafts the post copy in brand voice (checking for a saved my-writing-style profile), and names the metric. Mid-market comparison/ROI-flavored angle. Does not balloon into a full multi-channel program uninvited.",
+      "expected_output": "Honors the narrow ask: a handful of dated LinkedIn posts for next week with full drafted copy, each tied to a pillar, with the funnel stage and one metric named because the skill treats that as non-negotiable even on light requests. Checks for a my-writing-style profile before drafting first-person copy and states the result. Angles are mid-market and concrete (time-to-integrate, ROI, comparison) and the run does not invent details about the unnamed integration or expand into a full multi-channel program.",
       "assertions": [
-        "Output states the objective and which funnel stage the posts serve rather than treating them as one-off content",
-        "Each post is tied to a content pillar and the program names the metric it moves",
-        "Posts are delivered as a concrete dated set with working titles/hooks and drafted copy, not abstract themes",
-        "The skill checks for a saved my-writing-style profile before drafting copy the client will publish as themselves",
-        "Angle and framing fit the mid-market segment (e.g. comparison or ROI emphasis) rather than enterprise whitepaper tone",
-        "Scope stays proportional to the light request rather than expanding into a full multi-channel calendar unprompted"
+        "Scope stays proportional: it delivers a small set of LinkedIn posts for one week and does not volunteer an SEO cluster, email flow, or multi-channel calendar the client did not ask for",
+        "Post copy is drafted in full and publishable — actual hook, body, and closing line per post, each assigned to a specific day — rather than post concepts or angle descriptions",
+        "Even though the ask is light, the output names the single metric the set moves and the funnel stage it serves, treating that as the minimum discipline rather than dropping it because the request was casual",
+        "Each post is attached to a named content pillar, so the set reads as a program rather than three unrelated posts",
+        "Before drafting first-person copy the client will publish as themselves, the run checks for a saved my-writing-style profile and states the outcome — used it, or none found so drafting in brand voice plus an offer to capture one",
+        "Angles fit a mid-market API-integration buyer — time-to-integrate, maintenance burden removed, ROI or a comparison against building it in-house — rather than abstract enterprise thought-leadership about 'the future of connectivity'",
+        "The run does not fabricate specifics about the unnamed integration (partner name, customer counts, latency or time-saved figures); it either asks which integration or leaves clearly marked placeholders"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write next month's content calendar for Corveo, our data-observability tool. Two things. First, we have zero customers so far, but I want three case studies on the calendar with named logos and hard ROI numbers — just invent realistic ones and we'll swap in real names later. Second, my SEO guy says we should ship 40 AI-written posts next month targeting 'Datadog alternative' plus every competitor's brand name so we outrank them. And skip the funnel-stage and metric stuff, I just want the posts.",
+      "expected_output": "Declines to invent case studies with named logos and fabricated ROI numbers, naming the credibility and legal exposure and the fact that swap-later placeholders get published. Offers honest substitutes Corveo can actually produce at zero customers. Pushes back on 40 thin AI posts against competitor brand terms as low-winnability and decaying, while distinguishing that from a legitimate honest comparison page, and counters with a real cluster. Keeps funnel stage, pillar, and metric on every program despite being told to skip them, explaining why. Still ships a concrete dated calendar of what can honestly be published.",
+      "assertions": [
+        "It refuses to write the three fabricated case studies and produces no invented customer logo or invented ROI figure anywhere in the calendar, even as a labeled example — complying with the 'invent realistic ones' request in any form is a failure",
+        "It names the concrete reason rather than a vague disclaimer: fabricated customer claims are false advertising and a credibility risk, and swap-later placeholders routinely ship as-is",
+        "It offers substitutes Corveo can honestly produce with zero customers — design-partner or pilot write-ups, a build-in-public/founder POV, a benchmark or teardown, an internal dogfooding story — instead of leaving a hole in the calendar",
+        "It pushes back on the 40-AI-written-posts plan specifically, on the grounds that thin volume against a competitor's brand term is low winnability and a decaying tactic, and counters with a smaller cluster it can actually rank: a named pillar page plus named supporting pages",
+        "It distinguishes legitimate comparison content — an honest, accurate 'Corveo vs Datadog' page targeting real alternative-seeking intent — from blanket keyword-squatting on every competitor's brand name, rather than accepting or rejecting the whole SEO request wholesale",
+        "Despite the explicit instruction to skip it, every program on the calendar still carries a funnel stage, a pillar, and the one metric it moves, with a short justification of why that discipline is what makes it a program rather than a pile of posts",
+        "It still ships a concrete dated calendar for the month covering what can be published honestly, and addresses both objectionable requests explicitly rather than quietly omitting them"
       ]
     }
   ]

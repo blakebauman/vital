@@ -14,6 +14,8 @@ metadata:
 
 Build a community that compounds: a place where users help each other, contributors improve the product, and advocates bring the next wave. Community is a long game and a growth loop, not a launch tactic — design for retention and contribution, not vanity metrics. Coordinates with the community-led GTM motion (`gtm-plan`), advocacy (`customer-marketing`), content (`content-engine`), and launch-platform comms (`press-kit`). Anchor to the client's segment — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`.
 
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
+
 ## 1. Purpose and strategy
 
 Establish why the community exists — its primary job drives every other decision:
@@ -93,4 +95,4 @@ Name the two or three that matter most for this community's job and a realistic 
 
 ## Output
 
-Deliver: the community purpose, the platform recommendation with rationale, the structure (channel architecture or contributor funnel + OSS assets like CONTRIBUTING.md / good-first-issues / code of conduct), a seeding and early-growth plan, compounding programs, and a health-metrics dashboard with targets. Draft the concrete assets requested (welcome flow, CONTRIBUTING.md, code of conduct, channel list, event plan). Offer to set up recurring scheduled tasks for community rituals (office hours, community calls). Include a Sources section for any community research. Save the strategy and assets to `.vital/community.md`.
+Deliver: the community purpose, the platform recommendation with rationale, the structure (channel architecture or contributor funnel + OSS assets like CONTRIBUTING.md / good-first-issues / code of conduct), a seeding and early-growth plan, compounding programs, and a health-metrics dashboard with targets. Draft the concrete assets requested (welcome flow, CONTRIBUTING.md, code of conduct, channel list, event plan). Offer to set up recurring scheduled tasks for community rituals (office hours, community calls) if the host supports scheduling. Include a Sources section for any community research. Save the strategy and assets to `.vital/community.md`.

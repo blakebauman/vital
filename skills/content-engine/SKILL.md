@@ -10,9 +10,11 @@ metadata:
   version: "0.1.0"
 ---
 
-Design repeatable programs — not one-off posts — that create and capture demand, each mapped to a funnel stage. Pull the ICP from strategy and the messaging and voice from brand. Build the parts the request calls for — but even a light, few-posts ask still ties each piece to a content pillar and names the one metric the program moves; that discipline is what separates a program from random posts. When drafting copy the client will publish as themselves, check for a saved `my-writing-style` profile first.
+Design repeatable programs — not one-off posts — that create and capture demand, each mapped to a funnel stage. Pull the ICP from strategy and the messaging and voice from brand. Build the parts the request calls for — but even a light, few-posts ask still ties each piece to a content pillar and names the one metric the program moves; that discipline is what separates a program from random posts. When drafting copy the client will publish as themselves, check for a saved `my-writing-style` profile first if that skill is available.
 
 Match the content program to the **client's segment** — see `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`. Enterprise leans on thought leadership, whitepapers, webinars, case studies, and account-based campaigns to named targets with longer nurture; mid-market on comparison content, ROI calculators, and lifecycle email; small business on high-velocity SEO, social, and self-serve education.
+
+**Workspace.** Read `.vital/INDEX.md` and the deliverables it lists that this work depends on (always `.vital/positioning.md`) before generating; write your output back and update the index. Protocol: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`.
 
 ## 1. Objective and funnel map
 
@@ -28,7 +30,7 @@ Produce a concrete, dated calendar: for each slot, the date, channel, format, wo
 
 ## 4. Campaign build (when a campaign is the ask)
 
-For a launch or feature campaign: the objective and success metric, the single message, and the sequenced assets across channels with timing. Before drafting any copy the client will publish in their own name, check for a saved `my-writing-style` profile and match it when one exists — first-person copy in the wrong voice reads as inauthentic and gets rewritten. State whether you found and used one; if there is none, draft in the brand voice, say so, and offer to capture a writing-style profile. Draft the key pieces — email subject lines and body, social posts, ad copy variants — accordingly.
+For a launch or feature campaign: the objective and success metric, the single message, and the sequenced assets across channels with timing. Before drafting any copy the client will publish in their own name, check for a saved `my-writing-style` profile (when that skill is available) and match it when one exists — first-person copy in the wrong voice reads as inauthentic and gets rewritten. State whether you found and used one; if there is none, draft in the brand voice, say so, and offer to capture a writing-style profile. Draft the key pieces — email subject lines and body, social posts, ad copy variants — accordingly.
 
 ## 5. SEO (when relevant)
 
@@ -44,4 +46,4 @@ Identify at least one loop where output feeds input (referral, user-generated co
 
 ## Output
 
-Deliver the objective and funnel map, content pillars, a dated calendar, and the specific campaign/SEO/email/social plans requested — with real draft copy where it helps and the metric each program moves. When you draft first-person copy, note whether a `my-writing-style` profile was found and used. Route graphics to the `design-brief` skill. Consider delivering the calendar as a spreadsheet (xlsx skill) or a shareable tracker. Offer to set up recurring scheduled tasks for ongoing content cadence. Save the plan to `.vital/marketing.md`.
+Deliver the objective and funnel map, content pillars, a dated calendar, and the specific campaign/SEO/email/social plans requested — with real draft copy where it helps and the metric each program moves. When you draft first-person copy, note whether a `my-writing-style` profile was found and used. Route graphics to the `design-brief` skill. Deliver the calendar as a spreadsheet via the `xlsx` skill when available, and as a dated markdown table otherwise — the calendar must always ship in some form. Offer to set up recurring scheduled tasks for ongoing content cadence if the host supports scheduling. Save the plan to `.vital/marketing.md`.
