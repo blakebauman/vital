@@ -43,7 +43,7 @@ Prefer to vendor the files, or using a different agent? The 22 skills are the po
 | `brand-messaging` | Value proposition, messaging hierarchy, voice, naming. |
 | `design-brief` | Art direction and build-ready creative specs for Adobe Express. |
 | `content-engine` | Content strategy, calendar, campaigns, SEO, email, growth loops. |
-| `press-kit` | Angle, media list, press release, pitches, launch-platform copy. |
+| `press-kit` | Angle, media list, press release, pitches, launch-platform copy, Show HN. |
 | `abm-playbook` | *(Enterprise)* Named-account targeting, buying-committee maps, orchestrated plays. |
 | `analyst-relations` | *(Enterprise)* Gartner/Forrester/IDC briefings, narrative, ranked-report prep. |
 | `rfp-response` | *(Enterprise)* RFPs, security questionnaires (SOC 2/SSO), procurement enablement. |
