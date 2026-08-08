@@ -5,7 +5,7 @@ description: >
   press release, media list, tailored journalist pitches, and launch-platform
   copy (Product Hunt, Hacker News, communities). Triggers include "get press",
   "press release", "media list", "pitch journalists", "announcement", "PR for
-  my launch", or "Product Hunt launch copy".
+  my launch", "Product Hunt launch copy", "Show HN", or "post to Hacker News".
 allowed-tools: WebSearch, WebFetch, Read, Write
 metadata:
   version: "0.1.0"
@@ -37,10 +37,18 @@ Write a short, tailored pitch per priority journalist. Lead with their reader's 
 
 For Product Hunt, Hacker News, and relevant communities: write the copy and first comment in the tone that platform rewards, and note the etiquette (HN dislikes marketing speak; Product Hunt rewards a clear maker story). Sequence when each posts relative to launch hour. Never manufacture inauthentic upvotes or comments.
 
+**Show HN.** Follow `${CLAUDE_PLUGIN_ROOT}/skills/press-kit/references/show-hn.md` whenever the client wants to post to Hacker News. Three things that differ from every other platform: (1) **Qualify first** — Show HN is for something people can play with, so landing pages, waitlists, newsletters, and routine version bumps are off-topic; give the client a straight does-not-qualify verdict and redirect rather than drafting copy for a post that will be flagged. (2) **Deliver a brief, not pasteable prose** — HN asks people not to post AI-generated or AI-edited text, and the thread's value is a real maker answering, so hand the founder the points, facts, and cuts for the first comment and have them write it in their own voice; say why. (3) **Plan the thread, not just the post** — the first two hours of replies decide the outcome, so prepare the hardest questions and their honest answers.
+
+**Guardrails.** Asking for upvotes, coordinating a voting ring, seeding comments from alt accounts, and delete-and-repost are against Hacker News's guidelines and get accounts and domains banned. Refuse each one specifically, name the consequence, and offer the honest substitute — asking real users to look and react in their own words, on their own schedule.
+
 ## 6. Press kit
 
 Assemble the simple kit: fact sheet, boilerplate, founder bio, logo/screenshot links, and where to reach the client.
 
 ## Output
 
-Deliver the chosen angle, a tailored media list with rationale and sources, the press release, per-outlet pitches, launch-platform copy, and the press-kit contents. Keep everything verifiable and free of fabricated quotes or endorsements; do not attribute persuasive statements to real named public figures. Include a Sources section for media research. Save materials to `.vital/press-kit/`.
+Deliver the chosen angle, a tailored media list with rationale and sources, the press release, per-outlet pitches, launch-platform copy, and the press-kit contents. Keep everything verifiable and free of fabricated quotes or endorsements; do not attribute persuasive statements to real named public figures. Include a Sources section for media research. Save materials to `.vital/press-kit/`; save a Show HN plan to `.vital/press-kit/show-hn.md`.
+
+## Reference
+
+- **`${CLAUDE_PLUGIN_ROOT}/skills/press-kit/references/show-hn.md`** — the Show HN playbook: the qualify-or-don't gate, title format, pre-post link and load checklist, the first-comment brief the founder writes from, timing, thread handling, the hard prohibitions, and what to do when it flops.
