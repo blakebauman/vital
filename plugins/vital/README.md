@@ -80,9 +80,17 @@ Just describe what you need. Broad requests ("take my product to market", "help 
 
 Positioning is the source of truth — set once by strategy, everything else ladders up to it. Vital saves every major deliverable into a `.vital/` directory in your project and indexes it in `.vital/INDEX.md`, recording which version of the positioning each one assumed. Specialists read that index before generating, so each session builds on the last — and when positioning changes, Vital tells you which downstream deliverables it just invalidated instead of letting them quietly contradict each other.
 
+### Example prompts
+
+- `/vital:launch Tallyho — a $29/month Shopify app that auto-tags orders by fulfilment risk; solo founder, launching in 6 weeks` — runs intake, names a self-serve launch sequence, and leaves out the sales and partner work a $29 app doesn't need.
+- "Who is this for and how do I position it against Debezium?" — `positioning` and `competitive-teardown` produce the ICP, the wedge, and the narrative, saved to `.vital/positioning.md`.
+- "A bank sent us a 300-question security questionnaire" — the `sales` agent runs `rfp-response` and sends every security claim to the engineering advisor before it ships.
+- "We launch in three weeks — what should we track?" — the `analytics` agent writes a north star, metric definitions, and a tracking plan your engineers implement before launch.
+- `/vital:status` — a read-only report of what's in `.vital/`, what has gone stale since positioning changed, and the next step.
+
 ## Built to Claude Code spec
 
-Agents and skills use the documented [subagent](https://code.claude.com/docs/en/sub-agents) and [skill](https://code.claude.com/docs/en/skills) frontmatter. Each agent declares a valid `color` (blue, cyan, green, purple, pink, orange, yellow, red — colors repeat across the 13 agents), a `model` (`inherit`, so the team runs at your session's model tier), `skills` (each specialist preloads the skills it owns, so it starts with its playbook already in context), and `tools` where access should be restricted (the engineering advisor is read-only + web). The research skills (`competitive-teardown`, `analyst-relations`, `press-kit`) pre-approve `WebSearch`/`WebFetch` via `allowed-tools`, and the production skills (`design-brief`) pre-approve `Read`/`Write`, so those turns don't stop for permission prompts.
+Agents and skills use the documented [subagent](https://code.claude.com/docs/en/sub-agents) and [skill](https://code.claude.com/docs/en/skills) frontmatter. Each agent declares a valid `color` (blue, cyan, green, purple, pink, orange, yellow, red — colors repeat across the 13 agents), a `model` (`inherit`, so the team runs at your session's model tier), `skills` (each specialist preloads the skills it owns, so it starts with its playbook already in context), and `tools` where access should be restricted (the engineering advisor has no Edit or Bash: it reads, researches, and writes only its review file). The research skills (`competitive-teardown`, `analyst-relations`, `press-kit`) pre-approve `WebSearch`/`WebFetch` via `allowed-tools`, and the production skills (`design-brief`) pre-approve `Read`/`Write`, so those turns don't stop for permission prompts.
 
 ## Setup
 
@@ -96,12 +104,16 @@ Installation lives in [docs/install.md](https://github.com/blakebauman/vital/blo
 
 Adding a new agent (e.g., paid acquisition) is a new file in `agents/`; a new workflow is a new folder in `skills/`. Contributor rules live in the repo's [CONTRIBUTING.md](https://github.com/blakebauman/vital/blob/main/CONTRIBUTING.md). The lead and playbook are designed to absorb new specialists as the agency grows.
 
+## Support
+
+Report bugs and ask questions in [GitHub Issues](https://github.com/blakebauman/vital/issues). Releases and changelog: [GitHub Releases](https://github.com/blakebauman/vital/releases).
+
 ## What Vital runs on your machine
 
-Vital is instructions, not software: agents and skills are Markdown that Claude reads. The only thing it executes is one `SessionStart` hook (`hooks/vital-index.sh`), a plain shell script that checks for a `.vital/` folder in your project and, if one exists, prints `.vital/INDEX.md` (or a list of `.vital/*.md` files) into the session so Claude reuses earlier deliverables. It reads only that folder, writes nothing, reads no environment variables, and makes no network calls. Vital bundles no MCP servers; any connector is one you add yourself (see `CONNECTORS.md`). Research skills use Claude's own web search and fetch tools when you run them.
+Vital is instructions, not software: agents and skills are Markdown that Claude reads. The only thing it executes is one `SessionStart` hook (`hooks/vital-index.sh`), a plain shell script that checks for a `.vital/` folder in your project and, if one exists, prints `.vital/INDEX.md` (or a list of `.vital/*.md` files) into the session so Claude reuses earlier deliverables. It reads only that folder, writes nothing, reads no environment variables, and makes no network calls. Vital bundles no MCP servers; any connector is one you add yourself (see `CONNECTORS.md`). Research skills use Claude's own web search and fetch tools when you run them. Vital collects no data: nothing is logged, stored outside your project's `.vital/` folder, or sent anywhere.
 
 ## What Vital does not do
 
 Build, ship, or deliver the product. That's yours — Vital takes it from finished to launched.
 
-The `capital` discipline (incorporation, fundraising, bootstrapping) is advisory only: Vital provides information, frameworks, benchmarks, and drafts — **not legal, tax, financial, or investment advice.** Binding decisions (entity, equity, securities, taxes) belong with a qualified startup attorney and CPA, and fundraising is subject to securities law.
+The `capital` discipline (incorporation, fundraising, bootstrapping) is advisory only: Vital provides information, frameworks, benchmarks, and drafts — **not legal, tax, financial, or investment advice.** Binding decisions (entity, equity, securities, taxes) belong with a qualified startup attorney and CPA, and fundraising is subject to securities law. Vital never files, signs, transacts, or sends anything on your behalf: every capital deliverable is a draft for you and your advisers to review, and the same holds for partner agreements and the privacy side of tracking plans.
