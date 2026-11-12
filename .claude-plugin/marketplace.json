@@ -7,9 +7,9 @@
   "plugins": [
     {
       "name": "vital",
-      "source": "./",
-      "description": "An AI agency that takes the tech products you build to market — specialist agents (strategy, GTM, brand, design, marketing, PR, engineering advisory, capital) plus a lead orchestrator, with skills spanning company formation and financing through launch.",
-      "version": "0.13.0",
+      "source": "./plugins/vital",
+      "description": "An AI agency that takes the tech products you build to market — a lead orchestrator and 12 specialists (strategy, GTM, sales, partnerships, brand, design, marketing, community, PR, analytics, engineering advisory, capital), with skills spanning company formation and financing through launch.",
+      "version": "0.14.0",
       "homepage": "https://github.com/blakebauman/vital",
       "license": "MIT",
       "category": "productivity",

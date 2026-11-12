@@ -1,0 +1,16 @@
+{
+  "description": "Surface the client's .vital/ engagement index at session start so every agent reads before it generates.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/vital-index.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

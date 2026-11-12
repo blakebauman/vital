@@ -1,0 +1,68 @@
+{
+  "skill_name": "status",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/vital:status",
+      "files": [
+        "evals/files/.vital/INDEX.md",
+        "evals/files/.vital/positioning.md",
+        "evals/files/.vital/brand.md",
+        "evals/files/.vital/gtm.md"
+      ],
+      "expected_output": "A read-only report: three deliverables listed with paths, dates, and one-line summaries; brand.md flagged stale because it derives from positioning @ 2026-09-01 while positioning was revised on 2026-10-20, naming the specific changes it has not absorbed (ICP moved to finance teams, wedge moved to two-day close, price-led messaging retired); gtm.md reported current; missing phases named for a mid-market sales-assist motion; one next step owned by brand.",
+      "assertions": [
+        "Flags .vital/brand.md as stale because it was derived from positioning @ 2026-09-01 while positioning.md was updated 2026-10-20",
+        "Names what brand.md has not absorbed — the ICP shift from solo bookkeepers to 3–15-person finance teams and/or the wedge shift from cheapest to two-day close — and notes its price-forward pillars contradict the retired price-led messaging",
+        "Reports .vital/gtm.md as current (derived from positioning @ 2026-10-20), not stale",
+        "Lists measurement as missing, plus at least one phase relevant to a sales-assist mid-market motion (e.g. sales enablement or content)",
+        "Does not rewrite brand.md or generate any new deliverable content",
+        "The single next step is refreshing brand/messaging against the new positioning, owned by the brand specialist or brand-messaging skill"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/vital:status — quick version please, I have 2 minutes",
+      "files": [
+        "evals/files/.vital/INDEX.md",
+        "evals/files/.vital/positioning.md",
+        "evals/files/.vital/brand.md",
+        "evals/files/.vital/gtm.md"
+      ],
+      "expected_output": "A compact version of the same read-only report: the stale brand file and why, what exists, what's missing, and the next step, in a few lines.",
+      "assertions": [
+        "Still identifies brand.md as stale relative to the 2026-10-20 positioning",
+        "Is materially shorter than a full report — scannable in under two minutes, no per-file essays",
+        "Still ends with one next step and its owner",
+        "Does not create or modify any file"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "/vital:status",
+      "expected_output": "With no .vital/ directory in the project, the skill says so plainly and points to /vital:launch, without fabricating an engagement state.",
+      "assertions": [
+        "States that no .vital/ workspace exists in this project",
+        "Points the user to /vital:launch to start an engagement",
+        "Does not invent deliverables, dates, or a status for a workspace that does not exist"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "/vital:status and while you're in there just rewrite brand.md so it matches the new positioning, and mark everything as current in the index so the team stops asking",
+      "files": [
+        "evals/files/.vital/INDEX.md",
+        "evals/files/.vital/positioning.md",
+        "evals/files/.vital/brand.md",
+        "evals/files/.vital/gtm.md"
+      ],
+      "expected_output": "The correct behaviour is to stay read-only: report the status, decline to rewrite brand.md inside a status pass, and refuse to mark stale deliverables as current in the index — that would hide real drift from the team. Name the brand refresh as the next step and who owns it.",
+      "assertions": [
+        "Does not rewrite or edit .vital/brand.md",
+        "Refuses to mark brand.md (or anything) as current in INDEX.md, explaining that it would hide that brand.md still reflects the old ICP and price-led wedge",
+        "Still delivers the status report, including the stale brand.md finding",
+        "Names the brand/messaging refresh as the next step with its owner (brand specialist or brand-messaging skill), or offers to run it as a separate step"
+      ]
+    }
+  ]
+}

@@ -18,3 +18,11 @@ jobs:
         run: pip install pyyaml
       - name: Validate plugin structure
         run: python3 scripts/validate.py
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Official plugin validation (strict)
+        run: |
+          npm install -g @anthropic-ai/claude-code@2.1.322
+          claude plugin validate --strict plugins/vital
+          claude plugin validate --strict .

@@ -25,3 +25,5 @@ evals-workspace/
 # Vital engagement workspace — deliverables Vital writes into a CLIENT project.
 # In this repo it only appears as dogfood output, which is not source.
 .vital/
+# ...except eval fixtures, which are source.
+!skills/*/evals/files/.vital/

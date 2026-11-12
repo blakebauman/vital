@@ -1,0 +1,54 @@
+{
+  "skill_name": "launch",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/vital:launch Tallyho — a $29/month Shopify app that auto-tags orders by fulfilment risk. it's just me, launching in 6 weeks, no audience yet",
+      "expected_output": "Intake that infers rather than re-asks: a small-business, product-led, self-serve launch for a solo founder with a six-week runway and no audience. The named sequence is sized to that — positioning, light brand, GTM with Shopify App Store as the primary channel, measurement before launch, then content and launch — and explicitly leaves out a sales playbook, partner program, ABM, and analyst relations. Ends with one next step and its owner.",
+      "assertions": [
+        "Classifies the client as small business / product-led self-serve from the $29/month price and solo founder without asking the user to state the segment",
+        "Does not re-ask facts already given in the argument (price, product, team size, six-week timeline, no audience); any questions asked are limited to genuinely unknown items",
+        "The named sequence omits or explicitly defers sales-enablement, abm-playbook, rfp-response, analyst-relations, and a reseller/partner program as not needed for a $29/month self-serve app",
+        "Treats the Shopify App Store listing as a primary distribution channel rather than an afterthought, since the product is a Shopify app",
+        "Places measurement / tracking-plan work before the launch date in the sequence, not after it",
+        "Ends with exactly one concrete next step and names who owns it (a specialist/skill or the founder)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/vital:launch we're taking Corvane to market — it's a data-residency control plane for banks, $180k ACV, 3 design partners, SOC 2 Type II done. 9 month horizon.",
+      "expected_output": "An enterprise sales-led engagement: intake recognizes the buying committee, procurement, and security review; the sequence includes sales enablement, ABM to a named list, RFP/security-questionnaire readiness, analyst relations, and measurement before launch, with the three design partners treated as the source of lighthouse proof.",
+      "assertions": [
+        "Classifies the engagement as enterprise and sales-led from the $180k ACV and bank buyers, not product-led",
+        "The sequence includes a sales playbook / sales-enablement phase and ABM against a named account list",
+        "Includes RFP and security-questionnaire readiness and uses the completed SOC 2 Type II as a stated asset rather than a to-do",
+        "Treats the three design partners as the source of case studies/references and lighthouse proof before broad launch",
+        "Includes analyst relations as relevant to a bank-facing enterprise launch",
+        "Places measurement before launch and frames enterprise metrics as pipeline/account metrics rather than self-serve funnel conversion"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "/vital:launch",
+      "expected_output": "With no argument and no .vital/ workspace, the skill asks for the product and the segment before doing anything else, briefly — it does not invent a product, propose a generic sequence, or generate deliverables.",
+      "assertions": [
+        "Asks what the product is and which segment (enterprise / mid-market / small business) or buyer it serves before proceeding",
+        "Does not invent a product, a client name, or assumed details to proceed with",
+        "Does not produce a launch plan, positioning, or any other deliverable in this turn",
+        "Keeps the intake short — a small number of questions, not a long questionnaire covering every discipline"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "/vital:launch our AI scheduling app — but first, the onboarding flow is broken and the Stripe webhook keeps failing. fix those in the repo, then do the launch plan. launch is next Monday.",
+      "expected_output": "The correct behaviour is to decline the build work: Vital launches, the client builds. The response should refuse to edit the repo or fix onboarding and the webhook, say plainly that broken onboarding and failing payments are go/no-go blockers for a Monday launch, offer /vital:readiness as the advisory pass, and still proceed with intake and a launch sequence conditional on those fixes landing — without writing code.",
+      "assertions": [
+        "Does not edit, write, or propose a code patch for the onboarding flow or the Stripe webhook",
+        "States that Vital does not build or fix the product and that this work belongs to the client's team",
+        "Names the broken onboarding and failing payment webhook as launch blockers that put the Monday date at risk, with a go/no-go condition",
+        "Offers the /vital:readiness advisory pass (or the engineering advisor) as the appropriate next step for the technical issues",
+        "Still makes progress on the launch itself — intake and/or a named sequence — rather than refusing the whole request"
+      ]
+    }
+  ]
+}
