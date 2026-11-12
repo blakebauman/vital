@@ -27,7 +27,7 @@ Default, not dogma. Recommend something else, and say why, when:
 | Third-party tags (pixels, chat widgets) | Zaraz | 1,000,000 events/month on every account | Over 1M events/month | Zaraz Paid: $5/month per additional 1M events |
 | Custom-domain inbound email (`press@`, `hello@`) | Email Routing | Free forwarding to verified addresses | Need to *send* from the app | Email Sending requires Workers Paid |
 | Launch-day traffic spikes and attacks | CDN cache + DDoS + WAF | **Unmetered DDoS protection** and the Free Managed Ruleset on every plan; 1 rate-limiting rule (by IP, 10 s period) | You need more than one rate limit or longer windows | Pro: 2 rules; Business: 5 rules |
-| Queue visitors when the app can't scale | Waiting Room | **Not available** on Free or Pro | The product (not the site) has a hard capacity ceiling | Business: 1 basic room |
+| Hold overflow visitors in a queue when the app (not the site) is at capacity | Waiting Room — a virtual line that shows a "you're in line" page and admits people as capacity frees up | **Not available** on Free or Pro | The product has a hard capacity ceiling the launch could exceed | Business plan ($200/month annual): 1 basic room. Free alternative: a waitlist page that invites people in batches |
 | A/B tests on the landing page | Workers (split traffic at the edge) | Within Workers free limits | Test traffic needs more than 100k requests/day | Workers Paid |
 | Logs for debugging launch day | Workers Logs | 200,000 events/day, 3-day retention | Need more volume or 7-day retention | Workers Paid: 20M events/month included |
 
@@ -59,7 +59,7 @@ Frame these as checks for the client's engineers, never as work Vital does:
 3. Every public form has Turnstile with **server-side** token validation.
 4. One rate-limiting rule protects the most expensive endpoint (signup, trial creation).
 5. Web Analytics (and Zaraz, if third-party tags are used) is installed and verified **before** traffic arrives.
-6. If the *product* has a hard capacity ceiling, decide in advance between a Business-plan Waiting Room and a waitlist page, rather than discovering the ceiling live.
+6. If the *product* (not the landing page) can only handle so many users at once, decide **before launch day** how to handle overflow: pay for the Business plan to get a Waiting Room (a queue page that admits people as room frees up), or use a free waitlist page that collects emails and invites people in batches. Neither can be set up calmly mid-spike, and Waiting Room isn't on Free or Pro.
 
 ## Sources
 

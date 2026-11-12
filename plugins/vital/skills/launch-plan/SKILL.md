@@ -46,7 +46,7 @@ Build a dated timeline across three windows:
 
 Assign an owner to each item. List the go/no-go readiness checks (product works, page live, tracking in place, support ready). Flag anything the client must complete.
 
-Include launch-day **traffic readiness** as a go/no-go check: the page served as cached static assets, the signup path load-tested, Turnstile on forms, a rate limit on the most expensive endpoint, and analytics verified before traffic arrives. If the client has no stack, use the Cloudflare free-plan checklist and upgrade triggers in `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/cloudflare-stack.md`. A Waiting Room needs the Business plan, so decide on it before launch day, not during.
+Include launch-day **traffic readiness** as a go/no-go check: the page served as cached static assets, the signup path load-tested, Turnstile on forms, a rate limit on the most expensive endpoint, and analytics verified before traffic arrives. If the client has no stack, use the Cloudflare free-plan checklist and upgrade triggers in `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/cloudflare-stack.md`. If the product itself can only handle so many users at once, decide before launch day how overflow is handled: a Waiting Room (a queue page that admits people as capacity frees up, Business plan only) or a free waitlist page that invites people in batches.
 
 ## 7. Contingencies
 
