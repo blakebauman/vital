@@ -34,7 +34,7 @@ These come from Claude Code's plugin spec and from install failures we have alre
 - `color` must be one of: `red`, `blue`, `green`, `yellow`, `purple`, `orange`, `pink`, `cyan`. **`magenta` is not valid.** Colors may repeat across agents.
 - `model` should be `inherit` (default) or a valid alias (`sonnet`, `opus`, `haiku`, `fable`) or a full model ID.
 - `description` is required and should say **when to delegate** to the agent, with trigger phrases. Keep `<example>` blocks in the body, not the frontmatter, so the YAML stays valid.
-- Restrict `tools` only when the agent should be limited (e.g. the `engineering` advisor is read-only + web).
+- Restrict `tools` only when the agent should be limited (e.g. the `engineering` advisor has no Edit or Bash: it reads, researches, and writes only its review file).
 - List the skills the agent owns under `skills:` (a YAML list). They are preloaded into the agent's context when it starts, so a specialist begins with its playbook instead of rediscovering it. Preload only skills the agent owns — every preload costs context on every delegation. The validator checks each name exists.
 
 **Hooks** (`hooks/hooks.json`)
