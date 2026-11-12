@@ -7,7 +7,7 @@ materially better deliverable than Claude with no skill at all?**
 
 ## What's tracked vs. generated
 
-- **Tracked (source):** `skills/<name>/evals/evals.json` — the test cases and
+- **Tracked (source):** `plugins/vital/skills/<name>/evals/evals.json` — the test cases and
   assertions for each skill. Author and commit these.
 - **Generated (gitignored):** `evals-workspace/` — run outputs, timings,
   gradings, and benchmarks. Reproducible from the tracked evals, never committed.

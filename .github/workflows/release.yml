@@ -28,18 +28,9 @@ jobs:
         run: python3 scripts/validate.py
 
       - name: Build vital.plugin
+        # Ship only the plugin folder — never repo tooling or contributor docs.
         run: |
-          zip -r vital.plugin . \
-            -x ".git/*" \
-               ".github/*" \
-               "scripts/*" \
-               "*.plugin" \
-               "*.zip" \
-               "*.tar.gz" \
-               ".gitignore" \
-               "CONTRIBUTING.md" \
-               "AGENTS.md" \
-               "*.DS_Store"
+          (cd plugins/vital && zip -r ../../vital.plugin . -x "*.DS_Store")
           echo "Built vital.plugin:"
           unzip -l vital.plugin | tail -3
 

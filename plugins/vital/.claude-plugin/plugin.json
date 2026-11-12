@@ -1,0 +1,30 @@
+{
+  "name": "vital",
+  "displayName": "Vital GTM Agency",
+  "version": "0.14.0",
+  "description": "Vital — an AI agency that takes the tech products you build to market. A lead orchestrator and 12 specialists (strategy, GTM, sales, partnerships, brand, design, marketing, community, PR, analytics, engineering advisory, capital), with skills from company formation and financing through launch. Enterprise and mid-market focus, small business supported. Vital does everything but build the product; capital is advisory only, not legal or financial advice.",
+  "author": {
+    "name": "Blake Bauman"
+  },
+  "homepage": "https://github.com/blakebauman/vital",
+  "repository": "https://github.com/blakebauman/vital",
+  "license": "MIT",
+  "keywords": [
+    "agency",
+    "go-to-market",
+    "gtm",
+    "launch",
+    "positioning",
+    "branding",
+    "marketing",
+    "pr",
+    "design",
+    "startup",
+    "enterprise",
+    "mid-market",
+    "smb",
+    "fundraising",
+    "incorporation",
+    "bootstrapping"
+  ]
+}
