@@ -28,7 +28,11 @@ the fix for the client to make. The only file this pass writes is the review.
    page in `.vital/design/`, plus the product itself.
 2. **Assess launch readiness** — reliability, scale, onboarding, and first-run
    risks, framed as things for the client to check, not as a build backlog.
-   Group by severity: blocker, should-fix, nice-to-have.
+   Group by severity: blocker, should-fix, nice-to-have. Include launch-day
+   traffic: cached static landing page, a load-tested signup path, bot protection
+   on forms, rate limiting, and a plan if the product has a capacity ceiling.
+   If the client is on (or choosing) Cloudflare, use the checklist in
+   `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/cloudflare-stack.md`.
 3. **Review every technical claim** in the messaging and PR. For each: the claim,
    a verdict (defensible / soften / cut), the reason, and — for soften — the
    honest rewrite. Assume a hostile technical reader. Compliance and

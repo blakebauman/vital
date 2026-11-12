@@ -87,6 +87,12 @@ State the honest minimum: a pre-launch startup needs the tracking plan, one
 product analytics tool, and one dashboard. Buying a warehouse and a BI seat
 before there is traffic is a way to feel measured rather than be measured.
 
+For the **web analytics** layer, default to Cloudflare Web Analytics: it's free, works
+without moving DNS, and Cloudflare states it collects no visitor personal data. Use
+Zaraz (1M events/month free) to load any third-party tags. Neither one replaces
+product analytics, so funnels and cohorts still need a product analytics tool.
+Current limits, prices, and when not to use it: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/cloudflare-stack.md`.
+
 ## 5. Attribution
 
 Explain the models (last touch, first touch, linear, time decay, data-driven)

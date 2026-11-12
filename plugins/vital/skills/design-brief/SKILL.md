@@ -46,7 +46,7 @@ Give step-followable directions: which Express template type to start from, how 
 
 ## 4. Produce what you can here
 
-- **Landing page** — deliver a single self-contained HTML file (inline CSS/JS), on-brand, ready to hand off or preview.
+- **Landing page** — deliver a single self-contained HTML file (inline CSS/JS), on-brand, ready to hand off or preview. If the client has no host yet, recommend Cloudflare Workers static assets (free, unlimited static requests) and Turnstile on every form, with server-side validation. The client's engineers deploy it. Details and limits: `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/cloudflare-stack.md`.
 - **Deck** — use the `pptx` skill to build the actual slides when it is available; otherwise deliver slide-by-slide markdown (one section per slide, with layout, copy, and asset notes) that the client can build in Express, Slides, or Keynote.
 - **Static graphics** — provide the exact Express build spec; generate a mockup or reference image only to illustrate direction.
 

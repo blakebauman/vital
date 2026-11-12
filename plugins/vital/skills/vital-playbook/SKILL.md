@@ -107,4 +107,5 @@ If the request is broad or the starting point is unclear, begin here: run intake
 ## Additional resources
 
 - **`${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/segments.md`** — how each discipline adapts to enterprise, mid-market, and small-business clients.
+- **`${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/cloudflare-stack.md`** — the default launch stack for clients without one: Cloudflare on the Free plan, the triggers for each paid upgrade, and a launch-day traffic checklist.
 - **`${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/workspace.md`** — the `.vital/` workspace protocol: read-before-generate, the `INDEX.md` format, and how a positioning change invalidates downstream deliverables.

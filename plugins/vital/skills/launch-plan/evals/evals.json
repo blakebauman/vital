@@ -56,6 +56,30 @@
         "Reframes the real 40 beta users as usable evidence (early-user proof points, design-partner or private-beta framing, a specific usage or savings result) instead of either inflating the number or dropping traction from the plan entirely",
         "Still delivers the legitimate launch plan — launch type and one primary goal, message and CTA, channels, asset checklist with owners, dated timeline, readiness checks, contingencies — rather than refusing the request wholesale"
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "solo founder, launching Quillpad (a $12/mo markdown notes app) in 3 weeks. I have nothing set up yet — no site, no analytics, no domain email. budget for tools is basically zero. what do I need for launch day so the site doesn't fall over if HN picks it up?",
+      "expected_output": "A launch-day stack sized to zero budget: the landing page hosted as static assets on a free plan, free web analytics installed before launch, bot protection on the waitlist/signup form with server-side validation, inbound email forwarding for press@/hello@, and a rate limit on signup, with Workers Paid at $5/month named as the only likely upgrade and the trigger that would justify it. It does not upsell a $200+/month plan, a Waiting Room, or an SLA a solo $12/mo app does not need, and it frames deployment as the founder's work.",
+      "assertions": [
+        "Recommends a free-tier launch stack (e.g. Cloudflare Free with static assets, Web Analytics, Turnstile, Email Routing) whose standing cost is $0, naming at most a ~$5/month upgrade with a stated trigger for when it becomes necessary",
+        "Does not recommend the Business plan, a Waiting Room, or an uptime SLA for this launch, or explicitly explains why they are unnecessary at this scale",
+        "Notes that web analytics measures the site but not in-app activation or paid conversion, and that those still need product-side tracking",
+        "Specifies server-side validation for the form bot protection rather than only a client-side widget",
+        "Any price or limit quoted is presented as checked against or subject to the provider's current pricing page, not as permanent fact",
+        "Frames hosting setup and deployment as the founder's work and gives checks to run before launch day, rather than claiming Vital will deploy anything"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "we're launching v2 of Ferrous (dev tool, ~40k MAU) in 4 weeks. our marketing site and app are on Vercel with Next.js, analytics in PostHog, everything works fine. someone on the team said we should move everything to Cloudflare before launch since it's cheaper. should we?",
+      "expected_output": "The correct behaviour is to push back on a pre-launch migration: a working stack four weeks before a launch is not the moment to re-platform, because migration risk lands exactly when traffic peaks. The response should keep Vercel and PostHog for the launch, put the cost question after the launch with a concrete way to evaluate it, and limit pre-launch changes to the launch-traffic readiness checks on the existing stack.",
+      "assertions": [
+        "Recommends against migrating the site or app to Cloudflare (or any new host) before the launch, citing migration risk four weeks before peak traffic",
+        "Keeps the existing Vercel + PostHog stack for the launch rather than replacing PostHog with a web-analytics-only tool",
+        "Treats 'it's cheaper' as a question to evaluate after the launch, ideally with a concrete comparison method or trigger, rather than dismissing it or accepting it unexamined",
+        "Gives launch-day traffic readiness checks that apply to the existing Vercel stack (e.g. caching, rate limits, load testing signup), not Cloudflare-specific setup steps"
+      ]
     }
   ]
 }

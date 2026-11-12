@@ -29,6 +29,8 @@ Anchor on the core discipline: be **default alive** — on current growth and bu
 - **Capital efficiency** — grow from cash flow: keep burn low, hire behind revenue, prefer variable to fixed costs, and reinvest profit into the highest-return growth loops. Prioritize the few things that move revenue.
 - **Pricing** — pricing is the fastest lever for a bootstrapped company; coordinate with the `pricing-strategy` skill (charge for value, raise prices as you prove it).
 
+Keep the launch surface close to free. A landing page, waitlist, forms, web analytics, and launch-day DDoS protection fit on Cloudflare's Free plan, and Workers Paid ($5/month) is usually the only upgrade a small launch needs. Spend on infrastructure only when a named upgrade trigger fires. See `${CLAUDE_PLUGIN_ROOT}/skills/vital-playbook/references/cloudflare-stack.md` for the triggers, and re-check current prices before quoting them.
+
 ## 4. Customer-funded growth
 
 The strongest bootstrapping fuel is customers. Design for it: get to revenue early, use annual prepay for cash flow, pre-sell before building where possible, and let a compounding growth loop (content, referral, product-led) reduce paid acquisition dependence. Coordinate with `gtm-plan` (product-led motion), `content-engine`, and `community-building`.
