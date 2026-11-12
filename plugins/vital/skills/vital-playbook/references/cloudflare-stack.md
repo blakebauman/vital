@@ -61,6 +61,29 @@ Frame these as checks for the client's engineers, never as work Vital does:
 5. Web Analytics (and Zaraz, if third-party tags are used) is installed and verified **before** traffic arrives.
 6. If the *product* (not the landing page) can only handle so many users at once, decide **before launch day** how to handle overflow: pay for the Business plan to get a Waiting Room (a queue page that admits people as room frees up), or use a free waitlist page that collects emails and invites people in batches. Neither can be set up calmly mid-spike, and Waiting Room isn't on Free or Pro.
 
+## Explaining it to the client
+
+Founders are rarely infrastructure people. In any client-facing deliverable, never name a product or term on its own: give it a one-sentence plain-language gloss the first time it appears, and translate limits into launch terms ("handles about 100,000 page actions a day for free") rather than billing units. Use these:
+
+| Term | Say this |
+| --- | --- |
+| Workers | Cloudflare's way to run small bits of server code close to your visitors. |
+| Static assets | Your site's ready-made files (pages, images, scripts), served from Cloudflare's global network. Free and unlimited. |
+| D1 / KV | Places to store data such as waitlist signups. D1 is a SQL database; KV is a simple key-value lookup store. |
+| R2 | File storage for downloads, press-kit assets, and uploads, with no charge for downloads. |
+| Turnstile | A free, mostly invisible "are you human?" check that keeps bots out of your forms. |
+| Server-side validation | Your server double-checks the human check, so bots can't just skip the widget. |
+| Web Analytics | Free, privacy-friendly page-view and site-speed stats for your site. Not a replacement for in-app product analytics. |
+| Zaraz | Loads marketing tags (pixels, chat widgets) through Cloudflare, so they don't slow your page down. |
+| Email Routing | Forwards mail sent to addresses like `press@yourdomain.com` to your real inbox, for free. |
+| DDoS protection | Protection against floods of junk traffic meant to knock your site offline. Included free. |
+| WAF / Managed Ruleset | A filter that blocks common attack patterns before they reach your site. |
+| Rate-limiting rule | A cap on how often one visitor can hit an endpoint (e.g. signup), to stop abuse. The Free plan allows one. |
+| Waiting Room | A virtual line: when your app is full, extra visitors see a "you're in line" page and get in as room frees up. Business plan only. |
+| SLA | A written uptime guarantee with refunds if it's missed. Starts on the Business plan. |
+| Workers Paid | A $5/month add-on that raises the free limits on code and storage. Usually the only upgrade a small launch needs. |
+| Class A / Class B requests, GB-month | Billing units for storage (writes, reads, data stored per month). Translate them into launch terms; don't quote them to founders. |
+
 ## Sources
 
 Re-check these before quoting a figure:
